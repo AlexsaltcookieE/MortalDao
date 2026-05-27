@@ -1,0 +1,167 @@
+# This file will automatically update with entries for new content after a build and reload.
+#加注释
+
+Items: {
+	RoughPeachWoodSword: {
+		DisplayName: 初始桃木剑
+		Tooltip: 上面贴着玩具店标识的价格
+	}
+
+	MysteryBag: {
+		DisplayName: 锦囊
+		Tooltip:
+			'''
+			不管是里面和外面都是了灰尘
+			它好像一开始就在这了
+			鼠标右键打开
+			'''
+	}
+
+	FreezeIronSword: {
+		DisplayName: 玄铁剑
+		Tooltip:
+			'''
+			用地狱技术将冰熔炼进玄铁中
+			铁锈令这把剑在暴击时令敌人中毒
+			木和铁
+			'''
+	}
+
+	XIAOYAO: {
+		DisplayName: 李逍遥之剑
+		Tooltip: 侠客之剑
+	}
+
+	SummonDark_eye: {
+		DisplayName: 充满威压的竹制卷轴
+		Tooltip:
+			'''
+			-召唤魔尊的眼线-
+			白天召唤可能会被仙族盯上,魔尊会速战速决
+			建议备好冲刺，飞行，速度饰品
+			'''
+	}
+
+	Dark_magic_Jewellery: {
+		DisplayName: 魔光宝珠
+		Tooltip: 专家
+	}
+
+	Cyan_Fe_Item: {
+		DisplayName: 青铁矿
+		Tooltip:
+			'''
+			一种以韧性和柔软著称的金属矿石
+			上面有轻微灵气的迹象
+			'''
+	}
+
+	AlchemyFurnaceItem: {
+		DisplayName: 铜制炼丹炉
+		Tooltip:
+			'''
+			最基本的炼制工作都在这完成
+			最终形态甚至可以关住齐天大圣
+			'''
+	}
+
+	Cyan_Fe_Ingot_item: {
+		DisplayName: 青铁锭
+		Tooltip:
+			'''
+			一种以韧性和柔软著称的金属矿石通过特殊炼制而成的锭块
+			能熔炼成许多兵器和法宝
+			'''
+	}
+
+	Bloody_Chest_item: {
+		Tooltip: ""
+		DisplayName: 染红的暗影木箱
+	}
+
+	Bloody_key: {
+		Tooltip: 解除地牢的封印
+		DisplayName: 流血的钥匙
+	}
+
+	Overlord_Bow: {
+		DisplayName: 霸王弓
+		Tooltip: ""
+	}
+
+	Puers_Slime_Wand: {
+		DisplayName: Puers_ Slime_ Wand
+		Tooltip: ""
+	}
+}
+
+NPCs: {
+	Rod.DisplayName: 阴间屏障
+	DARK_EYES.DisplayName: 魔尊之眼
+	Shadow_hand.DisplayName: 贴了符咒的暗影爪
+	Captain_Army_Ghost.DisplayName: 万将魂
+	DarkGaze.DisplayName: Dark Gaze
+	ShadowHand.DisplayName: Shadow Hand
+	GeneralSoul.DisplayName: General Soul
+}
+
+Projectiles: {
+	LXYIron.DisplayName: 李逍遥的铁剑
+	LXYPeachWood.DisplayName: 李逍遥的木剑
+	Dead_ray.DisplayName: 死亡光波
+	Shadow_hand_EXPOSE.DisplayName: 符咒暗影爪
+	Ghost_aero.DisplayName: 幽冥魂指
+	Cyan_Dragon.DisplayName: 青龙偃月刀
+	Cyan_Dragon_H.DisplayName: 青锋龙刺
+	Ghost_Hook.DisplayName: 魂钩
+	Ghost_Restriction_Ring.DisplayName: 画地为牢
+	Milion_Arrow.DisplayName: 万箭齐发
+	Ghost_Explosion.DisplayName: 魂爆
+	WKey.DisplayName: W Key
+	AKey.DisplayName: A Key
+	DKey.DisplayName: D Key
+	SpaceKey.DisplayName: Space Key
+	Bow_of_OverLord.DisplayName: 霸王本色
+	OverLord_Bow_Proj.DisplayName: Over Lord_ Bow_ Proj
+	OverLord_Arrow.DisplayName: Over Lord_ Arrow
+	Black_Hole.DisplayName: Black_ Hole
+	Baby_Slime_King.DisplayName: Baby_ Slime_ King
+}
+
+Buffs: {
+	Evil_aura: {
+		DisplayName: 煞气中伤
+		Description: 你使用的生命药水无法恢复生命!
+	}
+
+	BreakLeg: {
+		DisplayName: 断腿
+		Description: 你的脚废了 连踩油门都不行 （或许钩爪，靴子，传送可以帮你?）
+	}
+
+	Ghost_Hooked: {
+		DisplayName: 被魂钩钩住了
+		Description: 你啥也干不了 只能拼命挣扎了
+	}
+
+	Unable_Platform: {
+		DisplayName: Unable_ Platform
+		Description: Mods.YINGYANG.Buffs.Unable_Platform.Description
+	}
+
+	RainBowSlime: {
+		DisplayName: Rain Bow Slime
+		Description: Mods.MortalDao.Buffs.RainBowSlime.Description
+	}
+}
+
+Tiles: {
+	Cyan_Fe.MapEntry: 青铁矿
+	AlchemyFurnance.MapEntry: 炼丹炉
+
+	Bloody_Chest: {
+		MapEntry0: 染红的暗影木箱
+		MapEntry1: 被封印的染红的暗影木箱
+		Locked: 需要流血的钥匙
+	}
+}
