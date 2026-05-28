@@ -10,3 +10,4 @@ D:\文档\My Games\Terraria\tModLoader\ModSources\MortalDao\obj\Debug\net8.0\Mor
 D:\文档\My Games\Terraria\tModLoader\ModSources\MortalDao\obj\Debug\net8.0\refint\MortalDao.dll
 D:\文档\My Games\Terraria\tModLoader\ModSources\MortalDao\obj\Debug\net8.0\MortalDao.pdb
 D:\文档\My Games\Terraria\tModLoader\ModSources\MortalDao\obj\Debug\net8.0\ref\MortalDao.dll
+D:\文档\My Games\Terraria\tModLoader\ModSources\MortalDao\obj\Debug\net8.0\MortalDao.sourcelink.json

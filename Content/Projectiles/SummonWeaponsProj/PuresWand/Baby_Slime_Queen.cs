@@ -6,7 +6,7 @@ using Terraria.ModLoader;
 
 namespace MortalDao.Content.Projectiles.SummonWeaponsProj.PuresWand
 {
-    public class Baby_Slime_King : ModProjectile
+    public class Baby_Slime_Queen : ModProjectile
     {
         private const float Gravity = 0.3f;
         private const float MaxFallSpeed = 10f;
@@ -19,7 +19,7 @@ namespace MortalDao.Content.Projectiles.SummonWeaponsProj.PuresWand
         private int attackTimer = 0;
         public override void SetStaticDefaults()
         {
-            Main.projFrames[Type] = 12;               // 史莱姆一般有 12 帧动画
+            Main.projFrames[Type] = 11;               // 史莱姆一般有 12 帧动画
             Main.projPet[Type] = true;                // 标记为宠物/仆从类
             ProjectileID.Sets.MinionSacrificable[Type] = true;
             ProjectileID.Sets.CultistIsResistantTo[Type] = true;
@@ -33,7 +33,7 @@ namespace MortalDao.Content.Projectiles.SummonWeaponsProj.PuresWand
         public override void SetDefaults()
         {
             Projectile.damage = 10;
-            Projectile.width = 36;
+            Projectile.width = 58;
             Projectile.height = 36;
             Projectile.friendly = true;
             Projectile.minion = true;
@@ -86,9 +86,9 @@ namespace MortalDao.Content.Projectiles.SummonWeaponsProj.PuresWand
                 CurrentAIState = AIState.FlyFollow;
             }
             // 优先级3：在玩家附近，进入闲置状态（但不要太近）
-            else if(CurrentAIState == AIState.FlyFollow)    
-             {
-                if (player.Center.Y >= Projectile.Center.Y &&((player.Center.X - Projectile.Center.X) >= 10 || (Projectile.Center.X - player.Center.X) >= 10) && distanceToPlayer < dynamicFollowRange - 20f)
+            else if (CurrentAIState == AIState.FlyFollow)
+            {
+                if (player.Center.Y >= Projectile.Center.Y && ((player.Center.X - Projectile.Center.X) >= 10 || (Projectile.Center.X - player.Center.X) >= 10) && distanceToPlayer < dynamicFollowRange - 20f)
                 {
                     CurrentAIState = AIState.Idle;
                 }
@@ -125,7 +125,7 @@ namespace MortalDao.Content.Projectiles.SummonWeaponsProj.PuresWand
                 if (dir != Vector2.Zero)
                     dir.Normalize();
                 float projectileSpeed = 18f;
-                Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, dir * projectileSpeed, ModContent.ProjectileType<Baby_Slime_Spike>(), Projectile.damage, 1f, Projectile.owner);
+                Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, dir * projectileSpeed, ModContent.ProjectileType<Baby_Slime_Gel>(), Projectile.damage, 1f, Projectile.owner);
             }
             int total;
             int myIndex = GetMinionIndexAndTotal(out total);
@@ -204,7 +204,7 @@ namespace MortalDao.Content.Projectiles.SummonWeaponsProj.PuresWand
         }
         public override bool TileCollideStyle(ref int width, ref int height, ref bool fallThrough, ref Vector2 hitboxCenterFrac)
         {
-            if(CurrentAIState != AIState.FlyFollow)
+            if (CurrentAIState != AIState.FlyFollow)
             {
                 fallThrough = false;// 史莱姆不穿平台
                 return true;
@@ -228,7 +228,7 @@ namespace MortalDao.Content.Projectiles.SummonWeaponsProj.PuresWand
             for (int i = 0; i < Main.maxNPCs; i++)
             {
                 NPC npc = Main.npc[i];
-                if(!npc.CanBeChasedBy(this.Projectile, ignoreDontTakeDamage: true))
+                if (!npc.CanBeChasedBy(this.Projectile, ignoreDontTakeDamage: true))
                 {
                     continue;
                 }
@@ -248,6 +248,7 @@ namespace MortalDao.Content.Projectiles.SummonWeaponsProj.PuresWand
             int index = 0;
             int kingType = ModContent.ProjectileType<Baby_Slime_King>();
             int queenType = ModContent.ProjectileType<Baby_Slime_Queen>();
+
             for (int i = 0; i < Main.maxProjectiles; i++)
             {
                 Projectile p = Main.projectile[i];
@@ -268,14 +269,14 @@ namespace MortalDao.Content.Projectiles.SummonWeaponsProj.PuresWand
         {
             animationTimer++;
             // 根据状态选择动画区间
-            int startFrame = 0,endFrame = 5, speed = 5;
+            int startFrame = 0, endFrame = 4, speed = 5;
             if (CurrentAIState == AIState.FlyFollow)
             {
-                startFrame = 6; endFrame = 11; speed = 8; // 飞行动画快一点
+                startFrame = 6; endFrame = 10; speed = 8; // 飞行动画快一点
             }
-            else if(CurrentAIState == AIState.Idle)
+            else if (CurrentAIState == AIState.Idle)
             {
-                startFrame = 0; endFrame = 5; speed = 5; // 行走/闲置动画慢一点
+                startFrame = 0; endFrame = 4; speed = 5; // 行走/闲置动画慢一点
             }
             if (animationTimer >= speed)
             {

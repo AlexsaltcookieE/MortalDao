@@ -126,6 +126,10 @@ Projectiles: {
 	OverLord_Arrow.DisplayName: Over Lord_ Arrow
 	Black_Hole.DisplayName: Black_ Hole
 	Baby_Slime_King.DisplayName: Baby_ Slime_ King
+	Baby_Slime_Spike.DisplayName: Baby_ Slime_ Spike
+	Baby_Slime_Queen.DisplayName: Baby_ Slime_ Queen
+	Baby_Slime_Gel.DisplayName: Baby_ Slime_ Gel
+	Puer_Baby_Slime.DisplayName: Puer_ Baby_ Slime
 }
 
 Buffs: {

@@ -34,14 +34,41 @@ namespace MortalDao.Content.Items.SummonWeapons
             Item.value = Item.sellPrice(gold: 99);//售价
             Item.UseSound = SoundID.Item44;
             Item.autoReuse = true;
-            Item.shoot = ModContent.ProjectileType<Baby_Slime_King>();//发射宝宝史莱姆
+            Item.shoot = ModContent.ProjectileType<Baby_Slime_Queen>();//发射宝宝史莱姆
             Item.buffType = ModContent.BuffType<RainBowSlime>();
         }
-        public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source,Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+        public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
-            position = Main.MouseWorld;//鼠标位置
-            player.AddBuff(Item.buffType, 300);//史莱姆宝宝
-            var projectile = Projectile.NewProjectileDirect(source, position, Vector2.Zero, type, damage, knockback, player.whoAmI);
+            position = Main.MouseWorld;
+            player.AddBuff(Item.buffType, 300);
+
+            // 获取玩家的 ModPlayer
+            Puer_WandPlayer slimePlayer = player.GetModPlayer<Puer_WandPlayer>();
+
+            // 根据计数器决定召唤哪种仆从
+            int projectileType;
+
+            switch (slimePlayer.slimeSummonCycle)
+            {
+                case 0: // 第一次：Baby_Slime_King
+                    projectileType = ModContent.ProjectileType<Baby_Slime_King>();
+                    break;
+                case 1: // 第二次：Baby_Slime_Queen
+                    projectileType = ModContent.ProjectileType<Baby_Slime_Queen>();
+                    break;
+                case 2:
+                    projectileType = ProjectileID.BabySlime;
+                    break;
+                default:
+                    projectileType = ModContent.ProjectileType<Baby_Slime_King>();
+                    break;
+            }
+
+            // 更新计数器（循环 0->1->2->0...）
+            slimePlayer.slimeSummonCycle = (slimePlayer.slimeSummonCycle + 1) % 3;
+
+            // 生成对应的仆从
+            var projectile = Projectile.NewProjectileDirect(source, position, Vector2.Zero, projectileType, damage, knockback, player.whoAmI);
 
             return false;
         }
