@@ -1,4 +1,5 @@
 using Microsoft.Xna.Framework;
+using MortalDao.Content.Items.Placeables.Ores;
 using MortalDao.Content.Items.SummonItems;
 using MortalDao.Content.Tiles;
 using MortalDao.Content.Tiles.Ore;
@@ -12,7 +13,7 @@ using Terraria.WorldBuilding;
 
 namespace MortalDao.Content.ModSetting
 {
-    public class YINYANGWorldGenarateSystem : ModSystem
+    public class MortalDaoGenarateSystem : ModSystem
     {
         public override void ModifyWorldGenTasks(List<GenPass> tasks, ref double totalWeight)//世界生成
         {
@@ -21,6 +22,7 @@ namespace MortalDao.Content.ModSetting
             if(OresIndex != -1)
             {
                 tasks.Insert(OresIndex + 1, new PassLegacy("MortalDao Ores", GenerateCyan_Fe));
+                tasks.Insert(OresIndex + 2, new PassLegacy("MortalDao Ores", GenerateDownGrade_LingShi));
             }
             int dungeonIndex = tasks.FindIndex(pass => pass.Name.Equals("dungeon",StringComparison.OrdinalIgnoreCase));
             if(dungeonIndex != -1)
@@ -28,11 +30,45 @@ namespace MortalDao.Content.ModSetting
                 tasks.Insert(dungeonIndex + 1, new PassLegacy("MortalDao Dungeon Chests", GenerateBloodyChestsInDungeon));
             }
         }
+        public override void PostWorldGen()
+        {
+            for (int i = 0; i < Main.maxTilesX; i++)
+            {
+                for (int j = 0; j < Main.maxTilesY; j++)
+                {
+                    var t = Main.tile[i, j];
+                    if (t.HasTile && t.TileType == ModContent.TileType<DownGradeLingShi>())
+                    {
+                        DownGradeLingShi.ApplyConnectFrame(i, j);
+                        // 让区块重新承认帧变化（生成期单人可用）
+                        WorldGen.SquareTileFrame(i, j, true);
+                    }
+                }
+            }
+        }
+        private void GenerateDownGrade_LingShi(GenerationProgress progress, GameConfiguration config)
+        {
+            progress.Message = "生成一些带有仙气的矿石";
+            int OreTileType = ModContent.TileType<DownGradeLingShi>();
+            int OreVein = (int)(Main.maxTilesX * Main.maxTilesY * 0.00006f);//矿脉密度
+            //矿脉生成层级
+            int MinLayerY = (int)Main.rockLayer;
+            int MaxLayerY = Main.maxTilesY - 200;
+            //Gen
+            for (int i = 0; i < OreVein; i++)
+            {
+                int x = WorldGen.genRand.Next(0, Main.maxTilesX);
+                int y = WorldGen.genRand.Next(MinLayerY, MaxLayerY);
+                double VeinThickness = WorldGen.genRand.Next(4, 8);
+                int VeinLength = WorldGen.genRand.Next(3, 7);
+                WorldGen.TileRunner(x, y, VeinThickness, VeinLength, OreTileType);
+            }
+        }
         private void GenerateCyan_Fe(GenerationProgress progress, GameConfiguration config)
         {
             progress.Message = "生成一些带有仙气的矿石";
             int OreTileType = ModContent.TileType<Cyan_Fe>();
-            int OreVein = (int)(Main.maxTilesX * Main.maxTilesY * 0.00006f);//矿脉密度
+            int OreVein = (int)(Main.maxTilesX * Main.maxTilesY * 0.00004f);//矿脉密度
             //矿脉生成层级
             int MinLayerY = (int)Main.rockLayer;
             int MaxLayerY = Main.maxTilesY - 200;
@@ -81,9 +117,6 @@ namespace MortalDao.Content.ModSetting
             {
                 int x = dungeonChestPositions[i].X;
                 int y = dungeonChestPositions[i].Y;
-
-                // 最稳方案：直接把已有箱子改成自定义箱子的锁定样式，保留原 chest 数据
-                // 锁定样式 frameX 基准为 36（style 1）
                 bool valid = true;
                 for (int dx = 0; dx < 2; dx++)
                 {

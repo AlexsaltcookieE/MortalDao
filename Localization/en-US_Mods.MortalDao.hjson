@@ -23,7 +23,6 @@ Items: {
 			'''
 			用地狱技术将冰熔炼进玄铁中
 			铁锈令这把剑在暴击时令敌人中毒
-			木和铁
 			'''
 	}
 
@@ -86,23 +85,52 @@ Items: {
 
 	Overlord_Bow: {
 		DisplayName: 霸王弓
-		Tooltip: ""
+		Tooltip: 古代名将项羽所使用的弓，能拉得起这把弓的弓弦的人绝不简单
 	}
 
 	Puers_Slime_Wand: {
-		DisplayName: Puers_ Slime_ Wand
-		Tooltip: ""
+		DisplayName: 普洱的法杖
+		Tooltip:
+			'''
+			-捐赠者物品-
+			左键召唤出仆从
+			右键让国王助你一臂之力1
+			千金的法杖
+			此物品属于普洱
+			'''
+	}
+
+	DownGrade_LingShi: {
+		DisplayName: 下品灵石
+		Tooltip:
+			'''
+			凡间人类交换法宝的货币
+			虽然灵力微弱，但是加以用处，也能发挥极大
+			'''
 	}
 }
 
 NPCs: {
 	Rod.DisplayName: 阴间屏障
-	DARK_EYES.DisplayName: 魔尊之眼
-	Shadow_hand.DisplayName: 贴了符咒的暗影爪
 	Captain_Army_Ghost.DisplayName: 万将魂
-	DarkGaze.DisplayName: Dark Gaze
-	ShadowHand.DisplayName: Shadow Hand
-	GeneralSoul.DisplayName: General Soul
+	DarkGaze.DisplayName: 魔尊之眼
+	ShadowHand.DisplayName: 暗影手
+	GeneralSoul.DisplayName: 万将魂
+
+	The_Second: {
+		DisplayName: The_ Second
+
+		TownNPCMood: {
+			Content: I am content.
+			NoHome: I hate not having a home.
+			FarFromHome: I am too far from home.
+			LoveSpace: I love having so much space.
+			DislikeCrowded: I dislike how crowded I am.
+			HateCrowded: I hate how crowded I am.
+			LikeNPC_Princess: I like {NPCName}.
+			Princess_LovesNPC: I like {NPCName}.
+		}
+	}
 }
 
 Projectiles: {
@@ -117,19 +145,19 @@ Projectiles: {
 	Ghost_Restriction_Ring.DisplayName: 画地为牢
 	Milion_Arrow.DisplayName: 万箭齐发
 	Ghost_Explosion.DisplayName: 魂爆
-	WKey.DisplayName: W Key
-	AKey.DisplayName: A Key
-	DKey.DisplayName: D Key
-	SpaceKey.DisplayName: Space Key
+	AKey.DisplayName: 键盘A
+	DKey.DisplayName: 键盘B
+	SpaceKey.DisplayName: 空格
 	Bow_of_OverLord.DisplayName: 霸王本色
-	OverLord_Bow_Proj.DisplayName: Over Lord_ Bow_ Proj
-	OverLord_Arrow.DisplayName: Over Lord_ Arrow
-	Black_Hole.DisplayName: Black_ Hole
-	Baby_Slime_King.DisplayName: Baby_ Slime_ King
-	Baby_Slime_Spike.DisplayName: Baby_ Slime_ Spike
-	Baby_Slime_Queen.DisplayName: Baby_ Slime_ Queen
-	Baby_Slime_Gel.DisplayName: Baby_ Slime_ Gel
-	Puer_Baby_Slime.DisplayName: Puer_ Baby_ Slime
+	OverLord_Arrow.DisplayName: 霸王箭
+	Black_Hole.DisplayName: 古代漩涡
+	Baby_Slime_King.DisplayName: 史莱姆王子宝宝
+	Baby_Slime_Spike.DisplayName: 史莱姆王子宝宝尖刺
+	Baby_Slime_Queen.DisplayName: 史莱姆公主宝宝
+	Baby_Slime_Gel.DisplayName: 史莱姆公主宝宝凝胶
+	Baby_Slime_Gun.DisplayName: 普洱史莱姆粘液枪
+	Puer_Slime_baby.DisplayName: 普洱史莱姆宝宝
+	Puer_King.DisplayName: 普洱的史莱姆王
 }
 
 Buffs: {
@@ -149,13 +177,13 @@ Buffs: {
 	}
 
 	Unable_Platform: {
-		DisplayName: Unable_ Platform
-		Description: Mods.YINGYANG.Buffs.Unable_Platform.Description
+		DisplayName: 裂空
+		Description: 魔气劈开了空气，令你无法站立在平台上
 	}
 
 	RainBowSlime: {
-		DisplayName: Rain Bow Slime
-		Description: Mods.MortalDao.Buffs.RainBowSlime.Description
+		DisplayName: 一家
+		Description: 你也不想惹怒它们吧（史莱姆之神？）
 	}
 }
 
@@ -168,4 +196,6 @@ Tiles: {
 		MapEntry1: 被封印的染红的暗影木箱
 		Locked: 需要流血的钥匙
 	}
+
+	DownGradeLingShi.MapEntry: Down Grade Ling Shi
 }

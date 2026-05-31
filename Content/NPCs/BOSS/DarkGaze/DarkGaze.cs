@@ -438,14 +438,14 @@ namespace MortalDao.Content.NPCs.BOSS.DarkGaze
         {
             if (Main.expertMode)//专家模式
             {
-                NPC.lifeMax = 37000;
+                NPC.lifeMax = 46000;
                 NPCdamage = 56;
                 NPC.damage = NPCdamage;
                 LaserDamage = 82;
             }
             if (Main.masterMode)//大师模式
             {
-                NPC.lifeMax = 46000;
+                NPC.lifeMax = 56000;
                 NPCdamage = 64;
                 NPC.damage = NPCdamage;
                 LaserDamage = 96;

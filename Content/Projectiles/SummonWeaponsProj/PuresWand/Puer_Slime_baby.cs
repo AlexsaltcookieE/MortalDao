@@ -6,7 +6,7 @@ using Terraria.ModLoader;
 
 namespace MortalDao.Content.Projectiles.SummonWeaponsProj.PuresWand
 {
-    public class Baby_Slime_King : ModProjectile
+    public class Puer_Slime_baby : ModProjectile
     {
         private const float Gravity = 0.3f;
         private const float MaxFallSpeed = 10f;
@@ -32,8 +32,8 @@ namespace MortalDao.Content.Projectiles.SummonWeaponsProj.PuresWand
         }
         public override void SetDefaults()
         {
-            Projectile.width = 36;
-            Projectile.height = 36;
+            Projectile.width = 50;
+            Projectile.height = 24;
             Projectile.friendly = true;
             Projectile.minion = true;
             Projectile.DamageType = DamageClass.Summon;
@@ -85,9 +85,9 @@ namespace MortalDao.Content.Projectiles.SummonWeaponsProj.PuresWand
                 CurrentAIState = AIState.FlyFollow;
             }
             // 优先级3：在玩家附近，进入闲置状态（但不要太近）
-            else if(CurrentAIState == AIState.FlyFollow)    
-             {
-                if (player.Center.Y >= Projectile.Center.Y &&((player.Center.X - Projectile.Center.X) >= 10 || (Projectile.Center.X - player.Center.X) >= 10) && distanceToPlayer < dynamicFollowRange - 20f)
+            else if (CurrentAIState == AIState.FlyFollow)
+            {
+                if (player.Center.Y >= Projectile.Center.Y && ((player.Center.X - Projectile.Center.X) >= 10 || (Projectile.Center.X - player.Center.X) >= 10) && distanceToPlayer < dynamicFollowRange - 20f)
                 {
                     CurrentAIState = AIState.Idle;
                 }
@@ -116,15 +116,15 @@ namespace MortalDao.Content.Projectiles.SummonWeaponsProj.PuresWand
             if (target == null || !target.active)
                 return;
             Vector2 dir = target.Center - Projectile.Center;
-            // 攻击逻辑：每 60 帧发射一次子弹
+            // 攻击逻辑：每 18 帧发射一次子弹
             attackTimer++;
-            if (attackTimer >= 25)
+            if (attackTimer >= 18)
             {
                 attackTimer = 0;
                 if (dir != Vector2.Zero)
                     dir.Normalize();
-                float projectileSpeed = 22f;
-                Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, dir * projectileSpeed, ModContent.ProjectileType<Baby_Slime_Spike>(), Projectile.damage, 1f, Projectile.owner);
+                float projectileSpeed = 25f;
+                Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, dir * projectileSpeed, ModContent.ProjectileType<Baby_Slime_Gun>(),Projectile.damage, 1f, Projectile.owner);
             }
             int total;
             int myIndex = GetMinionIndexAndTotal(out total);
@@ -203,7 +203,7 @@ namespace MortalDao.Content.Projectiles.SummonWeaponsProj.PuresWand
         }
         public override bool TileCollideStyle(ref int width, ref int height, ref bool fallThrough, ref Vector2 hitboxCenterFrac)
         {
-            if(CurrentAIState != AIState.FlyFollow)
+            if (CurrentAIState != AIState.FlyFollow)
             {
                 fallThrough = false;// 史莱姆不穿平台
                 return true;
@@ -227,7 +227,7 @@ namespace MortalDao.Content.Projectiles.SummonWeaponsProj.PuresWand
             for (int i = 0; i < Main.maxNPCs; i++)
             {
                 NPC npc = Main.npc[i];
-                if(!npc.CanBeChasedBy(this.Projectile, ignoreDontTakeDamage: true))
+                if (!npc.CanBeChasedBy(this.Projectile, ignoreDontTakeDamage: true))
                 {
                     continue;
                 }
@@ -248,6 +248,7 @@ namespace MortalDao.Content.Projectiles.SummonWeaponsProj.PuresWand
             int kingType = ModContent.ProjectileType<Baby_Slime_King>();
             int queenType = ModContent.ProjectileType<Baby_Slime_Queen>();
             int PuerType = ModContent.ProjectileType<Puer_Slime_baby>();
+
             for (int i = 0; i < Main.maxProjectiles; i++)
             {
                 Projectile p = Main.projectile[i];
@@ -268,14 +269,14 @@ namespace MortalDao.Content.Projectiles.SummonWeaponsProj.PuresWand
         {
             animationTimer++;
             // 根据状态选择动画区间
-            int startFrame = 0,endFrame = 5, speed = 5;
+            int startFrame = 0, endFrame = 7, speed = 3;
             if (CurrentAIState == AIState.FlyFollow)
             {
                 startFrame = 6; endFrame = 11; speed = 8; // 飞行动画快一点
             }
-            else if(CurrentAIState == AIState.Idle)
+            else if (CurrentAIState == AIState.Idle)
             {
-                startFrame = 0; endFrame = 5; speed = 5; // 行走/闲置动画慢一点
+                startFrame = 0; endFrame = 7; speed = 3; // 行走/闲置动画慢一点
             }
             if (animationTimer >= speed)
             {

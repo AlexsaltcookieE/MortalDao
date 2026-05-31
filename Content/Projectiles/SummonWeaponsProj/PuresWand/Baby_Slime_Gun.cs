@@ -5,9 +5,9 @@ using Terraria.ModLoader;
 
 namespace MortalDao.Content.Projectiles.SummonWeaponsProj.PuresWand
 {
-    public class Baby_Slime_Spike : ModProjectile
+    public class Baby_Slime_Gun : ModProjectile
     {
-        public override string Texture => "Terraria/Images/Projectile_" + ProjectileID.QueenSlimeMinionBlueSpike;
+        public override string Texture => "Terraria/Images/Projectile_" + ProjectileID.SlimeGun;
         public override void SetStaticDefaults()
         {
             // 可选：设置原版弹幕的替代贴图或行为
@@ -22,8 +22,8 @@ namespace MortalDao.Content.Projectiles.SummonWeaponsProj.PuresWand
             Projectile.DamageType = DamageClass.Summon; // 关键：设为召唤伤害
             Projectile.penetrate = 1;       // 击中敌人后消失
             Projectile.timeLeft = 360;       // 存活时间（2秒）
-            Projectile.aiStyle = 1;
-            AIType = ProjectileID.QueenSlimeMinionBlueSpike;
+            Projectile.aiStyle = 60;          // 使用原版木箭的AI（直线飞行+重力）
+            AIType = ProjectileID.SlimeGun; // 模仿木箭的行为
             Projectile.ignoreWater = true;
         }
 

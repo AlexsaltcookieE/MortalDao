@@ -20,7 +20,7 @@ namespace MortalDao.Content.Items.SummonWeapons
         {
             Item.rare = ItemRarityID.Expert;
             //面板
-            Item.damage = 7;//伤害
+            Item.damage = 36;//伤害
             Item.DamageType = DamageClass.Summon;//召唤类型
             Item.mana = 10;//耗蓝
             Item.useTime = 15;//攻速
@@ -37,11 +37,18 @@ namespace MortalDao.Content.Items.SummonWeapons
             Item.shoot = ModContent.ProjectileType<Baby_Slime_Queen>();//发射宝宝史莱姆
             Item.buffType = ModContent.BuffType<RainBowSlime>();
         }
+        public override bool AltFunctionUse(Player player)
+        {
+            return true; // 允许右键
+        }
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
-            position = Main.MouseWorld;
+            if (player.altFunctionUse == 2)
+            {
+                Projectile.NewProjectileDirect(source,Main.MouseWorld,Vector2.Zero,ModContent.ProjectileType<Puer_King>(),damage,knockback,player.whoAmI);
+                return false;
+            }
             player.AddBuff(Item.buffType, 300);
-
             // 获取玩家的 ModPlayer
             Puer_WandPlayer slimePlayer = player.GetModPlayer<Puer_WandPlayer>();
 
@@ -57,7 +64,7 @@ namespace MortalDao.Content.Items.SummonWeapons
                     projectileType = ModContent.ProjectileType<Baby_Slime_Queen>();
                     break;
                 case 2:
-                    projectileType = ProjectileID.BabySlime;
+                    projectileType = ModContent.ProjectileType<Puer_Slime_baby>();
                     break;
                 default:
                     projectileType = ModContent.ProjectileType<Baby_Slime_King>();

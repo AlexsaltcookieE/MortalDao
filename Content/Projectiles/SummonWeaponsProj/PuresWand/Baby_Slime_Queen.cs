@@ -32,7 +32,6 @@ namespace MortalDao.Content.Projectiles.SummonWeaponsProj.PuresWand
         }
         public override void SetDefaults()
         {
-            Projectile.damage = 10;
             Projectile.width = 58;
             Projectile.height = 36;
             Projectile.friendly = true;
@@ -124,7 +123,7 @@ namespace MortalDao.Content.Projectiles.SummonWeaponsProj.PuresWand
                 attackTimer = 0;
                 if (dir != Vector2.Zero)
                     dir.Normalize();
-                float projectileSpeed = 18f;
+                float projectileSpeed = 30f;
                 Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, dir * projectileSpeed, ModContent.ProjectileType<Baby_Slime_Gel>(), Projectile.damage, 1f, Projectile.owner);
             }
             int total;
@@ -248,13 +247,14 @@ namespace MortalDao.Content.Projectiles.SummonWeaponsProj.PuresWand
             int index = 0;
             int kingType = ModContent.ProjectileType<Baby_Slime_King>();
             int queenType = ModContent.ProjectileType<Baby_Slime_Queen>();
+            int PuerType = ModContent.ProjectileType<Puer_Slime_baby>();
 
             for (int i = 0; i < Main.maxProjectiles; i++)
             {
                 Projectile p = Main.projectile[i];
                 if (!p.active || p.owner != owner)
                     continue;
-                if (p.type == kingType || p.type == queenType)
+                if (p.type == kingType || p.type == queenType || p.type == PuerType)
                 {
                     if (p.whoAmI == Projectile.whoAmI)
                     {
