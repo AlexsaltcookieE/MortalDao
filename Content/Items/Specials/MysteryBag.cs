@@ -1,4 +1,5 @@
 ﻿using MortalDao.Content.Items.MeleeWeapons;
+using MortalDao.Content.Items.Specials.Document;
 using Terraria;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
@@ -22,7 +23,7 @@ namespace MortalDao.Content.Items.Specials
             Item.consumable = true;//消耗品
             Item.useStyle = ItemUseStyleID.Swing;
             Item.noMelee = true;
-
+            Item.value = 30;
         }
         public override bool CanRightClick()
         {
@@ -31,6 +32,7 @@ namespace MortalDao.Content.Items.Specials
         public override void ModifyItemLoot(ItemLoot itemLoot)
         {
             itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<RoughPeachWoodSword>()));//战利品
+            itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<OldPlayerDiary>()));
         }
 
         

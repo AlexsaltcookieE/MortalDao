@@ -1,8 +1,13 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Input;
+using MortalDao.Content.Items.Specials;
+using MortalDao.Content.ModSetting.Business;
+using MortalDao.Content.ModSetting.UI;
 using MortalDao.Content.ModSetting.UI.The_Sencond;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.ModLoader.Default;
 
 namespace MortalDao.Content.NPCs.TownNPCs
 {
@@ -14,6 +19,7 @@ namespace MortalDao.Content.NPCs.TownNPCs
         // ---------- 贴图路径 ----------
         // 对应 MyMod/Content/NPCs/The_Second.png
         public override string Texture => "MortalDao/Content/NPCs/TownNPCs/The_Second";
+        private const string ShopName = "灵石交易";
 
         //对话
         public override void SetStaticDefaults()
@@ -39,22 +45,18 @@ namespace MortalDao.Content.NPCs.TownNPCs
         // ---------- 运行时属性 ----------
         public override void SetDefaults()
         {
+            NPC.homeless = true;
             NPC.townNPC = true;   // ★ 标记为城镇NPC（住宅系统认它）
             NPC.friendly = true;  // 不会伤玩家
             NPC.width = 18;      // 碰撞/交互命中框 宽
             NPC.height = 40;      // 碰撞/交互命中框 高
-            NPC.aiStyle = NPCAIStyleID.Passive; // = 7 原版城镇被动AI
-                                                // 包含：回家/找椅子坐下/躲避怪物/跟随玩家对话
+            NPC.aiStyle = NPCAIStyleID.Passive; // = 7 原版城镇被动AI              // 包含：回家/找椅子坐下/躲避怪物/跟随玩家对话
             NPC.damage = 0;
             NPC.defense = 15;
             NPC.lifeMax = 250;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
             NPC.knockBackResist = 0.5f;
-            // ★ 偷懒神器：直接复用原版某NPC的"帧切分规则"
-            //   这样你哪怕只做了占位色块贴图，动画也不会崩
-            //   等你自己贴图画好了，把这行删掉就行
-            AnimationType = NPCID.Guide;
         }
         // ---------- 什么时候允许入住 ----------
         public override bool CanTownNPCSpawn(int numTownNPCs)
@@ -68,7 +70,7 @@ namespace MortalDao.Content.NPCs.TownNPCs
         // ---------- 对话 ----------
         public override string GetChat()
         {
-            return Main.npcChatText = GetCurrentLine();
+            return GetCurrentLine();
         }
         private string GetCurrentLine()
         {
@@ -80,23 +82,44 @@ namespace MortalDao.Content.NPCs.TownNPCs
                 2 => "客官可知，灵石可换我口袋宝物",
                 3 => "传闻万年前，此间还无人类",
                 4 => "吾相信天地神明会好好保护我们",
+                5 => "客官丢了重要的东西吗，吾这里捡到了了",
                 _ => "客官，需要来一壶好酒吗",
             };
         }
         // ---------- 对话按钮 ----------
         public override void SetChatButtons(ref string button, ref string button2)
         {
-            button = "聊天";
+            button = ShopName;
+            button2 = "聊天";
         }
-        public override void OnChatButtonClicked(bool firstButton, ref string shopName) 
+        public override void OnChatButtonClicked(bool firstButton, ref string shopName)
         {
             if (firstButton)
             {
+                // 原版商店流程：给它一个 shopName，后续 ModifyActiveShop 会接管
+                shopName = ShopName;
+            }
+            else
+            {
+                // 你的聊天UI
                 Main.npcChatText = "";
                 Main.npcChatFocus1 = false;
-                TheSencondDialogueSystem.Open(); // ✅
+                Player player = Main.LocalPlayer;
+                if (Main.LocalPlayer.active && Main.myPlayer == player.whoAmI)
+                {
+                    TheSencondDialogueSystem.Open();
+                }
             }
-            return;
+        }
+        public override void AddShops()
+        {
+            var shop = new NPCShop(Type, ShopName);
+            Item MysteryBag = new Item(ModContent.ItemType<MysteryBag>());
+            MysteryBag.value = MysteryBag.value;
+            MysteryBag.shopSpecialCurrency = DownGradeLingShiBusiness.CurrencyID; // 绑定灵石
+            shop.Add(MysteryBag, Condition.NpcIsPresent(ModContent.NPCType<The_Second>()));
+            //锦囊
+            shop.Register();
         }
         public override void OnKill()
         {

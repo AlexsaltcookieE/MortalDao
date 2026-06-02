@@ -108,6 +108,11 @@ Items: {
 			虽然灵力微弱，但是加以用处，也能发挥极大
 			'''
 	}
+
+	OldPlayerDiary: {
+		DisplayName: 卷宗#1
+		Tooltip: 像是某卷卷宗的一部分
+	}
 }
 
 NPCs: {
@@ -197,5 +202,5 @@ Tiles: {
 		Locked: 需要流血的钥匙
 	}
 
-	DownGradeLingShi.MapEntry: Down Grade Ling Shi
+	DownGradeLingShi.MapEntry: 下品灵石
 }

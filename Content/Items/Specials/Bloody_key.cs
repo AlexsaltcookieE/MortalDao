@@ -12,7 +12,7 @@ namespace MortalDao.Content.Items.Specials
             Item.height = 20;
             Item.maxStack = Item.CommonMaxStack;
             Item.rare = ItemRarityID.Red;
-            Item.value = Item.sellPrice(silver: 50);
+            Item.value = 10;
         }
     }
 }

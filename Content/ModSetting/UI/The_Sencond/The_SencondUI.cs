@@ -11,10 +11,10 @@ namespace MortalDao.Content.ModSetting.UI.The_Sencond
         {
             Main.blockInput = true; // 锁住世界点击（可选但强烈建议）
         }
-
         public override void OnDeactivate()
         {
             Main.blockInput = false;
+            Main.player[Main.myPlayer].mouseInterface = false;
         }
         private System.Collections.Generic.List<DialogueNode> _stack = new();
         private UIPanel _panel;
@@ -32,18 +32,15 @@ namespace MortalDao.Content.ModSetting.UI.The_Sencond
         {
             RemoveAllChildren();
             _panel = null;
-
             if (_stack.Count == 0) return;
-
             var node = _stack[_stack.Count - 1]; // 修正：获取栈顶节点
-
             // ── 半屏底框 ──────────────────────────────────────
             _panel = new UIPanel();
             // 位置：底部居中，宽度 ~800，高度 ~220
-            _panel.Width.Set(800, 0f);
-            _panel.Height.Set(240, 0f);
-            _panel.Left.Set(-400, 0.5f);   // 水平居中
-            _panel.Top.Set(-260, 1f);       // 底部往上
+            _panel.Width.Set(1000, 0f);
+            _panel.Height.Set(350, 0f);
+            _panel.Left.Set(-500, 0.5f);   // 水平居中
+            _panel.Top.Set(-400, 1f);       // 底部往上
             Append(_panel);
 
             // ── 台词正文 ──────────────────────────────────────
@@ -61,26 +58,25 @@ namespace MortalDao.Content.ModSetting.UI.The_Sencond
             _panel.Append(text);
 
             // ── 选项按钮 ──────────────────────────────────────
-            int btnY = 110;
+            int btnY = 180;
             foreach (var opt in node.Options)
             {
                 if (opt.Condition != null && !opt.Condition()) continue;
 
                 var btn = new UIPanel();
+                btn.HAlign = 0.5f;
                 btn.Width.Set(600, 0f);
                 btn.Height.Set(36, 0f);
                 btn.Top.Set(btnY, 0f);
-                btn.Left.Set(80, 0f);
+                btn.Left.Set(0, 0f);
                 var lbl = new UIText(opt.Label, 0.85f);
                 lbl.HAlign = 0.5f;
                 lbl.VAlign = 0.5f;
                 btn.Append(lbl);
-
                 btn.OnLeftClick += (_, __) =>
                 {
                     opt.OnSelect?.Invoke(this);
                 };
-
                 _panel.Append(btn);
                 btnY += 44;
             }

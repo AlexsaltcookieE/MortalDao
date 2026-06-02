@@ -3,36 +3,40 @@
   "WorkspaceRootPath": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\modsetting\\ui\\the_sencond\\the_senconddialogue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\modsetting\\ui\\the_sencond\\the_senconddialogue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\modsetting\\questsystem\\globaltasksystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\modsetting\\questsystem\\globaltasksystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\modsetting\\questsystem\\tasksavesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\modsetting\\questsystem\\tasksavesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\modsetting\\ui\\the_sencond\\the_sencondui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\modsetting\\ui\\the_sencond\\the_sencondui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\modsetting\\ui\\the_sencond\\the_senconddialoguesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\modsetting\\ui\\the_sencond\\the_senconddialoguesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\mortaldao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:mortaldao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\modsetting\\ui\\the_sencond\\the_senconddialogue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\modsetting\\ui\\the_sencond\\the_senconddialogue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\modsetting\\questsystem\\taskdefinition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\modsetting\\questsystem\\taskdefinition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\modsetting\\ui\\documentui\\oldplayerdiaryui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\modsetting\\ui\\documentui\\oldplayerdiaryui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\npcs\\townnpcs\\the_second.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\npcs\\townnpcs\\the_second.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\items\\specials\\mysterybag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\items\\specials\\mysterybag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\modsetting\\worldgen\\mortaldaoworldgen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\modsetting\\worldgen\\mortaldaoworldgen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\tiles\\ore\\downgradelingshi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\tiles\\ore\\downgradelingshi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\tiles\\ore\\downgradelingshi.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
-      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\tiles\\ore\\downgradelingshi.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\modsetting\\ui\\documentui\\oldplayerdiaryuisystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\modsetting\\ui\\documentui\\oldplayerdiaryuisystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,106 +46,125 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "The_SencondDialogue.cs",
-              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\UI\\The_Sencond\\The_SencondDialogue.cs",
-              "RelativeDocumentMoniker": "Content\\ModSetting\\UI\\The_Sencond\\The_SencondDialogue.cs",
-              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\UI\\The_Sencond\\The_SencondDialogue.cs",
-              "RelativeToolTip": "Content\\ModSetting\\UI\\The_Sencond\\The_SencondDialogue.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAuwEYAAAAeAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "OldPlayerDiaryUI.cs",
+              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\UI\\DocumentUI\\OldPlayerDiaryUI.cs",
+              "RelativeDocumentMoniker": "Content\\ModSetting\\UI\\DocumentUI\\OldPlayerDiaryUI.cs",
+              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\UI\\DocumentUI\\OldPlayerDiaryUI.cs",
+              "RelativeToolTip": "Content\\ModSetting\\UI\\DocumentUI\\OldPlayerDiaryUI.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAQwCUAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-31T09:25:37.704Z",
+              "WhenOpened": "2026-06-01T11:28:47.129Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "The_SencondDialogueSystem.cs",
-              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\UI\\The_Sencond\\The_SencondDialogueSystem.cs",
-              "RelativeDocumentMoniker": "Content\\ModSetting\\UI\\The_Sencond\\The_SencondDialogueSystem.cs",
-              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\UI\\The_Sencond\\The_SencondDialogueSystem.cs",
-              "RelativeToolTip": "Content\\ModSetting\\UI\\The_Sencond\\The_SencondDialogueSystem.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAQwB0AAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-31T09:18:13.798Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "The_SencondUI.cs",
-              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\UI\\The_Sencond\\The_SencondUI.cs",
-              "RelativeDocumentMoniker": "Content\\ModSetting\\UI\\The_Sencond\\The_SencondUI.cs",
-              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\UI\\The_Sencond\\The_SencondUI.cs",
-              "RelativeToolTip": "Content\\ModSetting\\UI\\The_Sencond\\The_SencondUI.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAADUAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-31T09:15:23.502Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "The_Second.cs",
               "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\NPCs\\TownNPCs\\The_Second.cs",
               "RelativeDocumentMoniker": "Content\\NPCs\\TownNPCs\\The_Second.cs",
               "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\NPCs\\TownNPCs\\The_Second.cs",
               "RelativeToolTip": "Content\\NPCs\\TownNPCs\\The_Second.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAYwFwAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAC8AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-31T05:43:34.215Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MysteryBag.cs",
-              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Items\\Specials\\MysteryBag.cs",
-              "RelativeDocumentMoniker": "Content\\Items\\Specials\\MysteryBag.cs",
-              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Items\\Specials\\MysteryBag.cs",
-              "RelativeToolTip": "Content\\Items\\Specials\\MysteryBag.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAIwAsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-30T10:34:01.184Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "DownGradeLingShi.png - PNG [70x70, 32 \u4F4D, PNG]",
-              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Tiles\\Ore\\DownGradeLingShi.png",
-              "RelativeDocumentMoniker": "Content\\Tiles\\Ore\\DownGradeLingShi.png",
-              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Tiles\\Ore\\DownGradeLingShi.png - PNG [70x70, 32 \u4F4D, PNG]",
-              "RelativeToolTip": "Content\\Tiles\\Ore\\DownGradeLingShi.png - PNG [70x70, 32 \u4F4D, PNG]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2026-05-30T09:41:21.783Z",
-              "EditorCaption": " - PNG [70x70, 32 \u4F4D, PNG]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DownGradeLingShi.cs",
-              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Tiles\\Ore\\DownGradeLingShi.cs",
-              "RelativeDocumentMoniker": "Content\\Tiles\\Ore\\DownGradeLingShi.cs",
-              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Tiles\\Ore\\DownGradeLingShi.cs",
-              "RelativeToolTip": "Content\\Tiles\\Ore\\DownGradeLingShi.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAxwA8AAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-30T09:38:16.656Z"
+              "WhenOpened": "2026-06-02T10:43:57.531Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "MortalDaoWorldGen.cs",
-              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\WorldGen\\MortalDaoWorldGen.cs",
-              "RelativeDocumentMoniker": "Content\\ModSetting\\WorldGen\\MortalDaoWorldGen.cs",
-              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\WorldGen\\MortalDaoWorldGen.cs",
-              "RelativeToolTip": "Content\\ModSetting\\WorldGen\\MortalDaoWorldGen.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAIwEoAAAARAAAAAAAAAA==",
+              "Title": "TaskDefinition.cs",
+              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\QuestSystem\\TaskDefinition.cs",
+              "RelativeDocumentMoniker": "Content\\ModSetting\\QuestSystem\\TaskDefinition.cs",
+              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\QuestSystem\\TaskDefinition.cs",
+              "RelativeToolTip": "Content\\ModSetting\\QuestSystem\\TaskDefinition.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAwFYAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-30T04:53:35.055Z"
+              "WhenOpened": "2026-06-02T08:42:10.207Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "The_SencondDialogue.cs",
+              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\UI\\The_Sencond\\The_SencondDialogue.cs",
+              "RelativeDocumentMoniker": "Content\\ModSetting\\UI\\The_Sencond\\The_SencondDialogue.cs",
+              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\UI\\The_Sencond\\The_SencondDialogue.cs",
+              "RelativeToolTip": "Content\\ModSetting\\UI\\The_Sencond\\The_SencondDialogue.cs",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAAACUAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T08:31:18.757Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GlobalTaskSystem.cs",
+              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\QuestSystem\\GlobalTaskSystem.cs",
+              "RelativeDocumentMoniker": "Content\\ModSetting\\QuestSystem\\GlobalTaskSystem.cs",
+              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\QuestSystem\\GlobalTaskSystem.cs",
+              "RelativeToolTip": "Content\\ModSetting\\QuestSystem\\GlobalTaskSystem.cs",
+              "ViewState": "AgIAAMYAAAAAAAAAAAAAANgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T15:51:16.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TaskSaveSystem.cs",
+              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\QuestSystem\\TaskSaveSystem.cs",
+              "RelativeDocumentMoniker": "Content\\ModSetting\\QuestSystem\\TaskSaveSystem.cs",
+              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\QuestSystem\\TaskSaveSystem.cs",
+              "RelativeToolTip": "Content\\ModSetting\\QuestSystem\\TaskSaveSystem.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAApwEgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T07:54:43.031Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "The_SencondUI.cs",
+              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\UI\\The_Sencond\\The_SencondUI.cs",
+              "RelativeDocumentMoniker": "Content\\ModSetting\\UI\\The_Sencond\\The_SencondUI.cs",
+              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\UI\\The_Sencond\\The_SencondUI.cs",
+              "RelativeToolTip": "Content\\ModSetting\\UI\\The_Sencond\\The_SencondUI.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAiwB8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T15:44:15.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MortalDao.cs",
+              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\MortalDao.cs",
+              "RelativeDocumentMoniker": "MortalDao.cs",
+              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\MortalDao.cs",
+              "RelativeToolTip": "MortalDao.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAIwCYAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T15:43:21.808Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "OldPlayerDiaryUISystem.cs",
+              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\UI\\DocumentUI\\OldPlayerDiaryUISystem.cs",
+              "RelativeDocumentMoniker": "Content\\ModSetting\\UI\\DocumentUI\\OldPlayerDiaryUISystem.cs",
+              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\UI\\DocumentUI\\OldPlayerDiaryUISystem.cs",
+              "RelativeToolTip": "Content\\ModSetting\\UI\\DocumentUI\\OldPlayerDiaryUISystem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T12:25:05.723Z",
+              "EditorCaption": ""
             }
           ]
         }
