@@ -78,43 +78,6 @@ namespace MortalDao.Content.ModSetting.QuestSystem
             // ⚠ 注意：这里“不”去碰 GlobalTaskStates
         }
 
-        //static GlobalTaskSystem()
-        //{
-        //    InitTask1();
-        //}
-        //public static void Load()
-        //{
-        //    InitTask1();
-        //}
-        //public static void InitTask1()
-        //{
-        //    int DownGrade_LingShi_ID = ModContent.ItemType<DownGrade_LingShi>();
-        //    if (!AllTasks.ContainsKey(1))
-        //    {
-        //        RegisterTask(new TaskDefinition
-        //        {
-        //            ID = 1,
-        //            Name = "小二的家",
-        //            Description = "帮小二找一间房间住下",
-        //            Requirements =
-        //        {
-        //            new CheckNPCHouseRequirement {NpcID = ModContent.NPCType<The_Second>()}
-        //        },
-        //            Rewards =
-        //        {
-
-        //            new TaskReward{ItemID = ModContent.ItemType<DownGrade_LingShi>(), Stack = 10}
-        //        }
-        //        });
-        //    }
-        //}
-        //public static void RegisterTask(TaskDefinition task)
-        //{
-        //    AllTasks[task.ID] = task;
-        //    // 不直接覆写，只在不存在时设默认值
-        //    if (!GlobalTaskStates.ContainsKey(task.ID))
-        //        GlobalTaskStates[task.ID] = false;
-        //}
         public static void CompleteTask(int taskId)
         {
             GlobalTaskStates[taskId] = true;
@@ -171,13 +134,13 @@ namespace MortalDao.Content.ModSetting.QuestSystem
                 GiveRewardsToAllPlayers(taskId);
                 return;
             }
-
             if (Main.netMode == NetmodeID.MultiplayerClient)
             {
                 ModPacket packet = ModContent.GetInstance<MortalDao>().GetPacket();
                 packet.Write((byte)PacketType.RequestCompleteTask);
                 packet.Write(taskId);
                 packet.Send();
+                GiveRewardsToAllPlayers(taskId);
             }
         }
         private static void SendTaskFailMessage(int toWhoAmI)
@@ -250,26 +213,6 @@ namespace MortalDao.Content.ModSetting.QuestSystem
                 modPlayer.CompletedTasks.Add(taskId);
             }
         }
-        //private static void GiveRewardsToAllPlayers(int taskId)
-        //{
-        //    var task = AllTasks[taskId];
-
-        //    for (int i = 0; i < Main.maxPlayers; i++)
-        //    {
-        //        Player player = Main.player[i];
-        //        if (player.active)
-        //        {
-        //            foreach (var reward in task.Rewards)
-        //            {
-        //                player.QuickSpawnItem(player.GetSource_GiftOrReward(), reward.ItemID, reward.Stack);
-        //            }
-
-        //            // 标记玩家已完成此任务
-        //            var modPlayer = player.GetModPlayer<TaskModPlayer>();
-        //            modPlayer.CompletedTasks.Add(taskId);
-        //        }
-        //    }
-        //}
         public static bool CanCompleteTask(int taskId)
         {
             if (!GlobalTasks.TryGetValue(taskId, out var status))

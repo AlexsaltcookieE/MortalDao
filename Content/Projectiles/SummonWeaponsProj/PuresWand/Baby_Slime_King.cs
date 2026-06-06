@@ -185,9 +185,6 @@ namespace MortalDao.Content.Projectiles.SummonWeaponsProj.PuresWand
             Projectile.velocity = Vector2.Lerp(Projectile.velocity, dir * speed, 0.1f);
             Projectile.rotation = dir.ToRotation() + MathHelper.PiOver2;
         }
-        private void SwitchState(Player player)
-        {
-        }
         private void ApplyGravityAndPhysics()
         {
             // 只有在没有强力向上速度时才受重力影响（防止飞行时一直下坠）

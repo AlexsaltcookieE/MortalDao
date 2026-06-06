@@ -14,12 +14,11 @@ namespace MortalDao
 	{
         public override void Load()
         {
-            //GlobalTaskSystem.Load();   // ✅ 加这一行
-            //Main.NewText("✅ MortalDao 模组已加载");
+            
         }
         public override void HandlePacket(BinaryReader reader, int whoAmI)
         {
-            //PacketType type = (PacketType)reader.ReadByte();
+            //数据包管理
             byte raw = reader.ReadByte();
             ModContent.GetInstance<MortalDao>().Logger.Info($"[HandlePacket] raw={raw}");
             PacketType type = (PacketType)raw;
@@ -46,6 +45,18 @@ namespace MortalDao
 
                     // 更新UI
                     Main.NewText($"任务 {GlobalTaskSystem.AllTasks[completedTaskId].Name} 已完成！", Color.Green);
+                    break;
+                case PacketType.SyncPlayerTask:
+                    int targetPlayer = reader.ReadInt32();
+                    // 向目标玩家发送所有已存在的任务状态
+                    foreach (var kv in GlobalTaskSystem.GlobalTasks)
+                    {
+                        ModPacket syncPacket = ModContent.GetInstance<MortalDao>().GetPacket();
+                        syncPacket.Write((byte)PacketType.SyncTask);
+                        syncPacket.Write(kv.Key);
+                        syncPacket.Write((byte)kv.Value);
+                        syncPacket.Send(targetPlayer, -1);
+                    }
                     break;
             }
         }

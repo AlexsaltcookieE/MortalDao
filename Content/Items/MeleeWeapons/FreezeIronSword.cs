@@ -26,6 +26,7 @@ namespace MortalDao.Content.Items.MeleeWeapons
             Item.UseSound = SoundID.Item1;
             Item.autoReuse = true;//自动挥舞
             Item.scale = 2f;
+            Item.material = true;
         }
         public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
         {

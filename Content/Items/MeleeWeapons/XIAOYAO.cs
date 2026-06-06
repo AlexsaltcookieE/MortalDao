@@ -5,6 +5,7 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using MortalDao.Content.Items.Placeables.Ores;
 
 namespace MortalDao.Content.Items.MeleeWeapons
 {
@@ -36,6 +37,7 @@ namespace MortalDao.Content.Items.MeleeWeapons
             Recipe recipe = CreateRecipe();
             recipe.AddIngredient(ModContent.ItemType<FreezeIronSword>(),1);
             recipe.AddIngredient(ModContent.ItemType<RoughPeachWoodSword>(), 1);
+            recipe.AddIngredient(ModContent.ItemType<DownGrade_LingShi>(), 20);
 
             recipe.Register();
         }
@@ -54,11 +56,6 @@ namespace MortalDao.Content.Items.MeleeWeapons
 
             velocity.Normalize();
             velocity *= Item.shootSpeed;
-        }
-
-        private void Debug(int iorW)
-        {
-            throw new NotImplementedException();
         }
     }
 }

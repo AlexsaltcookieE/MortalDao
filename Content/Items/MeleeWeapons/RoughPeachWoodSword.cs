@@ -25,6 +25,7 @@ namespace MortalDao.Content.Items.MeleeWeapons
             Item.UseSound = SoundID.Item1;
             Item.autoReuse = true;//自动挥舞
             Item.scale = 1.5f;
+            Item.material = true;
         }
     }
 }

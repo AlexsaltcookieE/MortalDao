@@ -20,7 +20,7 @@ namespace MortalDao.Content.Items.Placeables.Ores
             Item.consumable = true;
             Item.rare = ItemRarityID.Cyan;
             Item.createTile = ModContent.TileType<Cyan_Fe>();
-            
+            Item.material = true;
         }
     }
 }

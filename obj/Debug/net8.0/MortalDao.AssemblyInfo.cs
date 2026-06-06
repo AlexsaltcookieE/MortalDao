@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MortalDao")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b6b0e0191451a8ae0b3fe2230709a47e5417421a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+106a9db9ef262cccdbeadb7f3f8f134bbe9fa7f8")]
 [assembly: System.Reflection.AssemblyProductAttribute("MortalDao")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MortalDao")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

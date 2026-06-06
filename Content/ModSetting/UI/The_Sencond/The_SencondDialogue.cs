@@ -136,7 +136,7 @@ namespace MortalDao.Content.ModSetting.UI.The_Sencond
                                // 简化写法：
                 var thanksNode = new DialogueNode("还行吧，虽然有点破旧，但总比露宿街头强。");
                 thanksNode.Options.Add(new DialogueOption("（离开）", ui2 => TheSencondDialogueSystem.Close()));
-                ui.PushNode(thanksNode);
+                ui.PopNode();
             }, () => 
             {
                 bool can = GlobalTaskSystem.CanCompleteTask(1);
@@ -151,4 +151,5 @@ namespace MortalDao.Content.ModSetting.UI.The_Sencond
             return root;
         }
     }
+
 }

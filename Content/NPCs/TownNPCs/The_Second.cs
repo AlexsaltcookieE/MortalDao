@@ -27,11 +27,11 @@ namespace MortalDao.Content.NPCs.TownNPCs
             // ★ 这行必须跟你 LazyNPC.png 的实际帧数一致！
             // 如果你直接拿原版向导/镇民贴图改：一般是 25 帧（0~24）
             // 如果你自己画了一套：量一下 (总高 ÷ 单帧高) = 填这里
-            Main.npcFrameCount[Type] = 17;
+            Main.npcFrameCount[Type] = 21;
             // ---- 下面这组是城镇NPC"坐下/闲聊/社交"所需的额外帧区间 ----
             // 大多数城镇NPC模板：前 16 帧是站立+行走，后 9 帧是坐下等
             // 你如果不想深究：照抄就好，等你换自己的贴图再调
-            NPCID.Sets.ExtraFramesCount[Type] = 1;     // 非行走的"额外"帧数
+            NPCID.Sets.ExtraFramesCount[Type] = 5;     // 非行走的"额外"帧数
             NPCID.Sets.AttackFrameCount[Type] = 0;     // 我们不攻击 → 攻击帧数 0
             NPCID.Sets.DangerDetectRange[Type] = 0;    // 不索敌
             NPCID.Sets.AttackType[Type] = -1;           // 无攻击类型
@@ -39,7 +39,6 @@ namespace MortalDao.Content.NPCs.TownNPCs
             NPCID.Sets.AttackAverageChance[Type] = 0;
             NPCID.Sets.FaceEmote[Type] = 0;         // 如果你NPC戴派对帽时帽子位置不对，调这个偏移：
             NPCID.Sets.HatOffsetY[Type] = 0;
-            NPCID.Sets.NPCFramingGroup[Type] = -1; // 不参与NPC社交分组
         }
 
         // ---------- 运行时属性 ----------
@@ -57,6 +56,7 @@ namespace MortalDao.Content.NPCs.TownNPCs
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
             NPC.knockBackResist = 0.5f;
+            AnimationType = NPCID.Guide;
         }
         // ---------- 什么时候允许入住 ----------
         public override bool CanTownNPCSpawn(int numTownNPCs)

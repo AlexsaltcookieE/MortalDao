@@ -14,14 +14,17 @@ namespace MortalDao.Content.ModSetting.QuestSystem
 
         // 存储已完成的任务
         public HashSet<int> CompletedTasks = new();
-
-        //public override void OnKillNPC(NPC npc,)
-        //{
-        //    if (!KillCounts.ContainsKey(npc.type))
-        //        KillCounts[npc.type] = 0;
-        //    KillCounts[npc.type]++;
-        //}
-
+        public override void OnEnterWorld()
+        {
+            if (Main.netMode == NetmodeID.MultiplayerClient)
+            {
+                // 向服务器请求同步所有任务状态
+                ModPacket packet = ModContent.GetInstance<MortalDao>().GetPacket();
+                packet.Write((byte)GlobalTaskSystem.PacketType.SyncPlayerTask);
+                packet.Write(Player.whoAmI);
+                packet.Send();
+            }
+        }
         public override void SyncPlayer(int toWho, int fromWho, bool newPlayer)
         {
             // 同步任务进度

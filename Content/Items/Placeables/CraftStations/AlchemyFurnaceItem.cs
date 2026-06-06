@@ -1,3 +1,4 @@
+using MortalDao.Content.Items.Placeables.Ores;
 using MortalDao.Content.Tiles.CraftStation;
 using Terraria;
 using Terraria.ID;
@@ -26,6 +27,7 @@ namespace MortalDao.Content.Items.Placeables.CraftStations
 				.AddIngredient(ItemID.CopperBar, 30)
                 .AddIngredient(ItemID.IronBar, 10)
                 .AddIngredient(ItemID.LavaBucket, 3)
+				.AddIngredient(ModContent.ItemType<DownGrade_LingShi>(),20)
 				.Register();
 		}
 	}

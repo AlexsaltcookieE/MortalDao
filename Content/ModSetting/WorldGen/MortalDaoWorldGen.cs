@@ -2,13 +2,16 @@ using Microsoft.Xna.Framework;
 using MortalDao.Content.Items.Placeables.Ores;
 using MortalDao.Content.Items.SummonItems;
 using MortalDao.Content.ModSetting.UI;
+using MortalDao.Content.NPCs.TownNPCs;
 using MortalDao.Content.Tiles;
 using MortalDao.Content.Tiles.Ore;
 using System;
 using System.Collections.Generic;
 using Terraria;
+using Terraria.DataStructures;
 using Terraria.GameContent.Generation;
 using Terraria.GameContent.UI;
+using Terraria.ID;
 using Terraria.IO;
 using Terraria.ModLoader;
 using Terraria.WorldBuilding;
@@ -47,6 +50,8 @@ namespace MortalDao.Content.ModSetting
                     }
                 }
             }
+            //初始NPC
+            SpawnThe_Second();
         }
         private void GenerateDownGrade_LingShi(GenerationProgress progress, GameConfiguration config)
         {
@@ -155,6 +160,31 @@ namespace MortalDao.Content.ModSetting
             }
             BChest.item[0].SetDefaults(ModContent.ItemType<SummonDark_eye>());
             Mod.Logger.Info($"[MortalDao] Dungeon bloody chest gen: placed {placed}/{targetCount}, scanned {scanned} chests");
+        }
+        public void SpawnThe_Second()
+        {
+            bool npcExists = false;
+            for (int i = 0; i < Main.maxNPCs; i++)
+            {
+                if (Main.npc[i].active && Main.npc[i].type == ModContent.NPCType<The_Second>())
+                {
+                    npcExists = true;
+                    break;
+                }
+            }
+            if (!npcExists)
+            {
+                int spawnX = Main.spawnTileX * 16 + 8; // 出生点X坐标
+                int spawnY = Main.spawnTileY * 16 - 64; // 出生点Y坐标（向导上方）
+                                                        // 修复参数：添加玩家索引（Main.myPlayer 表示本地玩家）
+                IEntitySource source = new EntitySource_WorldGen("SpawnTheSecond");
+                NPC.NewNPCDirect(
+                    source,
+                    spawnX,
+                    spawnY,
+                    ModContent.NPCType<The_Second>()
+                );
+            }
         }
     }
 }

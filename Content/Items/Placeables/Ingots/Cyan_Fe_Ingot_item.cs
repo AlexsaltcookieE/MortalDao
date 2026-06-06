@@ -16,6 +16,7 @@ namespace MortalDao.Content.Tiles.Ore
             Item.maxStack = Item.CommonMaxStack;
             Item.value = Item.sellPrice(silver: 10);
             Item.rare = ItemRarityID.White;
+            Item.material = true;
         }
         public override void AddRecipes()
         {

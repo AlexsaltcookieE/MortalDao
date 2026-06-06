@@ -113,6 +113,16 @@ Items: {
 		DisplayName: 卷宗#1
 		Tooltip: 像是某卷卷宗的一部分
 	}
+
+	resentment: {
+		DisplayName: 怨气
+		Tooltip: 在地下游荡，神魂又无法消散之物所累积的强大之气
+	}
+
+	Blank_Talisman_Paper: {
+		DisplayName: 空白黄纸
+		Tooltip: 空白的符纸,似乎掌握写法后才能灵验
+	}
 }
 
 NPCs: {
@@ -136,6 +146,8 @@ NPCs: {
 			Princess_LovesNPC: I like {NPCName}.
 		}
 	}
+
+	Chinese_Zombie.DisplayName: 跳尸
 }
 
 Projectiles: {
@@ -187,7 +199,7 @@ Buffs: {
 	}
 
 	RainBowSlime: {
-		DisplayName: 一家
+		DisplayName: 史莱姆一家
 		Description: 你也不想惹怒它们吧（史莱姆之神？）
 	}
 }
