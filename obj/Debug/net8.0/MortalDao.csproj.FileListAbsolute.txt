@@ -3,6 +3,7 @@ D:\文档\My Games\Terraria\tModLoader\ModSources\MortalDao\obj\Debug\net8.0\Mor
 D:\文档\My Games\Terraria\tModLoader\ModSources\MortalDao\obj\Debug\net8.0\MortalDao.AssemblyInfoInputs.cache
 D:\文档\My Games\Terraria\tModLoader\ModSources\MortalDao\obj\Debug\net8.0\MortalDao.AssemblyInfo.cs
 D:\文档\My Games\Terraria\tModLoader\ModSources\MortalDao\obj\Debug\net8.0\MortalDao.csproj.CoreCompileInputs.cache
+D:\文档\My Games\Terraria\tModLoader\ModSources\MortalDao\obj\Debug\net8.0\MortalDao.sourcelink.json
 D:\文档\My Games\Terraria\tModLoader\ModSources\MortalDao\bin\Debug\net8.0\MortalDao.deps.json
 D:\文档\My Games\Terraria\tModLoader\ModSources\MortalDao\bin\Debug\net8.0\MortalDao.dll
 D:\文档\My Games\Terraria\tModLoader\ModSources\MortalDao\bin\Debug\net8.0\MortalDao.pdb
@@ -10,4 +11,3 @@ D:\文档\My Games\Terraria\tModLoader\ModSources\MortalDao\obj\Debug\net8.0\Mor
 D:\文档\My Games\Terraria\tModLoader\ModSources\MortalDao\obj\Debug\net8.0\refint\MortalDao.dll
 D:\文档\My Games\Terraria\tModLoader\ModSources\MortalDao\obj\Debug\net8.0\MortalDao.pdb
 D:\文档\My Games\Terraria\tModLoader\ModSources\MortalDao\obj\Debug\net8.0\ref\MortalDao.dll
-D:\文档\My Games\Terraria\tModLoader\ModSources\MortalDao\obj\Debug\net8.0\MortalDao.sourcelink.json

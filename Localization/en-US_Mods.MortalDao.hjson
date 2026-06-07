@@ -148,6 +148,7 @@ NPCs: {
 	}
 
 	Chinese_Zombie.DisplayName: 跳尸
+	Hostile_Dryad.DisplayName: Hostile_ Dryad
 }
 
 Projectiles: {
@@ -175,6 +176,8 @@ Projectiles: {
 	Baby_Slime_Gun.DisplayName: 普洱史莱姆粘液枪
 	Puer_Slime_baby.DisplayName: 普洱史莱姆宝宝
 	Puer_King.DisplayName: 普洱的史莱姆王
+	HostileLeafShot.DisplayName: Hostile Leaf Shot
+	HostileLeafBeam.DisplayName: Hostile Leaf Beam
 }
 
 Buffs: {

@@ -7,6 +7,12 @@
 	<PropertyGroup>
 		
 	</PropertyGroup>
+	<ItemGroup>
+	  <AdditionalFiles Remove="Content\Effects\*.fx" />
+	  <EmbeddedResource Remove="Content\Effects\*.fx" />
+	  <Compile Remove="Content\Effects\*.fx" />
+	  <Compile Remove="Content\Effects\*.xnb" />
+	</ItemGroup>
 
 	<!-- References -->
 

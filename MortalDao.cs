@@ -1,5 +1,6 @@
 
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using MortalDao.Content.ModSetting.QuestSystem;
 using System.IO;
 using Terraria;
@@ -13,12 +14,12 @@ namespace MortalDao
 	public class MortalDao : Mod
 	{
         public override void Load()
-        {
-            
+        { 
         }
+        //Structure
+        //DataPacket管理
         public override void HandlePacket(BinaryReader reader, int whoAmI)
         {
-            //数据包管理
             byte raw = reader.ReadByte();
             ModContent.GetInstance<MortalDao>().Logger.Info($"[HandlePacket] raw={raw}");
             PacketType type = (PacketType)raw;
@@ -60,6 +61,5 @@ namespace MortalDao
                     break;
             }
         }
-
     }
 }
