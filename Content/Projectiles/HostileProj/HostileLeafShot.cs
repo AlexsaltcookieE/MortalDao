@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
+using Terraria.Audio;
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -10,6 +11,7 @@ namespace MortalDao.Content.Projectiles.HostileProj
     public class HostileLeafShot : ModProjectile
     {
         public override string Texture => "Terraria/Images/Projectile_" + ProjectileID.CrystalLeafShot;
+        private bool PlaySound = false;
 
         public override void SetStaticDefaults()
         {
@@ -31,6 +33,11 @@ namespace MortalDao.Content.Projectiles.HostileProj
 
         public override void AI()
         {
+            if (!PlaySound)
+            {
+                SoundEngine.PlaySound(SoundID.Item4,Projectile.Center);
+                PlaySound = true;
+            }
             Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.Pi;
             Lighting.AddLight(Projectile.Center, 0.4f, 0.8f, 0.4f);
 
@@ -74,6 +81,7 @@ namespace MortalDao.Content.Projectiles.HostileProj
                     0f
                 );
             }
+            Main.EntitySpriteDraw(texture,Projectile.Center, null, lightColor,Projectile.rotation, origin, Projectile.scale, SpriteEffects.None, 0f);
             return false;
         }
     }

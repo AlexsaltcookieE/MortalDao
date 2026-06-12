@@ -1,0 +1,12 @@
+D:\文档\My Games\Terraria\tModLoader\ModSources\TestShader\bin\Debug\net8.0\TestShader.deps.json
+D:\文档\My Games\Terraria\tModLoader\ModSources\TestShader\bin\Debug\net8.0\TestShader.dll
+D:\文档\My Games\Terraria\tModLoader\ModSources\TestShader\bin\Debug\net8.0\TestShader.pdb
+D:\文档\My Games\Terraria\tModLoader\ModSources\TestShader\obj\Debug\net8.0\TestShader.csproj.AssemblyReference.cache
+D:\文档\My Games\Terraria\tModLoader\ModSources\TestShader\obj\Debug\net8.0\TestShader.GeneratedMSBuildEditorConfig.editorconfig
+D:\文档\My Games\Terraria\tModLoader\ModSources\TestShader\obj\Debug\net8.0\TestShader.AssemblyInfoInputs.cache
+D:\文档\My Games\Terraria\tModLoader\ModSources\TestShader\obj\Debug\net8.0\TestShader.AssemblyInfo.cs
+D:\文档\My Games\Terraria\tModLoader\ModSources\TestShader\obj\Debug\net8.0\TestShader.csproj.CoreCompileInputs.cache
+D:\文档\My Games\Terraria\tModLoader\ModSources\TestShader\obj\Debug\net8.0\TestShader.dll
+D:\文档\My Games\Terraria\tModLoader\ModSources\TestShader\obj\Debug\net8.0\refint\TestShader.dll
+D:\文档\My Games\Terraria\tModLoader\ModSources\TestShader\obj\Debug\net8.0\TestShader.pdb
+D:\文档\My Games\Terraria\tModLoader\ModSources\TestShader\obj\Debug\net8.0\ref\TestShader.dll

@@ -123,6 +123,11 @@ Items: {
 		DisplayName: 空白黄纸
 		Tooltip: 空白的符纸,似乎掌握写法后才能灵验
 	}
+
+	Cyan_Fe_Sword: {
+		DisplayName: Cyan_ Fe_ Sword
+		Tooltip: ""
+	}
 }
 
 NPCs: {
@@ -178,6 +183,11 @@ Projectiles: {
 	Puer_King.DisplayName: 普洱的史莱姆王
 	HostileLeafShot.DisplayName: Hostile Leaf Shot
 	HostileLeafBeam.DisplayName: Hostile Leaf Beam
+	Cyan_BladeProj.DisplayName: Cyan_ Blade Proj
+	Cyan_BladeHitbox.DisplayName: Cyan_ Blade Hitbox
+	PeachWoodBladeProj.DisplayName: Peach Wood Blade Proj
+	PeachWoodBladeHitbox.DisplayName: Peach Wood Blade Hitbox
+	BlackTriBeam.DisplayName: Black Tri Beam
 }
 
 Buffs: {

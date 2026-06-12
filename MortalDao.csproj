@@ -13,6 +13,21 @@
 	  <Compile Remove="Content\Effects\*.fx" />
 	  <Compile Remove="Content\Effects\*.xnb" />
 	</ItemGroup>
+	<ItemGroup>
+	  <AdditionalFiles Remove="Content\ExtraTextures\ScarletDevilStreak.png" />
+	  <AdditionalFiles Remove="Content\ExtraTextures\SylvestaffStreak.png" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Content Include="Content\ExtraTextures\ScarletDevilStreak.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Content\ExtraTextures\SylvestaffStreak.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Content\Graphics\" />
+	</ItemGroup>
 
 	<!-- References -->
 
