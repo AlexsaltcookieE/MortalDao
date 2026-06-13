@@ -154,6 +154,8 @@ NPCs: {
 
 	Chinese_Zombie.DisplayName: 跳尸
 	Hostile_Dryad.DisplayName: Hostile_ Dryad
+	GoldBody.DisplayName: Gold Body
+	GoldArm.DisplayName: Gold Arm
 }
 
 Projectiles: {
@@ -188,6 +190,8 @@ Projectiles: {
 	PeachWoodBladeProj.DisplayName: Peach Wood Blade Proj
 	PeachWoodBladeHitbox.DisplayName: Peach Wood Blade Hitbox
 	BlackTriBeam.DisplayName: Black Tri Beam
+	GoldOreProj.DisplayName: Gold Ore Proj
+	IronOreProj.DisplayName: Iron Ore Proj
 }
 
 Buffs: {
