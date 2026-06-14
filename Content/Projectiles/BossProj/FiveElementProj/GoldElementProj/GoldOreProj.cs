@@ -1,6 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
+using Terraria.Audio;
+using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -23,9 +25,14 @@ namespace MortalDao.Content.Projectiles.BossProj.FiveElementProj.GoldElementProj
             Projectile.height = 16;
             Projectile.timeLeft = 80;
         }
+        public override void OnSpawn(IEntitySource source)
+        {
+            SoundEngine.PlaySound(SoundID.Item48, Projectile.Center);
+        }
         public override void OnKill(int timeLeft)
         {
-            if(Main.netMode != NetmodeID.Server)
+            SoundEngine.PlaySound(SoundID.Item53, Projectile.Center);
+            if (Main.netMode != NetmodeID.Server)
             {
                 for (int i = 0; i < 3; i++)
                 {

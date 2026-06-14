@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
+using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -33,6 +34,7 @@ namespace MortalDao.Content.Projectiles.BossProj.FiveElementProj.GoldElementProj
         }
         public override void OnKill(int timeLeft)
         {
+            SoundEngine.PlaySound(SoundID.Item54, Projectile.Center);
             for (int i = 0; i < 3; i++)
             {
                 Dust.NewDust(Projectile.Center, Projectile.width, Projectile.height, DustID.Iron);

@@ -1,6 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using MortalDao.Content.Projectiles.BossProj.FiveElementProj.GoldElementProj;
+using System;
+using System.Data;
 using Terraria;
+using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -18,7 +21,6 @@ namespace MortalDao.Content.NPCs.BOSS.FiveElement.GoldElement
         private int BossEscapeTimer = 0;
         private int BossStateTimer = 0;//状态时间累加
         private int BossCoolDown = 0;
-        private int Time = 0;
         //===== 距离 =====
         private int BossEscapeDistance = 3200;
         // ===== 拳击 =====
@@ -28,12 +30,19 @@ namespace MortalDao.Content.NPCs.BOSS.FiveElement.GoldElement
         private bool PunchCharging1 = false;
         private bool PunchCharging2 = false;
         //=====手部撞击=====
-        private const float LimbPunchTriggerDistance = 160f;
+        private const float LimbPunchTriggerDistance = 170f;
         //=====头部撞击=====
         private int DashCount = 0;
         private Vector2 dashDir = Vector2.Zero;
         //=====发射巨石=====
         private float CrimtaneBoulderSpeed = 10f;
+        //=====传送位置=====
+        private Vector2 TelPos1;
+        private Vector2 TelPos2;
+        private Vector2 TelPos3;
+        private Vector2 TelPos4;
+        //=====拍击状态=====
+        private bool CalPos = false;
         // ===== 预测位置 =====
         private Vector2 PredictPos;
         public enum BossState
@@ -41,10 +50,11 @@ namespace MortalDao.Content.NPCs.BOSS.FiveElement.GoldElement
             Punch = 0,
             HeadDashCool = 1,
             CrimtaneBoulderCoolDown = 2,
+            ClipTel =3,
             //不要随机
-            Idle = 3,
-            HeadDash = 4,
-            CrimtaneBoulders = 5
+            Idle = 4,
+            HeadDash = 5,
+            CrimtaneBoulders = 6,
         }
         public override void SetStaticDefaults()//BOSS预设值
         {
@@ -148,7 +158,184 @@ namespace MortalDao.Content.NPCs.BOSS.FiveElement.GoldElement
                 RandomBossState(NextState: BossState.CrimtaneBoulders);
             }
         }
-        
+        //private void DoPatCoolDown(Player target)
+        //{
+        //    if (BossStateTimer < 60)
+        //    {
+        //        limb1Follow(target);
+        //        limb2Follow(target);
+        //        Vector2 Dir = target.Center - NPC.Center;
+        //        BodyMove(Dir, 4f, 0.8f);
+        //    }
+        //    else
+        //    {
+        //        RandomBossState(NextState:BossState.Pat);
+        //    }
+        //}
+        private void DoClipTel(Player target)
+        {
+            if (BossStateTimer  < 100)
+            {
+                limb1Follow(target);
+                limb2Follow(target);
+                Vector2 Dir = NPC.Center - target.Center;
+                BodyMove(Dir, 1f, 0.25f);
+                TelPos1 = new Vector2(target.Center.X - 120, target.Center.Y);
+                TelPos2 = new Vector2(target.Center.X + 120, target.Center.Y);
+                TelPos3 = new Vector2(target.Center.X, target.Center.Y - 150);
+                TelPos4 = new Vector2(target.Center.X, target.Center.Y + 150);
+                bool hasLimb1 = TryGetLimb((int)NPC.ai[0], out _);
+                bool hasLimb2 = TryGetLimb((int)NPC.ai[1], out _);
+                //Warning 
+                float pulse = (float)Math.Sin(BossStateTimer * 0.15f) * 0.5f + 0.5f;
+
+                if (hasLimb1)
+                {
+                    NPC limb1 = Main.npc[(int)NPC.ai[0]];
+                    if (Main.netMode != NetmodeID.Server)
+                    {
+                        for (int i = 0; i < 5; i++)
+                        {
+                            Dust dust = Dust.NewDustDirect(
+                                TelPos1 + Main.rand.NextVector2Circular(20f, 20f),
+                                0, 0,
+                                DustID.Stone,
+                                Scale: 2.5f + pulse
+                            );
+                            dust.noGravity = true;
+                            dust.velocity = Main.rand.NextVector2Circular(1f, 1f);
+                            dust.alpha = (int)(100 * (1f - pulse)); // 透明度变化
+                        }
+                    }
+                }
+                if(hasLimb2)
+                {
+                    NPC limb2 = Main.npc[(int)NPC.ai[1]];
+                    if (Main.netMode != NetmodeID.Server)
+                    {
+                        for (int i = 0; i < 5; i++)
+                        {
+                            Dust dust = Dust.NewDustDirect(
+                                TelPos2 + Main.rand.NextVector2Circular(20f, 20f),
+                                0, 0,
+                                DustID.Stone,
+                                Scale: 2.5f + pulse
+                            );
+                            dust.noGravity = true;
+                            dust.velocity = Main.rand.NextVector2Circular(1f, 1f);
+                            dust.alpha = (int)(100 * (1f - pulse)); // 透明度变化
+                        }
+                    }
+                }
+                if (NPC.active)
+                {
+                    if (Main.netMode != NetmodeID.Server)
+                    {
+                        for (int i = 0; i < 5; i++)
+                        {
+                            Dust dust = Dust.NewDustDirect(
+                                TelPos3 + Main.rand.NextVector2Circular(20f, 20f),
+                                0, 0,
+                                DustID.Stone,
+                                Scale: 2.5f + pulse
+                            );
+                            dust.noGravity = true;
+                            dust.velocity = Main.rand.NextVector2Circular(1f, 1f);
+                            dust.alpha = (int)(100 * (1f - pulse)); // 透明度变化
+                        }
+                        for (int i = 0; i < 5; i++)
+                        {
+                            Dust dust = Dust.NewDustDirect(
+                                TelPos4 + Main.rand.NextVector2Circular(20f, 20f),
+                                0, 0,
+                                DustID.Stone,
+                                Scale: 2.5f + pulse
+                            );
+                            dust.noGravity = true;
+                            dust.velocity = Main.rand.NextVector2Circular(1f, 1f);
+                            dust.alpha = (int)(100 * (1f - pulse)); // 透明度变化
+                        }
+                    }
+                }
+            }
+            else
+            {
+                bool hasLimb1 = TryGetLimb((int)NPC.ai[0], out _);
+                bool hasLimb2 = TryGetLimb((int)NPC.ai[1], out _);
+                if (hasLimb1)
+                {
+                    NPC limb1 = Main.npc[(int)NPC.ai[0]];
+                    limb1.Center = TelPos1;
+                    SoundEngine.PlaySound(SoundID.Item14, limb1.Center);
+                    if (Main.netMode != NetmodeID.Server)
+                    {
+                        for (int i = 0; i < 5; i++)
+                        {
+                            Dust dust = Dust.NewDustDirect(
+                                TelPos1 + Main.rand.NextVector2Circular(20f, 20f),
+                                limb1.width, limb1.height,
+                                DustID.Stone,
+                                Scale: 2.5f
+                            );
+                        }
+                    }
+                }
+                if (hasLimb2)
+                {
+                    NPC limb2 = Main.npc[(int)NPC.ai[1]];
+                    limb2.Center = TelPos2;
+                    SoundEngine.PlaySound(SoundID.Item14, limb2.Center);
+                    if (Main.netMode != NetmodeID.Server)
+                    {
+                        for (int i = 0; i < 5; i++)
+                        {
+                            Dust dust = Dust.NewDustDirect(
+                                TelPos2 + Main.rand.NextVector2Circular(20f, 20f),
+                                limb2.width, limb2.height,
+                                DustID.Stone,
+                                Scale: 2.5f
+                            );
+                        }
+                    }
+                }
+                if(Main.rand.Next(0,2) == 0)
+                {
+                    NPC.Center = TelPos3;
+                    SoundEngine.PlaySound(SoundID.Item14, NPC.Center);
+                    if (Main.netMode != NetmodeID.Server)
+                    {
+                        for (int i = 0; i < 5; i++)
+                        {
+                            Dust dust = Dust.NewDustDirect(
+                                TelPos3 + Main.rand.NextVector2Circular(20f, 20f),
+                                NPC.width, NPC.height,
+                                DustID.Stone,
+                                Scale: 2.5f
+                            );
+                        }
+                    }
+                    RandomBossState(NextState: BossState.Idle);
+                }
+                else
+                {
+                    NPC.Center = TelPos4;
+                    SoundEngine.PlaySound(SoundID.Item14, NPC.Center);
+                    if (Main.netMode != NetmodeID.Server)
+                    {
+                        for (int i = 0; i < 5; i++)
+                        {
+                            Dust dust = Dust.NewDustDirect(
+                                TelPos4 + Main.rand.NextVector2Circular(20f, 20f),
+                                NPC.width, NPC.height,
+                                DustID.Stone,
+                                Scale: 2.5f
+                            );
+                        }
+                    }
+                    RandomBossState(NextState: BossState.Idle);
+                }
+            }
+        }
         private void DoHeadDash(Player target)
         {
             limb1Follow(target);
@@ -361,12 +548,12 @@ namespace MortalDao.Content.NPCs.BOSS.FiveElement.GoldElement
             if (!TryGetLimb((int)NPC.ai[0], out var limb1))
                 return;
             float distToPlayer = Vector2.Distance(limb1.Center, target.Center);
-            if (CurrentBossState != BossState.Punch && distToPlayer < LimbPunchTriggerDistance)
+            if (CurrentBossState != BossState.Punch && CurrentBossState != BossState.ClipTel && distToPlayer < LimbPunchTriggerDistance)
             {
                 Vector2 Dir = target.Center - limb1.Center;
                 if (Dir != Vector2.Zero)
                     Dir.Normalize();
-                limb1.velocity = Vector2.Lerp(limb1.velocity, Dir * 4f, 0.4f);
+                limb1.velocity = Vector2.Lerp(limb1.velocity, Dir * 5f, 0.5f);
             }
             Vector2 limb1Pos = new Vector2(NPC.Center.X - 100, NPC.Center.Y + 25);
             Vector2 dir = limb1Pos - limb1.Center;
@@ -381,12 +568,12 @@ namespace MortalDao.Content.NPCs.BOSS.FiveElement.GoldElement
             if (CurrentBossState != BossState.Punch)
             {
                 float distToPlayer = Vector2.Distance(limb2.Center, target.Center);
-                if (CurrentBossState != BossState.Punch && distToPlayer < LimbPunchTriggerDistance)
+                if (CurrentBossState != BossState.Punch && CurrentBossState != BossState.ClipTel && distToPlayer < LimbPunchTriggerDistance)
                 {
                     Vector2 Dir = target.Center - limb2.Center;
                     if (Dir != Vector2.Zero)
                         Dir.Normalize();
-                    limb2.velocity = Vector2.Lerp(limb2.velocity, Dir * 4f, 0.4f);
+                    limb2.velocity = Vector2.Lerp(limb2.velocity, Dir * 5f, 0.5f);
                     return;
                 }
             }
@@ -426,7 +613,7 @@ namespace MortalDao.Content.NPCs.BOSS.FiveElement.GoldElement
             BossState next;
             do
             {
-                next = (BossState)Main.rand.Next(0,3);
+                next = (BossState)Main.rand.Next(0,4);
                 if (NextState != null)
                 {
                     next = (BossState)NextState;
@@ -467,6 +654,9 @@ namespace MortalDao.Content.NPCs.BOSS.FiveElement.GoldElement
                         break;
                     case BossState.CrimtaneBoulders:
                         DoCrimtaneBoulder(target);
+                        break;
+                    case BossState.ClipTel:
+                        DoClipTel(target);
                         break;
                 }
             }

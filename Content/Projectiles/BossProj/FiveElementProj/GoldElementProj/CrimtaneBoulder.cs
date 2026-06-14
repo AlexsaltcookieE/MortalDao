@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework.Graphics;
 using System;
 using Terraria.Audio;
 using MortalDao.Content.Projectiles.BossProj.FiveElementProj.GoldElementProj;
+using Terraria.DataStructures;
 
 namespace YourModName.Projectiles
 {
@@ -43,7 +44,7 @@ namespace YourModName.Projectiles
             // 视觉
             Projectile.scale = 1.2f;
         }
-
+        
         public override void AI()
         {
             // 重力模拟
@@ -105,7 +106,10 @@ namespace YourModName.Projectiles
             Main.NewText(bounceCount);
             return false; // 不销毁弹幕
         }
-
+        public override void OnSpawn(IEntitySource source)
+        {
+            SoundEngine.PlaySound(SoundID.NPCHit41, Projectile.Center);
+        }
         public override void OnKill(int timeLeft)
         {
             // 死亡时生成碎石效果

@@ -7,12 +7,16 @@
       "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\npcs\\boss\\fiveelement\\goldelement\\goldbody.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\projectiles\\bossproj\\fiveelementproj\\goldelementproj\\crimtaneboulder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\projectiles\\bossproj\\fiveelementproj\\goldelementproj\\crimtaneboulder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\projectiles\\bossproj\\fiveelementproj\\goldelementproj\\ironoreproj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\projectiles\\bossproj\\fiveelementproj\\goldelementproj\\ironoreproj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\projectiles\\bossproj\\fiveelementproj\\goldelementproj\\crimtaneoreproj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\projectiles\\bossproj\\fiveelementproj\\goldelementproj\\crimtaneoreproj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\projectiles\\bossproj\\fiveelementproj\\goldelementproj\\crimtaneboulder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\projectiles\\bossproj\\fiveelementproj\\goldelementproj\\crimtaneboulder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\npcs\\boss\\darkgaze\\shadowhand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,8 +38,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IronOreProj.cs",
+              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Projectiles\\BossProj\\FiveElementProj\\GoldElementProj\\IronOreProj.cs",
+              "RelativeDocumentMoniker": "Content\\Projectiles\\BossProj\\FiveElementProj\\GoldElementProj\\IronOreProj.cs",
+              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Projectiles\\BossProj\\FiveElementProj\\GoldElementProj\\IronOreProj.cs",
+              "RelativeToolTip": "Content\\Projectiles\\BossProj\\FiveElementProj\\GoldElementProj\\IronOreProj.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAgwCQAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T14:31:34.737Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -44,23 +60,22 @@
               "RelativeDocumentMoniker": "Content\\NPCs\\BOSS\\FiveElement\\GoldElement\\GoldBody.cs",
               "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\NPCs\\BOSS\\FiveElement\\GoldElement\\GoldBody.cs",
               "RelativeToolTip": "Content\\NPCs\\BOSS\\FiveElement\\GoldElement\\GoldBody.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAmwC4AAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAKQCAAAAAAAAAAAAAKQCAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-12T14:43:03.478Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "CrimtaneBoulder.cs",
               "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Projectiles\\BossProj\\FiveElementProj\\GoldElementProj\\CrimtaneBoulder.cs",
               "RelativeDocumentMoniker": "Content\\Projectiles\\BossProj\\FiveElementProj\\GoldElementProj\\CrimtaneBoulder.cs",
               "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Projectiles\\BossProj\\FiveElementProj\\GoldElementProj\\CrimtaneBoulder.cs",
               "RelativeToolTip": "Content\\Projectiles\\BossProj\\FiveElementProj\\GoldElementProj\\CrimtaneBoulder.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAFoAAAAAAAAAAADwv24AAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-13T22:20:12.322Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-13T22:20:12.322Z"
             },
             {
               "$type": "Document",
@@ -70,13 +85,13 @@
               "RelativeDocumentMoniker": "Content\\Projectiles\\BossProj\\FiveElementProj\\GoldElementProj\\CrimtaneOreProj.cs",
               "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Projectiles\\BossProj\\FiveElementProj\\GoldElementProj\\CrimtaneOreProj.cs",
               "RelativeToolTip": "Content\\Projectiles\\BossProj\\FiveElementProj\\GoldElementProj\\CrimtaneOreProj.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAIwCQAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAIwB0AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-13T21:19:40.58Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ShadowHand.cs",
               "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\NPCs\\BOSS\\DarkGaze\\ShadowHand.cs",
               "RelativeDocumentMoniker": "Content\\NPCs\\BOSS\\DarkGaze\\ShadowHand.cs",
@@ -88,7 +103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Ghost_Hook.cs",
               "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Projectiles\\BossProj\\GeneralSoulProj\\Ghost_Hook.cs",
               "RelativeDocumentMoniker": "Content\\Projectiles\\BossProj\\GeneralSoulProj\\Ghost_Hook.cs",
@@ -100,7 +115,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Ghost_Explosion.cs",
               "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Projectiles\\BossProj\\GeneralSoulProj\\Ghost_Explosion.cs",
               "RelativeDocumentMoniker": "Content\\Projectiles\\BossProj\\GeneralSoulProj\\Ghost_Explosion.cs",
