@@ -6,9 +6,9 @@ using Terraria.ModLoader;
 
 namespace MortalDao.Content.Projectiles.BossProj.FiveElementProj.GoldElementProj
 {
-    public class GoldOreProj : ModProjectile
+    public class CrimtaneOreProj : ModProjectile
     {
-        public override string Texture => "Terraria/Images/Item_" + ItemID.GoldOre;
+        public override string Texture => "Terraria/Images/Item_" + ItemID.CrimtaneOre;
 
         public override void SetStaticDefaults()
         {
@@ -21,34 +21,21 @@ namespace MortalDao.Content.Projectiles.BossProj.FiveElementProj.GoldElementProj
             Projectile.hostile = true;
             Projectile.width = 16;
             Projectile.height = 16;
-            Projectile.timeLeft = 80;
+            Projectile.timeLeft = 200;
+            Projectile.tileCollide = true;
         }
         public override void OnKill(int timeLeft)
         {
-            if(Main.netMode != NetmodeID.Server)
+            if (Main.netMode != NetmodeID.Server)
             {
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < 5; i++)
                 {
-                    Dust.NewDust(Projectile.Center, Projectile.width, Projectile.height, DustID.Gold);
-                }
-                NPC npc = Main.npc[(int)Projectile.ai[0]];
-                for (int i = 0; i < 3; i++)
-                {
-                    // 随机水平偏移 + 向下为主的方向
-                    Vector2 vel = new Vector2(
-                        Main.rand.NextFloat(-2f, 2f),   // 小幅水平散布
-                        Main.rand.NextFloat(3f, 6f)     // 主要向下
-                    );
-                    Projectile.NewProjectile(
-                        npc.GetSource_FromAI(),
-                        Projectile.Center,
-                        vel,
-                        ModContent.ProjectileType<IronOreProj>(),
-                        40,
-                        1f,
-                        Main.myPlayer,
-                        npc.whoAmI
-                    );
+                    Dust dust = Dust.NewDustDirect(
+                         Projectile.position,
+                         Projectile.width,
+                         Projectile.height,
+                         DustID.Crimstone
+                     );
                 }
             }
         }
@@ -56,7 +43,7 @@ namespace MortalDao.Content.Projectiles.BossProj.FiveElementProj.GoldElementProj
         {
             Texture2D texture = Terraria.GameContent.TextureAssets.Projectile[Projectile.type].Value;
             Vector2 origin = texture.Size() / 2f;
-            Color trailColor = new Color(255, 220, 110, 80);
+            Color trailColor = Color.Red;
             for (int i = 0; i < Projectile.oldPos.Length; i++)
             {
                 float progress = 1f - i / (float)Projectile.oldPos.Length;

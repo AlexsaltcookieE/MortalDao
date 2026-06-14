@@ -21,8 +21,7 @@ namespace MortalDao.Content.NPCs.BOSS.DarkGaze
         private int BossEscapeTimer;//逃脱计时器
         private int BossEscapeDelay = 180;//倒数计时器
         private int BossEscapeDistance = 3200;//逃脱距离
-        private bool IsDespawning;//是否正在离场
-        private int DespawnFlyTimer;//离场飞行计时
+
         private int DespawnFlyDuration = 120;//离场飞行时长（帧）
         private bool DashCalLock = false;//预判玩家动向锁
         private Microsoft.Xna.Framework.Vector2 DashVector;//冲刺向量

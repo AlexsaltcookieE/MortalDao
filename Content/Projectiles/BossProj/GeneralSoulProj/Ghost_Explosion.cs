@@ -13,7 +13,7 @@ namespace MortalDao.Content.Projectiles.BossProj.GeneralSoulProj
         // 你可以调整的属性
         private const int TotalFrames = 10; // 你的贴图有 10 帧
         private const int AnimationSpeed = 7; // 每 5 帧切换一次图片（数值越小越快）
-        private bool CanDamage;
+        private bool canDamage;
 
         public override void SetStaticDefaults()
         {
@@ -48,17 +48,17 @@ namespace MortalDao.Content.Projectiles.BossProj.GeneralSoulProj
                     Projectile.frame = 6;
                 }
             }
-            if (!CanDamage)
+            if (!canDamage)
             {
                 if(Projectile.frame > 5)
                 {
-                    CanDamage = true;
+                    canDamage = true;
                 }
             }
             foreach (Player p in Main.player)
             {
                 if (!p.active || p.dead) continue;
-                if (Projectile.Hitbox.Intersects(p.Hitbox) && CanDamage)
+                if (Projectile.Hitbox.Intersects(p.Hitbox) && canDamage)
                 {
                     p.immuneTime = 0;
                 }

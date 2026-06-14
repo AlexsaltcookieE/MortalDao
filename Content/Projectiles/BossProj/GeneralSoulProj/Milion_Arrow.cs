@@ -12,7 +12,6 @@ namespace MortalDao.Content.Projectiles.BossProj.GeneralSoulProj
     {
         private int ProjectileTimer;
         private const int WarningTime = 120;
-        private Vector2 realStartPoint;
         public static Dictionary<int, (Vector2 Pos, Vector2 Dir)> ActiveWarnings = new Dictionary<int, (Vector2, Vector2)>();
         private bool PlaySound = false;
         public override void SetStaticDefaults()

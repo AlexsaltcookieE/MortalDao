@@ -156,6 +156,7 @@ NPCs: {
 	Hostile_Dryad.DisplayName: Hostile_ Dryad
 	GoldBody.DisplayName: Gold Body
 	GoldArm.DisplayName: Gold Arm
+	CrimtaneWallProj.DisplayName: Crimtane Wall Proj
 }
 
 Projectiles: {
@@ -192,6 +193,10 @@ Projectiles: {
 	BlackTriBeam.DisplayName: Black Tri Beam
 	GoldOreProj.DisplayName: Gold Ore Proj
 	IronOreProj.DisplayName: Iron Ore Proj
+	CrimtaneOreProj.DisplayName: Crimtane Ore Proj
+	CrimtaneWallProj.DisplayName: Crimtane Wall Proj
+	BoulderProjectile.DisplayName: Boulder Projectile
+	CrimtaneBoulder.DisplayName: Crimtane Boulder
 }
 
 Buffs: {

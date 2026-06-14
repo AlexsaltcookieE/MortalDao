@@ -8,9 +8,7 @@ namespace MortalDao.Content.NPCs.BOSS.DarkGaze
 {
     public class ShadowHand : ModNPC
     {
-        private const int LifeTimeTicks = 300; // 5 seconds at 60 FPS
         private const int FrameSpeed = 6;
-        private int lifeTimer;
         private int FrameCounter;
 
 

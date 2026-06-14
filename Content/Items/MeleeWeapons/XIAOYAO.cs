@@ -14,7 +14,6 @@ namespace MortalDao.Content.Items.MeleeWeapons
     // https://github.com/tModLoader/tModLoader/tree/stable/ExampleMod
     public class XIAOYAO : ModItem
     {
-        int project; 
         // The Display Name and Tooltip of this item can be edited in the 'Localization/en-US_Mods.YINGYANG.hjson' file.
         public override void SetDefaults()
         {

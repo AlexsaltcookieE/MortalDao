@@ -13,7 +13,7 @@ namespace MortalDao.Content.Projectiles.BossProj.FiveElementProj.GoldElementProj
 
         public override void SetStaticDefaults()
         {
-            ProjectileID.Sets.TrailCacheLength[Projectile.type] = 12;
+            ProjectileID.Sets.TrailCacheLength[Projectile.type] = 5;
             ProjectileID.Sets.TrailingMode[Projectile.type] = 0;
         }
         public override void SetDefaults()
@@ -42,7 +42,7 @@ namespace MortalDao.Content.Projectiles.BossProj.FiveElementProj.GoldElementProj
         {
             Texture2D texture = Terraria.GameContent.TextureAssets.Projectile[Projectile.type].Value;
             Vector2 origin = texture.Size() / 2f;
-            Color trailColor = new Color(100, 200, 255, 80);
+            Color trailColor = new Color(140, 140, 140, 90);
             for (int i = 0; i < Projectile.oldPos.Length; i++)
             {
                 float progress = 1f - i / (float)Projectile.oldPos.Length;

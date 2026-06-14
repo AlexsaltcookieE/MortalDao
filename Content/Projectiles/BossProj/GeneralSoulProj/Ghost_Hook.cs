@@ -16,7 +16,6 @@ namespace MortalDao.Content.Projectiles.BossProj.GeneralSoulProj
         private bool HasHitPlayer = false;
         private int grabbedPlayer = -1;
         private int ProjectileTimer;
-        private bool ReachMaxLength;
         private int State = 0;
         private const int maxChains = 40;
         private bool Playsound = false;
