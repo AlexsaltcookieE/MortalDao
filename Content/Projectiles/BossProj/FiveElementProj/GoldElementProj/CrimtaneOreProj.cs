@@ -22,7 +22,7 @@ namespace MortalDao.Content.Projectiles.BossProj.FiveElementProj.GoldElementProj
             Projectile.hostile = true;
             Projectile.width = 16;
             Projectile.height = 16;
-            Projectile.timeLeft = 200;
+            Projectile.timeLeft = 800;
             Projectile.tileCollide = true;
         }
         public override void OnKill(int timeLeft)
@@ -39,7 +39,27 @@ namespace MortalDao.Content.Projectiles.BossProj.FiveElementProj.GoldElementProj
                          DustID.Crimstone
                      );
                 }
+                NPC npc = Main.npc[(int)Projectile.ai[0]];
+                for (int i = 0; i < 3; i++)
+                {
+                    // 随机水平偏移 + 向下为主的方向
+                    Vector2 vel = new Vector2(
+                        Main.rand.NextFloat(-2f, 2f),   // 小幅水平散布
+                        Main.rand.NextFloat(3f, 6f)     // 主要向下
+                    );
+                    Projectile.NewProjectile(
+                        npc.GetSource_FromAI(),
+                        Projectile.Center,
+                        vel,
+                        ModContent.ProjectileType<DemoniteOreProj>(),
+                        40,
+                        1f,
+                        Main.myPlayer,
+                        npc.whoAmI
+                    );
+                }
             }
+
         }
         public override bool PreDraw(ref Color lightColor)
         {

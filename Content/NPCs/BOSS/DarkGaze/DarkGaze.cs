@@ -59,9 +59,6 @@ namespace MortalDao.Content.NPCs.BOSS.DarkGaze
             NPC.width = 100;
             NPC.height = 200;
 
-            // Boss 战音乐（兼容不支持 override Music 的 tML 版本）
-            Music = MusicLoader.GetMusicSlot(Mod, "Content/Musics/Boss/DarkGaze");
-
         }
         private enum BossState
         {

@@ -60,7 +60,6 @@ namespace MortalDao.Content.NPCs.BOSS.GeneralSoul
             NPC.knockBackResist = 0f;
             NPC.aiStyle = -1;
             NPC.scale = 2f;
-            Music = MusicLoader.GetMusicSlot(Mod, "Content/Musics/Boss/GeneralSoul");
 
         }
         public override void AI()

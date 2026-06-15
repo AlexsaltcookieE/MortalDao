@@ -128,6 +128,11 @@ Items: {
 		DisplayName: Cyan_ Fe_ Sword
 		Tooltip: ""
 	}
+
+	Weird_Boulder: {
+		DisplayName: Weird_ Boulder
+		Tooltip: ""
+	}
 }
 
 NPCs: {
@@ -157,6 +162,7 @@ NPCs: {
 	GoldBody.DisplayName: Gold Body
 	GoldArm.DisplayName: Gold Arm
 	CrimtaneWallProj.DisplayName: Crimtane Wall Proj
+	CopperOreProj.DisplayName: Copper Ore Proj
 }
 
 Projectiles: {
@@ -197,6 +203,10 @@ Projectiles: {
 	CrimtaneWallProj.DisplayName: Crimtane Wall Proj
 	BoulderProjectile.DisplayName: Boulder Projectile
 	CrimtaneBoulder.DisplayName: Crimtane Boulder
+	DemoniteOreProj.DisplayName: Demonite Ore Proj
+	CopperOreProj.DisplayName: Copper Ore Proj
+	GoldElementWarning.DisplayName: Gold Element Warning
+	WeirdBoulderProj.DisplayName: Weird Boulder Proj
 }
 
 Buffs: {

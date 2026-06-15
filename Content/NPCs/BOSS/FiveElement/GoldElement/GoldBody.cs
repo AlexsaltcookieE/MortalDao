@@ -34,6 +34,13 @@ namespace MortalDao.Content.NPCs.BOSS.FiveElement.GoldElement
         //=====头部撞击=====
         private int DashCount = 0;
         private Vector2 dashDir = Vector2.Zero;
+        //=====手部冲击=====
+        private int Limb1DashCount = 0;
+        private Vector2 Limb1dashDir = Vector2.Zero;
+        private int Limb2DashCount = 0;
+        private Vector2 Limb2dashDir = Vector2.Zero;
+        private bool limb1DoneDash = false;
+        private bool limb2DoneDash = false;
         //=====发射巨石=====
         private float CrimtaneBoulderSpeed = 10f;
         //=====传送位置=====
@@ -41,20 +48,28 @@ namespace MortalDao.Content.NPCs.BOSS.FiveElement.GoldElement
         private Vector2 TelPos2;
         private Vector2 TelPos3;
         private Vector2 TelPos4;
-        //=====拍击状态=====
-        private bool CalPos = false;
+        //=====发射铜矿=====
+        private int CopperProjCount = 0;
+        private int CopperArrowCount = 70;
+        private float CopperArrowSpeed = 10f;
         // ===== 预测位置 =====
         private Vector2 PredictPos;
         public enum BossState
         {
             Punch = 0,
-            HeadDashCool = 1,
-            CrimtaneBoulderCoolDown = 2,
-            ClipTel =3,
+            LimbDashCool = 1,
+            ClipTel = 2,
+            //手部随机
+            HeadDashCool = 3,
+            CrimtaneBoulderCoolDown = 4,
+            //头部随机
+            CopperProjCoolDown =5,
             //不要随机
-            Idle = 4,
-            HeadDash = 5,
-            CrimtaneBoulders = 6,
+            Idle = 6,
+            HeadDash = 7,
+            CrimtaneBoulders = 8,
+            LimbDash = 9,
+            CopperProj = 10
         }
         public override void SetStaticDefaults()//BOSS预设值
         {
@@ -63,18 +78,20 @@ namespace MortalDao.Content.NPCs.BOSS.FiveElement.GoldElement
         }
         public override void SetDefaults()
         {
+            NPC.boss = true;
             NPC.noTileCollide = true;
             NPC.noGravity = true;
             NPC.friendly = false;
             NPC.width = 32;
             NPC.height = 32;
             NPC.scale = 4f;
-            NPC.lifeMax = 3200;
+            NPC.lifeMax = 2000;
             NPC.defense = 10;
-            NPC.damage = 25;
+            NPC.damage = 50;
             NPC.knockBackResist = 0f;
             NPC.HitSound = SoundID.NPCHit41;
             NPC.DeathSound = SoundID.NPCDeath1;
+            Music = MusicLoader.GetMusicSlot(Mod, "Content/Music/Boss_fight/GoldElement");
         }
         //-----------------------------------------------------------------------------------------------------------------------------------------------------------
         public override void OnSpawn(IEntitySource source)
@@ -97,6 +114,22 @@ namespace MortalDao.Content.NPCs.BOSS.FiveElement.GoldElement
         //------------------------------------------------------------------------------------------------------------------------------------------------------------
         public override void AI()
         {
+            if (AreBothLimbsDead())
+            {
+                NPC.dontTakeDamage = false;
+            }
+            else
+            {
+                NPC.dontTakeDamage = true;
+            }
+            if (Main.myPlayer == NPC.whoAmI || Main.LocalPlayer.active)
+            {
+                int myMusicFadeIndex = NPC.type % 500; // 取余，确保一定在范围内
+                if (myMusicFadeIndex >= 0 && myMusicFadeIndex < Main.musicFade.Length) // 安全检查
+                {
+                    Main.musicFade[myMusicFadeIndex] = 1f;
+                }
+            }
             NPC.rotation += 0.4f;
             //脱战逻辑和寻找玩家
             int targetID = NPC.FindClosestPlayer();
@@ -144,6 +177,153 @@ namespace MortalDao.Content.NPCs.BOSS.FiveElement.GoldElement
                 RandomBossState(NextState: BossState.HeadDash);
             }
         }
+        private void DoCopperProjCoolDown(Player target)
+        {
+            if (BossStateTimer < 60)
+            {
+                limb1Follow(target);
+                limb2Follow(target);
+                Vector2 Dir = NPC.Center - target.Center;
+                BodyMove(Dir, 1f, 0.25f);
+            }
+            else
+            {
+                RandomBossState(NextState: BossState.CopperProj);
+            }
+        }
+
+        private void DoCopperProj(Player target)
+        {
+            NPC.velocity *= 0;
+            if(CopperProjCount < 3 && BossStateTimer % 100 == 0)
+            {
+                SoundEngine.PlaySound(SoundID.Item53, NPC.Center);
+                float angleStep = MathHelper.TwoPi / CopperArrowCount;
+                for (int i = 0; i < CopperArrowCount; i++)
+                {
+                    // 从正右方向开始，顺时针旋转生成每一支箭的方向
+                    float currentAngle = angleStep * i;
+                    Vector2 arrowVelocity = Vector2.UnitX.RotatedBy(currentAngle) * CopperArrowSpeed;
+
+                    // 发射弹幕：如果没有自定义铜箭弹幕，可替换为原版ProjectileID.CopperArrow
+                    Projectile.NewProjectile(
+                        NPC.GetSource_FromAI(),
+                        NPC.Center,         // 以NPC中心为发射原点
+                        arrowVelocity,
+                        ModContent.ProjectileType<CopperOreProj>(), // 换成你的铜箭弹幕类
+                        NPC.damage,         // 伤害和NPC攻击力一致
+                        2f,                 // 击退力
+                        NPC.target          // 绑定目标玩家
+                    );
+                }
+                CopperProjCount++;
+            }
+            else if(CopperProjCount >= 3)
+            {
+                CopperProjCount = 0;
+                RandomBossState(NextState: BossState.Idle);
+            }
+            
+        }
+        private void DoLimbDashCoolDown(Player target)
+        {
+            if (BossStateTimer < 60)
+            {
+                limb1Follow(target);
+                limb2Follow(target);
+                Vector2 Dir = NPC.Center - target.Center;
+                BodyMove(Dir, 1f, 0.25f);
+            }
+            else
+            {
+                Limb1DashCount = 0;
+                Limb1dashDir = Vector2.Zero;
+                Limb2DashCount = 0;
+                Limb2dashDir = Vector2.Zero;
+                RandomBossState(NextState: BossState.LimbDash);
+            }
+        }
+        private void DoLimbDash(Player target)
+        {
+            bool hasLimb1 = TryGetLimb((int)NPC.ai[0], out _);
+            bool hasLimb2 = TryGetLimb((int)NPC.ai[1], out _);
+            Vector2 Dir = Vector2.Normalize(target.Center - NPC.Center);
+            BodyMove(Dir, 6f, 0.8f);
+            if (hasLimb1)
+            {
+                NPC limb1 = Main.npc[(int)NPC.ai[0]];
+                int DashDuration = 40;
+                int cooldown = 30;
+                int totalCycle = DashDuration + cooldown;
+                int phase = BossStateTimer % totalCycle;
+                if (phase == 0 && Limb1DashCount < 3)
+                {
+                    Limb1DashCount++;
+                    PredictPlayerVelocity(target, 5f);
+                    Limb1dashDir = PredictPos - limb1.Center;
+                    if (Limb1dashDir != Vector2.Zero)
+                        Limb1dashDir.Normalize();
+                    limb1.velocity = Limb1dashDir * 18f;
+                }
+                if (phase < DashDuration)
+                {
+                    // 冲刺期间保持速度
+                    limb1.velocity = Limb1dashDir * 18f;
+                }
+                else
+                {
+                    // 冷却期间减速
+                    limb1.velocity *= 0.9f;
+                }
+                if (Limb1DashCount >= 3)
+                {
+                    limb1DoneDash = true;
+                }
+            }
+            else
+            {
+                limb1DoneDash = true;
+            }
+            if (hasLimb2)
+            {
+                NPC limb2 = Main.npc[(int)NPC.ai[1]];
+                int DashDuration = 40;
+                int cooldown = 30;
+                int totalCycle = DashDuration + cooldown;
+                int phase = BossStateTimer % totalCycle;
+                if (phase == 0 && Limb2DashCount < 3)
+                {
+                    Limb2DashCount++;
+                    PredictPlayerVelocity(target, 10f);
+                    Limb2dashDir = PredictPos - limb2.Center;
+                    if (Limb2dashDir != Vector2.Zero)
+                        Limb2dashDir.Normalize();
+                    limb2.velocity = Limb2dashDir * 18f;
+                }
+                if (phase < DashDuration)
+                {
+                    // 冲刺期间保持速度
+                    limb2.velocity = Limb2dashDir * 18f;
+                }
+                else
+                {
+                    // 冷却期间减速
+                    limb2.velocity *= 0.9f;
+                }
+                if (Limb2DashCount >= 3)
+                {
+                    limb2DoneDash = true;
+                }
+            }
+            else
+            {
+                limb2DoneDash = true;
+            }
+            if(limb1DoneDash && limb2DoneDash)
+            {
+                RandomBossState(NextState: BossState.Idle);
+            }
+        }
         private void DoCrimtaneBoulderCoolDown(Player target)
         {
             if (BossStateTimer < 60)
@@ -158,20 +338,6 @@ namespace MortalDao.Content.NPCs.BOSS.FiveElement.GoldElement
                 RandomBossState(NextState: BossState.CrimtaneBoulders);
             }
         }
-        //private void DoPatCoolDown(Player target)
-        //{
-        //    if (BossStateTimer < 60)
-        //    {
-        //        limb1Follow(target);
-        //        limb2Follow(target);
-        //        Vector2 Dir = target.Center - NPC.Center;
-        //        BodyMove(Dir, 4f, 0.8f);
-        //    }
-        //    else
-        //    {
-        //        RandomBossState(NextState:BossState.Pat);
-        //    }
-        //}
         private void DoClipTel(Player target)
         {
             if (BossStateTimer  < 100)
@@ -180,10 +346,10 @@ namespace MortalDao.Content.NPCs.BOSS.FiveElement.GoldElement
                 limb2Follow(target);
                 Vector2 Dir = NPC.Center - target.Center;
                 BodyMove(Dir, 1f, 0.25f);
-                TelPos1 = new Vector2(target.Center.X - 120, target.Center.Y);
-                TelPos2 = new Vector2(target.Center.X + 120, target.Center.Y);
-                TelPos3 = new Vector2(target.Center.X, target.Center.Y - 150);
-                TelPos4 = new Vector2(target.Center.X, target.Center.Y + 150);
+                TelPos1 = new Vector2(target.Center.X - 180, target.Center.Y);
+                TelPos2 = new Vector2(target.Center.X + 180, target.Center.Y);
+                TelPos3 = new Vector2(target.Center.X, target.Center.Y - 200);
+                TelPos4 = new Vector2(target.Center.X, target.Center.Y + 200);
                 bool hasLimb1 = TryGetLimb((int)NPC.ai[0], out _);
                 bool hasLimb2 = TryGetLimb((int)NPC.ai[1], out _);
                 //Warning 
@@ -351,8 +517,22 @@ namespace MortalDao.Content.NPCs.BOSS.FiveElement.GoldElement
                 dashDir = PredictPos - NPC.Center;
                 if (dashDir != Vector2.Zero)
                     dashDir.Normalize();
-
                 NPC.velocity = dashDir * 18f;
+                //Projectile
+                bool hasLimb1 = TryGetLimb((int)NPC.ai[0], out _);
+                bool hasLimb2 = TryGetLimb((int)NPC.ai[1], out _);
+                if (hasLimb1)
+                {
+                    NPC limb1 = Main.npc[(int)NPC.ai[0]];
+                    Vector2 targetDir = Vector2.Normalize(target.Center - limb1.Center);
+                    Projectile.NewProjectile(limb1.GetSource_FromAI(), limb1.position, targetDir * 10f, ModContent.ProjectileType<GoldOreProj>(), NPC.damage,2f,NPC.target,limb1.whoAmI);
+                }
+                if (hasLimb2)
+                {
+                    NPC limb2 = Main.npc[(int)NPC.ai[1]];
+                    Vector2 targetDir = Vector2.Normalize(target.Center - limb2.Center);
+                    Projectile.NewProjectile(limb2.GetSource_FromAI(), limb2.position, targetDir * 10f, ModContent.ProjectileType<GoldOreProj>(), NPC.damage, 2f,NPC.target,limb2.whoAmI);
+                }
             }
             if (phase < DashDuration)
             {
@@ -465,7 +645,7 @@ namespace MortalDao.Content.NPCs.BOSS.FiveElement.GoldElement
                     }
                     if (hasLimb2)
                     {
-                        NPC limb2 = Main.npc[(int)NPC.ai[0]];
+                        NPC limb2 = Main.npc[(int)NPC.ai[1]];
                         if (TryGetLimb((int)NPC.ai[1], out limb2))
                         {
                             if (ProjectileTimer == 120 && !PunchCharging2)
@@ -609,18 +789,32 @@ namespace MortalDao.Content.NPCs.BOSS.FiveElement.GoldElement
                 NPC.netUpdate = true;
             BossStateTimer = 0;
             ProjectileTimer = 0;
-            BossCoolDown = 15;
-            BossState next;
-            do
+            BossCoolDown = 0;
+            if (NextState != null)
             {
-                next = (BossState)Main.rand.Next(0,4);
-                if (NextState != null)
-                {
-                    next = (BossState)NextState;
-                }
+                CurrentBossState = (BossState)NextState;
+                return;
             }
-            while ((next == CurrentBossState || (blockedState.HasValue && next == blockedState.Value || blockedState2.HasValue && next == blockedState2)));
-            CurrentBossState = next;
+            if(AreBothLimbsDead())
+            {
+                BossState next;
+                do
+                {
+                    next = (BossState)Main.rand.Next(3, 6);
+                }
+                while ((next == CurrentBossState || (blockedState.HasValue && next == blockedState.Value || blockedState2.HasValue && next == blockedState2)));
+                CurrentBossState = next;
+            }
+            else
+            {
+                BossState next;
+                do
+                {
+                    next = (BossState)Main.rand.Next(0, 5);
+                }
+                while ((next == CurrentBossState || (blockedState.HasValue && next == blockedState.Value || blockedState2.HasValue && next == blockedState2)));
+                CurrentBossState = next;
+            }
         }
         private void StateSwitcher(Player target)
         {
@@ -658,6 +852,18 @@ namespace MortalDao.Content.NPCs.BOSS.FiveElement.GoldElement
                     case BossState.ClipTel:
                         DoClipTel(target);
                         break;
+                    case BossState.LimbDashCool:
+                        DoLimbDashCoolDown(target);
+                        break;
+                    case BossState.LimbDash:
+                        DoLimbDash(target);
+                        break;
+                    case BossState.CopperProjCoolDown:
+                        DoCopperProjCoolDown(target);
+                        break;
+                    case BossState.CopperProj:
+                        DoCopperProj(target);
+                        break;
                 }
             }
         }
@@ -671,6 +877,19 @@ namespace MortalDao.Content.NPCs.BOSS.FiveElement.GoldElement
             if (aiSlot <= 0) return false;
             limb = Main.npc[aiSlot];
             return limb.active && limb.type == ModContent.NPCType<GoldArm>();
+        }
+        private bool AreBothLimbsDead()
+        {
+            // 手臂尚未完成初始化时，不视为已死亡，保持本体无敌（避免刚生成就被误打）
+            if (NPC.ai[0] <= 0 || NPC.ai[1] <= 0)
+                return false;
+
+            // 手臂1死亡条件：无法获取到有效手臂，或者手臂生命值≤0
+            bool limb1Dead = !TryGetLimb((int)NPC.ai[0], out var limb1) || limb1.life <= 0;
+            // 手臂2同理
+            bool limb2Dead = !TryGetLimb((int)NPC.ai[1], out var limb2) || limb2.life <= 0;
+
+            return limb1Dead && limb2Dead;
         }
     }
 }

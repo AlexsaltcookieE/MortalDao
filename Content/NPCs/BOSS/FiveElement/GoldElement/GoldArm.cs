@@ -17,7 +17,7 @@ namespace MortalDao.Content.NPCs.BOSS.FiveElement.GoldElement
             NPC.height = 32;
             NPC.scale = 2f;
             NPC.defense = 10;
-            NPC.lifeMax = 1000;
+            NPC.lifeMax = 1300;
             NPC.HitSound = SoundID.NPCHit41;
             NPC.DeathSound = SoundID.NPCDeath1;
             NPC.knockBackResist = 0f;
