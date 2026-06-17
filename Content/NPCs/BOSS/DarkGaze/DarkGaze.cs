@@ -21,12 +21,9 @@ namespace MortalDao.Content.NPCs.BOSS.DarkGaze
         private int BossEscapeTimer;//逃脱计时器
         private int BossEscapeDelay = 180;//倒数计时器
         private int BossEscapeDistance = 3200;//逃脱距离
-
-        private int DespawnFlyDuration = 120;//离场飞行时长（帧）
         private bool DashCalLock = false;//预判玩家动向锁
         private Microsoft.Xna.Framework.Vector2 DashVector;//冲刺向量
         private int LaserProjectileIndex = -1;//镭射ID
-        private float LaserRotateAmount = 0f;//旋转的量
         private bool laserStateInitialized = false;//已发射镭射
         // Rotate a small angle each tick; TwoPi per tick appears visually static.
         private const float LaserRotateStep = 0.03f;
@@ -36,9 +33,6 @@ namespace MortalDao.Content.NPCs.BOSS.DarkGaze
         private Vector2 SpawnPos3;
         private Vector2 SpawnPos4;
         private Vector2 SpawnPos5;
-        private Vector2 ScreenProjectVelocity1 = new Vector2(12f, 0f);
-        private Vector2 ScreenProjectVelocity2 = new Vector2(12f, -6f);
-        private Vector2 ScreenProjectVelocity3 = new Vector2(12f, 6f);
         public override void SetStaticDefaults()//BOSS预设值
         {
             // Ensure Terraria treats this ModNPC as a real boss for UI/progression behavior.
@@ -233,7 +227,6 @@ namespace MortalDao.Content.NPCs.BOSS.DarkGaze
             if(!laserStateInitialized)
             {
                 laserStateInitialized = true;
-                LaserRotateAmount = 0f;
                 LaserProjectileIndex = -1;
                 NPC.rotation = -MathHelper.PiOver2;
                 NPC.velocity *= 0.2f;

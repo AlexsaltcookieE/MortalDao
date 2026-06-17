@@ -52,7 +52,7 @@ namespace MortalDao.Content.Projectiles.BossProj.FiveElementProj.GoldElementProj
                         Projectile.Center,
                         vel,
                         ModContent.ProjectileType<DemoniteOreProj>(),
-                        40,
+                        22,
                         1f,
                         Main.myPlayer,
                         npc.whoAmI

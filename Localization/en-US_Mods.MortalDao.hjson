@@ -130,8 +130,8 @@ Items: {
 	}
 
 	Weird_Boulder: {
-		DisplayName: Weird_ Boulder
-		Tooltip: ""
+		DisplayName: 奇异巨石
+		Tooltip: "上面迸发着闪电，更像一个活物"
 	}
 }
 
@@ -159,10 +159,8 @@ NPCs: {
 
 	Chinese_Zombie.DisplayName: 跳尸
 	Hostile_Dryad.DisplayName: Hostile_ Dryad
-	GoldBody.DisplayName: Gold Body
-	GoldArm.DisplayName: Gold Arm
-	CrimtaneWallProj.DisplayName: Crimtane Wall Proj
-	CopperOreProj.DisplayName: Copper Ore Proj
+	GoldBody.DisplayName: 石魔（金元素)
+	GoldArm.DisplayName: 石魔手(金元素）
 }
 
 Projectiles: {
@@ -197,16 +195,15 @@ Projectiles: {
 	PeachWoodBladeProj.DisplayName: Peach Wood Blade Proj
 	PeachWoodBladeHitbox.DisplayName: Peach Wood Blade Hitbox
 	BlackTriBeam.DisplayName: Black Tri Beam
-	GoldOreProj.DisplayName: Gold Ore Proj
-	IronOreProj.DisplayName: Iron Ore Proj
-	CrimtaneOreProj.DisplayName: Crimtane Ore Proj
-	CrimtaneWallProj.DisplayName: Crimtane Wall Proj
-	BoulderProjectile.DisplayName: Boulder Projectile
-	CrimtaneBoulder.DisplayName: Crimtane Boulder
-	DemoniteOreProj.DisplayName: Demonite Ore Proj
-	CopperOreProj.DisplayName: Copper Ore Proj
-	GoldElementWarning.DisplayName: Gold Element Warning
-	WeirdBoulderProj.DisplayName: Weird Boulder Proj
+	GoldOreProj.DisplayName: 魔金矿弹
+	IronOreProj.DisplayName: 魔铁弹
+	CrimtaneOreProj.DisplayName: 魔猩子弹
+	BoulderProjectile.DisplayName: 猩红巨石
+	CrimtaneBoulder.DisplayName: 魔猩弹
+	DemoniteOreProj.DisplayName: 魔金弹
+	CopperOreProj.DisplayName: 魔铜弹
+	GoldElementWarning.DisplayName: 巨石奇点
+	WeirdBoulderProj.DisplayName: 奇异巨石弹幕
 }
 
 Buffs: {

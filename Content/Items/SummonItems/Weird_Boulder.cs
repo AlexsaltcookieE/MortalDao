@@ -1,4 +1,5 @@
 ﻿using MortalDao.Content.Items.Marterials;
+using MortalDao.Content.NPCs.BOSS.DarkGaze;
 using MortalDao.Content.NPCs.BOSS.FiveElement.GoldElement;
 using MortalDao.Content.Projectiles.BossProj.FiveElementProj.GoldElementProj;
 using MortalDao.Content.Tiles.CraftStation;
@@ -38,9 +39,13 @@ namespace MortalDao.Content.Items.SummonItems
         {
             if (player.position.Y < Main.worldSurface * 16.0)
                 return false;
-            foreach (NPC npc in Main.npc)
+            if (NPC.AnyNPCs(ModContent.NPCType<GoldBody>()))
             {
-                if(npc.active && (npc.type == ModContent.NPCType<GoldArm>() || npc.type == ModContent.NPCType<GoldBody>()))
+                return false;
+            }
+            foreach(Projectile proj in Main.projectile)
+            {
+                if (proj.active && (proj.type == ModContent.ProjectileType<GoldElementWarning>() || proj.type == ModContent.ProjectileType<WeirdBoulderProj>()))
                 {
                     return false;
                 }
@@ -51,6 +56,13 @@ namespace MortalDao.Content.Items.SummonItems
         {
             Recipe recipe = CreateRecipe();
             recipe.AddIngredient(ItemID.Boulder, 1);
+            recipe.AddRecipeGroup("MortalDao:CopperOrTin", 1);
+            recipe.AddRecipeGroup(RecipeGroupID.IronBar, 1);
+            recipe.AddRecipeGroup("MortalDao:SilverOrTungsten", 1);
+            recipe.AddRecipeGroup("MortalDao:GoldOrPlatinum", 1);
+            recipe.AddRecipeGroup("MortalDao:DemoniteOrCrimtane", 1);
+            recipe.AddIngredient(ItemID.HellstoneBar, 1);
+            recipe.AddIngredient(ItemID.MeteoriteBar, 1);
             recipe.AddIngredient(ModContent.ItemType<resentment>(), 5);
             recipe.AddTile(ModContent.TileType<AlchemyFurnance>());
             recipe.Register();

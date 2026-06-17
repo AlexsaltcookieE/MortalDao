@@ -21,6 +21,7 @@ namespace MortalDao.Content.Projectiles.BossProj.FiveElementProj.GoldElementProj
         {
             Projectile.tileCollide = false;
             Projectile.hostile = true;
+            Projectile.friendly = false;
             Projectile.width = 16;
             Projectile.height = 16;
             Projectile.timeLeft = 80;
@@ -51,7 +52,7 @@ namespace MortalDao.Content.Projectiles.BossProj.FiveElementProj.GoldElementProj
                         Projectile.Center,
                         vel,
                         ModContent.ProjectileType<IronOreProj>(),
-                        40,
+                        (int)(Projectile.damage * 0.9),
                         1f,
                         Main.myPlayer,
                         npc.whoAmI

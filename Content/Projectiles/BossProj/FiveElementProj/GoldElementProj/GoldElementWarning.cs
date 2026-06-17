@@ -9,7 +9,7 @@ namespace MortalDao.Content.Projectiles.BossProj.FiveElementProj.GoldElementProj
 {
     public class GoldElementWarning : ModProjectile
     {
-        public override string Texture => "BoulderBoss/Content/ExtraTextures/InVisibleProj";
+        public override string Texture => "MortalDao/Content/ExtraTextures/InVisibleProj";
         private const int WarningTime = 600;
         //
         private const float LockDistance = 1000f;
@@ -25,19 +25,18 @@ namespace MortalDao.Content.Projectiles.BossProj.FiveElementProj.GoldElementProj
             Projectile.timeLeft = WarningTime + 30;
             Projectile.alpha = 255; // 完全透明（不画本体）
             Projectile.penetrate = -1;
+            Projectile.netImportant = true;
         }
         public override void AI()
         {
-            if (Main.netMode != NetmodeID.Server)
-            {
                 if (Timer < WarningTime)
                 {
                     if (Main.netMode != NetmodeID.Server)
                     {
-                        for (int i = 0; i < 10; i++)
+                        for (int i = 0; i < 15; i++)
                         {
                             Dust dust = Dust.NewDustDirect(
-                                Projectile.Center + Main.rand.NextVector2Circular(70f, 70f),
+                                Projectile.Center + Main.rand.NextVector2Circular(90f, 90f),
                                 0, 0,
                                 DustID.Stone,
                                 Scale: 2.5f
@@ -71,28 +70,52 @@ namespace MortalDao.Content.Projectiles.BossProj.FiveElementProj.GoldElementProj
                 }
                 else
                 {
-                    SpawnBoss();
-                    Projectile.Kill();
+                    if (Main.netMode != NetmodeID.MultiplayerClient)
+                    {
+                        SpawnBoss();
+                    }
+                CameraLockSystem.LockedCenter = null;
+
+                // ✅ 所有客户端都播放结束特效
+                if (Main.netMode != NetmodeID.Server)
+                {
+                    for (int i = 0; i < 20; i++)
+                    {
+                        Dust.NewDustDirect(
+                            Projectile.position,
+                            Projectile.width * 4,
+                            Projectile.height * 4,
+                            DustID.Stone,
+                            Scale: 3,
+                            SpeedX: Main.rand.Next(-5, 5),
+                            SpeedY: Main.rand.Next(-5, 5)
+                        );
+                    }
+                    SoundEngine.PlaySound(SoundID.Roar, Projectile.Center);
                 }
-            }
+
+                Projectile.Kill();
+            }    
         }
         private void SpawnBoss()
         {
+            // ✅ 确保只在服务端生成Boss
             if (Main.netMode == NetmodeID.MultiplayerClient)
                 return;
-            CameraLockSystem.LockedCenter = null;
+                
             int bossType = ModContent.NPCType<GoldBody>();
-            NPC.NewNPC(
+            int npcIndex = NPC.NewNPC(
                 NPC.GetSource_NaturalSpawn(),
                 (int)Projectile.Center.X,
                 (int)Projectile.Center.Y,
                 bossType
             );
-            for (int i = 0; i < 20; i++)
+            
+            // ✅ 通知所有客户端Boss已生成
+            if (Main.netMode == NetmodeID.Server && npcIndex < Main.maxNPCs)
             {
-                Dust ExposeDust = Dust.NewDustDirect(Projectile.position, Projectile.width * 4, Projectile.height * 4, DustID.Stone, Scale: 3, SpeedX: Main.rand.Next(-5, 5), SpeedY: Main.rand.Next(-5, 5));
+                NetMessage.SendData(MessageID.SyncNPC, -1, -1, null, npcIndex);
             }
-            SoundEngine.PlaySound(SoundID.Roar, Projectile.Center);
         }
     }
 }

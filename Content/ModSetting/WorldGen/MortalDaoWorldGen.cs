@@ -13,6 +13,7 @@ using Terraria.GameContent.Generation;
 using Terraria.GameContent.UI;
 using Terraria.ID;
 using Terraria.IO;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.WorldBuilding;
 
@@ -20,6 +21,17 @@ namespace MortalDao.Content.ModSetting
 {
     public class MortalDaoGenarateSystem : ModSystem
     {
+        public override void AddRecipeGroups()
+        {
+            RecipeGroup CopperGroup = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " " + Lang.GetItemNameValue(ItemID.CopperBar), ItemID.CopperBar, ItemID.TinBar);
+            RecipeGroup.RegisterGroup("MortalDao:CopperOrTin",CopperGroup);
+            RecipeGroup SliverGroup = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " " + Lang.GetItemNameValue(ItemID.SilverBar), ItemID.SilverBar, ItemID.TungstenBar);
+            RecipeGroup.RegisterGroup("MortalDao:SilverOrTungsten", SliverGroup);
+            RecipeGroup GoldGroup = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " " + Lang.GetItemNameValue(ItemID.GoldBar), ItemID.GoldBar, ItemID.PlatinumBar);
+            RecipeGroup.RegisterGroup("MortalDao:GoldOrPlatinum", GoldGroup);
+            RecipeGroup DemoniteGroup = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " " + Lang.GetItemNameValue(ItemID.DemoniteBar), ItemID.DemoniteBar, ItemID.CrimtaneBar);
+            RecipeGroup.RegisterGroup("MortalDao:DemoniteOrCrimtane", DemoniteGroup);
+        }
         public override void ModifyWorldGenTasks(List<GenPass> tasks, ref double totalWeight)//世界生成
         {
             //插入生成矿石的命令

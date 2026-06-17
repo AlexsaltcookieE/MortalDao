@@ -21,6 +21,8 @@ namespace MortalDao.Content.Projectiles.BossProj.FiveElementProj.GoldElementProj
         public override void SetDefaults()
         {
             Projectile.tileCollide = false;
+            Projectile.penetrate = -1;
+            Projectile.friendly = false;
             Projectile.hostile = true;
             Projectile.width = 16;
             Projectile.height = 16;

@@ -8,7 +8,7 @@ using Terraria.Audio;
 using MortalDao.Content.Projectiles.BossProj.FiveElementProj.GoldElementProj;
 using Terraria.DataStructures;
 
-namespace YourModName.Projectiles
+namespace MortalDao.Content.Projectiles.BossProj.FiveElementProj.GoldElementProj
 {
     public class CrimtaneBoulder : ModProjectile
     {
@@ -103,7 +103,6 @@ namespace YourModName.Projectiles
             {
                 Projectile.Kill();
             }
-            Main.NewText(bounceCount);
             return false; // 不销毁弹幕
         }
         public override void OnSpawn(IEntitySource source)
@@ -173,9 +172,6 @@ namespace YourModName.Projectiles
         }
         private void ShootArrows()
         {
-            // 箭矢伤害（可以是巨石伤害的50%）
-            int arrowDamage = (int)(Projectile.damage * 0.5f);
-
             // 1. 向上发射
             Vector2 upVelocity = new Vector2(0, -Spreate_SPEED);
             Projectile.NewProjectile(
@@ -183,7 +179,7 @@ namespace YourModName.Projectiles
                 Projectile.Center,
                 upVelocity,
                 ModContent.ProjectileType<CrimtaneOreProj>(),  // 使用敌方的木箭
-                arrowDamage,
+                22,
                 2f,  // 击退力
                 Projectile.owner
             );
@@ -195,7 +191,7 @@ namespace YourModName.Projectiles
                 Projectile.Center,
                 leftDownVelocity,
                 ModContent.ProjectileType<CrimtaneOreProj>(),
-                arrowDamage,
+                22,
                 2f,
                 Projectile.owner
             );
@@ -207,7 +203,7 @@ namespace YourModName.Projectiles
                 Projectile.Center,
                 rightDownVelocity,
                 ModContent.ProjectileType<CrimtaneOreProj>(),
-                arrowDamage,
+                22,
                 2f,
                 Projectile.owner
             );
