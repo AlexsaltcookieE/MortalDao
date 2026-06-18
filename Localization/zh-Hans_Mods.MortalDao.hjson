@@ -11,8 +11,8 @@ Tiles: {
 }
 
 NPCs: {
-	GoldBody.DisplayName: 石魔（金元素
-	GoldArm.DisplayName: 石魔手(金元素）
+	GoldBody.DisplayName: 石魔(金元素)
+	GoldArm.DisplayName: 石魔手(金元素)
 	DarkGaze.DisplayName: 魔尊之眼
 	ShadowHand.DisplayName: 暗影手
 	GeneralSoul.DisplayName: 万将魂
