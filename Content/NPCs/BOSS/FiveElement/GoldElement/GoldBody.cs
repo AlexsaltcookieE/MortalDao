@@ -1,10 +1,12 @@
 ﻿using Microsoft.Xna.Framework;
+using MortalDao.Content.ModSetting.Utilities;
 using MortalDao.Content.Projectiles.BossProj.FiveElementProj.GoldElementProj;
 using System;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 //USING 引用
 namespace MortalDao.Content.NPCs.BOSS.FiveElement.GoldElement
@@ -12,6 +14,10 @@ namespace MortalDao.Content.NPCs.BOSS.FiveElement.GoldElement
     [AutoloadBossHead]//加载BOSS头
     public class GoldBody : ModNPC
     {
+        //离开范围
+        private bool DespawnMessage = false;
+        private static LocalizedText GetDespawnMessage(string entryName) => MortalDaoUtils.GetText($"DespawnMessage.{entryName}.DespawnText");
+        //帧图逻辑
         private int PlayerUpOrDown;
         //帧图逻辑
         private int _frameIndex = 0;
@@ -136,6 +142,19 @@ namespace MortalDao.Content.NPCs.BOSS.FiveElement.GoldElement
         //------------------------------------------------------------------------------------------------------------------------------------------------------------
         public override void AI()
         {
+            int tileY = (int)(NPC.Center.Y / 16f); // 像素→Tile坐标
+            bool isAnyUnderground = tileY > Main.worldSurface && tileY < Main.UnderworldLayer;
+            if (!isAnyUnderground)
+            {
+                if (!DespawnMessage)
+                {
+                    Main.NewText(GetDespawnMessage("GoldElement").Value, color: Color.Gray);
+                    DespawnMessage = true;
+                }
+                Despawn();
+                return;
+            }
+            //
             if (AreBothLimbsDead())
             {
                 NPC.dontTakeDamage = false;
@@ -163,6 +182,7 @@ namespace MortalDao.Content.NPCs.BOSS.FiveElement.GoldElement
                 Despawn();
                 return;
             }
+            
             Player target = Main.player[targetID];
             NPC.target = targetID;
             //帧图方向
@@ -564,13 +584,13 @@ namespace MortalDao.Content.NPCs.BOSS.FiveElement.GoldElement
                 {
                     NPC limb1 = Main.npc[(int)NPC.ai[0]];
                     Vector2 targetDir = Vector2.Normalize(target.Center - limb1.Center);
-                    Projectile.NewProjectile(limb1.GetSource_FromAI(), limb1.position, targetDir * 10f, ModContent.ProjectileType<GoldOreProj>(),GoldProj_Damage,2f,NPC.target,limb1.whoAmI);
+                    Projectile.NewProjectile(limb1.GetSource_FromAI(), limb1.position, targetDir * 10f, ModContent.ProjectileType<Hellstone>(),GoldProj_Damage,2f,NPC.target,limb1.whoAmI);
                 }
                 if (hasLimb2)
                 {
                     NPC limb2 = Main.npc[(int)NPC.ai[1]];
                     Vector2 targetDir = Vector2.Normalize(target.Center - limb2.Center);
-                    Projectile.NewProjectile(limb2.GetSource_FromAI(), limb2.position, targetDir * 10f, ModContent.ProjectileType<GoldOreProj>(),GoldProj_Damage, 2f,NPC.target,limb2.whoAmI);
+                    Projectile.NewProjectile(limb2.GetSource_FromAI(), limb2.position, targetDir * 10f, ModContent.ProjectileType<Hellstone>(),GoldProj_Damage, 2f,NPC.target,limb2.whoAmI);
                 }
             }
             if (phase < DashDuration)
@@ -955,6 +975,8 @@ namespace MortalDao.Content.NPCs.BOSS.FiveElement.GoldElement
         }
         public override void OnKill()
         {
+            if (NPC.type == ModContent.NPCType<GoldBody>())
+                BossesDowned.DownedGoldElementBoss = true;
             Gore.NewGore(NPC.GetSource_Death(), NPC.position + new Vector2(Main.rand.Next(NPC.width), Main.rand.Next(NPC.height)), new Vector2(Main.rand.NextFloat(-3f, 3f), Main.rand.NextFloat(-6f, -2f)), Mod.Find<ModGore>("GoldBodyGore1").Type, NPC.scale * Main.rand.NextFloat(0.9f, 1.1f));
             Gore.NewGore(NPC.GetSource_Death(), NPC.position + new Vector2(Main.rand.Next(NPC.width), Main.rand.Next(NPC.height)), new Vector2(Main.rand.NextFloat(-2.5f, 2.5f), Main.rand.NextFloat(-5f, -1.5f)), Mod.Find<ModGore>("GoldBodyGore2").Type, NPC.scale * Main.rand.NextFloat(0.85f, 1.05f));
         }

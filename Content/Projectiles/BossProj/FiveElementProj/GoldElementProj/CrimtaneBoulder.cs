@@ -12,7 +12,6 @@ namespace MortalDao.Content.Projectiles.BossProj.FiveElementProj.GoldElementProj
 {
     public class CrimtaneBoulder : ModProjectile
     {
-        public override string Texture => "Terraria/Images/Projectile_" + ProjectileID.Boulder;
         // 配置参数
 
         private const float GRAVITY = 0.25f;

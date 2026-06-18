@@ -7,9 +7,10 @@ using Terraria.ModLoader;
 
 namespace MortalDao.Content.Projectiles.BossProj.FiveElementProj.GoldElementProj
 {
-    public class CopperOreProj : ModProjectile
+    public class Hellstone : ModProjectile
     {
-        public override string Texture => "Terraria/Images/Item_" + ItemID.CopperOre;
+        public override string Texture => "Terraria/Images/Item_" + ItemID.Hellstone;
+        private int ProjectileTimer;
 
         public override void SetStaticDefaults()
         {
@@ -25,7 +26,7 @@ namespace MortalDao.Content.Projectiles.BossProj.FiveElementProj.GoldElementProj
             Projectile.hostile = true;
             Projectile.width = 16;
             Projectile.height = 16;
-            Projectile.timeLeft = 700;
+            Projectile.timeLeft = 60;
             // 确保弹幕在网络中同步
             Projectile.netImportant = true;
         }
@@ -38,9 +39,33 @@ namespace MortalDao.Content.Projectiles.BossProj.FiveElementProj.GoldElementProj
                 SoundEngine.PlaySound(SoundID.Item54, Projectile.Center);
                 for (int i = 0; i < 3; i++)
                 {
-                    Dust.NewDust(Projectile.Center, Projectile.width, Projectile.height, DustID.Copper, Scale: 2f);
+                    Dust.NewDust(Projectile.Center, Projectile.width, Projectile.height, DustID.Lava, Scale: 1f);
+                }
+                float baseRotation = Projectile.velocity.ToRotation();
+                float[] angleOffsets = new float[]
+                {
+                                    -(MathHelper.PiOver4)/2,
+                                    0f,
+                                    MathHelper.PiOver4/2
+                };
+                foreach (float offset in angleOffsets)
+                {
+                    Vector2 velocity = Vector2.UnitX.RotatedBy(baseRotation + offset) * 10f;
+                    Projectile.NewProjectile(
+                        Projectile.GetSource_Death(),
+                        Projectile.Center,
+                        velocity,
+                        ModContent.ProjectileType<MeteroriteOreProj>(), // 可替换成你的自定义激光
+                        22,
+                        2f,
+                        Projectile.owner
+                    );
                 }
             }
+        }
+        public override void OnHitPlayer(Player target, Player.HurtInfo info)
+        {
+            target.AddBuff(BuffID.Burning, 180);
         }
         public override bool PreDraw(ref Color lightColor)
         {
@@ -80,29 +105,6 @@ namespace MortalDao.Content.Projectiles.BossProj.FiveElementProj.GoldElementProj
                 0f
             );
             return false;
-        }
-    }
-
-    public class PickaxeBlockPlayer : ModPlayer
-    {
-        public override bool? CanMeleeAttackCollideWithNPC(Item item, Rectangle meleeAttackHitbox, NPC target)
-        {
-            if (item.pick <= 0) return base.CanMeleeAttackCollideWithNPC(item, meleeAttackHitbox, target);
-            if (Main.netMode != NetmodeID.Server)
-            {
-                for (int i = 0; i < Main.maxProjectiles; i++)
-                {
-                    var proj = Main.projectile[i];
-                    if (!proj.active || proj.type != ModContent.ProjectileType<CopperOreProj>()) continue;
-
-                    if (proj.Hitbox.Intersects(meleeAttackHitbox))
-                    {
-                        // 客户端杀死弹幕后，会自动通过网络同步到服务器
-                        proj.Kill();
-                    }
-                }
-            }
-            return base.CanMeleeAttackCollideWithNPC(item, meleeAttackHitbox, target);
         }
     }
 }
