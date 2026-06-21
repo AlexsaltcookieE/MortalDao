@@ -14,7 +14,7 @@ namespace MortalDao.Content.Projectiles.BossProj.FiveElementProj.GoldElementProj
         private const float Max_Fall_Speed = 20f;
         private const float Rotation_Speed = 0.15f;
         private bool HasBounce;
-        public override string Texture => "Terraria/Images/Projectile_" + ProjectileID.Boulder;
+        public override string Texture => "MortalDao/Content/Items/SummonItems/Weird_Boulder";
         public override void SetStaticDefaults()
         {
         }

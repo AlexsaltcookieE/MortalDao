@@ -16,6 +16,7 @@
 	<ItemGroup>
 	  <AdditionalFiles Remove="Content\ExtraTextures\ScarletDevilStreak.png" />
 	  <AdditionalFiles Remove="Content\ExtraTextures\SylvestaffStreak.png" />
+	  <AdditionalFiles Remove="Content\ExtraTextures\UItex\RealmWindow.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Content Include="Content\ExtraTextures\ScarletDevilStreak.png">
@@ -24,6 +25,9 @@
 	  <Content Include="Content\ExtraTextures\SylvestaffStreak.png">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </Content>
+	</ItemGroup>
+	<ItemGroup>
+	  <EmbeddedResource Include="Content\ExtraTextures\UItex\RealmWindow.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Content\Graphics\" />

@@ -3,44 +3,28 @@
   "WorkspaceRootPath": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\projectiles\\bossproj\\fiveelementproj\\goldelementproj\\hellstoneoreproj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\projectiles\\bossproj\\fiveelementproj\\goldelementproj\\hellstoneoreproj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\modsetting\\experienceandlevel\\mainlevelsys.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\modsetting\\experienceandlevel\\mainlevelsys.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\projectiles\\bossproj\\fiveelementproj\\goldelementproj\\meteoriteoreproj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\projectiles\\bossproj\\fiveelementproj\\goldelementproj\\meteoriteoreproj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\modsetting\\experienceandlevel\\killgain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\modsetting\\experienceandlevel\\killgain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\projectiles\\bossproj\\fiveelementproj\\goldelementproj\\goldoreproj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\projectiles\\bossproj\\fiveelementproj\\goldelementproj\\goldoreproj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\modsetting\\ui\\the_sencond\\the_senconddialogue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\modsetting\\ui\\the_sencond\\the_senconddialogue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\projectiles\\bossproj\\fiveelementproj\\goldelementproj\\ironoreproj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\projectiles\\bossproj\\fiveelementproj\\goldelementproj\\ironoreproj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\modsetting\\ui\\realm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\modsetting\\ui\\realm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\projectiles\\bossproj\\fiveelementproj\\goldelementproj\\copperoreproj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\projectiles\\bossproj\\fiveelementproj\\goldelementproj\\copperoreproj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\npcs\\hostilenpc\\prehardmode\\hostile_dryadspawnlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\npcs\\hostilenpc\\prehardmode\\hostile_dryadspawnlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\npcs\\boss\\fiveelement\\goldelement\\goldbody.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\npcs\\boss\\fiveelement\\goldelement\\goldbody.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\projectiles\\bossproj\\fiveelementproj\\goldelementproj\\crimtaneboulder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\projectiles\\bossproj\\fiveelementproj\\goldelementproj\\crimtaneboulder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\localization\\zh-hans_mods.mortaldao.despawnmessage.hjson||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:localization\\zh-hans_mods.mortaldao.despawnmessage.hjson||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\localization\\en-us_mods.mortaldao.despawnmessage.hjson||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:localization\\en-us_mods.mortaldao.despawnmessage.hjson||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\modsetting\\modlink\\linkbosschecklist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\modsetting\\modlink\\linkbosschecklist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\npcs\\hostilenpc\\prehardmode\\hostile_dryad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\npcs\\hostilenpc\\prehardmode\\hostile_dryad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,129 +34,86 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GoldBody.cs",
-              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\NPCs\\BOSS\\FiveElement\\GoldElement\\GoldBody.cs",
-              "RelativeDocumentMoniker": "Content\\NPCs\\BOSS\\FiveElement\\GoldElement\\GoldBody.cs",
-              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\NPCs\\BOSS\\FiveElement\\GoldElement\\GoldBody.cs",
-              "RelativeToolTip": "Content\\NPCs\\BOSS\\FiveElement\\GoldElement\\GoldBody.cs",
-              "ViewState": "AgIAADcCAAAAAAAAAAAUwFACAACLAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-16T07:16:00.742Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "IronOreProj.cs",
-              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Projectiles\\BossProj\\FiveElementProj\\GoldElementProj\\IronOreProj.cs",
-              "RelativeDocumentMoniker": "Content\\Projectiles\\BossProj\\FiveElementProj\\GoldElementProj\\IronOreProj.cs",
-              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Projectiles\\BossProj\\FiveElementProj\\GoldElementProj\\IronOreProj.cs",
-              "RelativeToolTip": "Content\\Projectiles\\BossProj\\FiveElementProj\\GoldElementProj\\IronOreProj.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAAAlAAAAAAAAAA==",
+              "Title": "Realm.cs",
+              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\UI\\Realm.cs",
+              "RelativeDocumentMoniker": "Content\\ModSetting\\UI\\Realm.cs",
+              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\UI\\Realm.cs",
+              "RelativeToolTip": "Content\\ModSetting\\UI\\Realm.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAQwD0AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-18T09:44:10.282Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GoldOreProj.cs",
-              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Projectiles\\BossProj\\FiveElementProj\\GoldElementProj\\GoldOreProj.cs",
-              "RelativeDocumentMoniker": "Content\\Projectiles\\BossProj\\FiveElementProj\\GoldElementProj\\GoldOreProj.cs",
-              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Projectiles\\BossProj\\FiveElementProj\\GoldElementProj\\GoldOreProj.cs",
-              "RelativeToolTip": "Content\\Projectiles\\BossProj\\FiveElementProj\\GoldElementProj\\GoldOreProj.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-18T09:43:44.574Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MeteoriteOreProj.cs",
-              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Projectiles\\BossProj\\FiveElementProj\\GoldElementProj\\MeteoriteOreProj.cs",
-              "RelativeDocumentMoniker": "Content\\Projectiles\\BossProj\\FiveElementProj\\GoldElementProj\\MeteoriteOreProj.cs",
-              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Projectiles\\BossProj\\FiveElementProj\\GoldElementProj\\MeteoriteOreProj.cs",
-              "RelativeToolTip": "Content\\Projectiles\\BossProj\\FiveElementProj\\GoldElementProj\\MeteoriteOreProj.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAQwC0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-18T09:38:58.558Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CopperOreProj.cs",
-              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Projectiles\\BossProj\\FiveElementProj\\GoldElementProj\\CopperOreProj.cs",
-              "RelativeDocumentMoniker": "Content\\Projectiles\\BossProj\\FiveElementProj\\GoldElementProj\\CopperOreProj.cs",
-              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Projectiles\\BossProj\\FiveElementProj\\GoldElementProj\\CopperOreProj.cs",
-              "RelativeToolTip": "Content\\Projectiles\\BossProj\\FiveElementProj\\GoldElementProj\\CopperOreProj.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-18T09:31:30.868Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HellstoneOreProj.cs",
-              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Projectiles\\BossProj\\FiveElementProj\\GoldElementProj\\HellstoneOreProj.cs",
-              "RelativeDocumentMoniker": "Content\\Projectiles\\BossProj\\FiveElementProj\\GoldElementProj\\HellstoneOreProj.cs",
-              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Projectiles\\BossProj\\FiveElementProj\\GoldElementProj\\HellstoneOreProj.cs",
-              "RelativeToolTip": "Content\\Projectiles\\BossProj\\FiveElementProj\\GoldElementProj\\HellstoneOreProj.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAUwEMAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-18T09:31:23.823Z",
+              "WhenOpened": "2026-06-18T12:50:27.507Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CrimtaneBoulder.cs",
-              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Projectiles\\BossProj\\FiveElementProj\\GoldElementProj\\CrimtaneBoulder.cs",
-              "RelativeDocumentMoniker": "Content\\Projectiles\\BossProj\\FiveElementProj\\GoldElementProj\\CrimtaneBoulder.cs",
-              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Projectiles\\BossProj\\FiveElementProj\\GoldElementProj\\CrimtaneBoulder.cs",
-              "RelativeToolTip": "Content\\Projectiles\\BossProj\\FiveElementProj\\GoldElementProj\\CrimtaneBoulder.cs",
-              "ViewState": "AgIAAL0AAAAAAAAAAAAiwEQAAAAiAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "The_SencondDialogue.cs",
+              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\UI\\The_Sencond\\The_SencondDialogue.cs",
+              "RelativeDocumentMoniker": "Content\\ModSetting\\UI\\The_Sencond\\The_SencondDialogue.cs",
+              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\UI\\The_Sencond\\The_SencondDialogue.cs",
+              "RelativeToolTip": "Content\\ModSetting\\UI\\The_Sencond\\The_SencondDialogue.cs",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAYwIYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-18T09:27:04.422Z"
+              "WhenOpened": "2026-06-21T11:38:40.525Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "en-US_Mods.MortalDao.DespawnMessage.hjson",
-              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Localization\\en-US_Mods.MortalDao.DespawnMessage.hjson",
-              "RelativeDocumentMoniker": "Localization\\en-US_Mods.MortalDao.DespawnMessage.hjson",
-              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Localization\\en-US_Mods.MortalDao.DespawnMessage.hjson",
-              "RelativeToolTip": "Localization\\en-US_Mods.MortalDao.DespawnMessage.hjson",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-06-18T09:15:19.226Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "zh-Hans_Mods.MortalDao.DespawnMessage.hjson",
-              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Localization\\zh-Hans_Mods.MortalDao.DespawnMessage.hjson",
-              "RelativeDocumentMoniker": "Localization\\zh-Hans_Mods.MortalDao.DespawnMessage.hjson",
-              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Localization\\zh-Hans_Mods.MortalDao.DespawnMessage.hjson",
-              "RelativeToolTip": "Localization\\zh-Hans_Mods.MortalDao.DespawnMessage.hjson",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-06-18T09:09:07.577Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "LinkBossCheckList.cs",
-              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\ModLink\\LinkBossCheckList.cs",
-              "RelativeDocumentMoniker": "Content\\ModSetting\\ModLink\\LinkBossCheckList.cs",
-              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\ModLink\\LinkBossCheckList.cs",
-              "RelativeToolTip": "Content\\ModSetting\\ModLink\\LinkBossCheckList.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAuwA8AAAAIAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "KillGain.cs",
+              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\ExperienceAndLevel\\KillGain.cs",
+              "RelativeDocumentMoniker": "Content\\ModSetting\\ExperienceAndLevel\\KillGain.cs",
+              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\ExperienceAndLevel\\KillGain.cs",
+              "RelativeToolTip": "Content\\ModSetting\\ExperienceAndLevel\\KillGain.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAzwA0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-17T13:36:30.682Z"
+              "WhenOpened": "2026-06-21T11:36:19.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainLevelSys.cs",
+              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\ExperienceAndLevel\\MainLevelSys.cs",
+              "RelativeDocumentMoniker": "Content\\ModSetting\\ExperienceAndLevel\\MainLevelSys.cs",
+              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\ExperienceAndLevel\\MainLevelSys.cs",
+              "RelativeToolTip": "Content\\ModSetting\\ExperienceAndLevel\\MainLevelSys.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAUwDQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-21T11:36:16.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Hostile_Dryad.cs",
+              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\NPCs\\HostileNPC\\PreHardMode\\Hostile_Dryad.cs",
+              "RelativeDocumentMoniker": "Content\\NPCs\\HostileNPC\\PreHardMode\\Hostile_Dryad.cs",
+              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\NPCs\\HostileNPC\\PreHardMode\\Hostile_Dryad.cs",
+              "RelativeToolTip": "Content\\NPCs\\HostileNPC\\PreHardMode\\Hostile_Dryad.cs",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAqwJIAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-21T10:43:32.237Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Hostile_DryadSpawnLogic.cs",
+              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\NPCs\\HostileNPC\\PreHardMode\\Hostile_DryadSpawnLogic.cs",
+              "RelativeDocumentMoniker": "Content\\NPCs\\HostileNPC\\PreHardMode\\Hostile_DryadSpawnLogic.cs",
+              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\NPCs\\HostileNPC\\PreHardMode\\Hostile_DryadSpawnLogic.cs",
+              "RelativeToolTip": "Content\\NPCs\\HostileNPC\\PreHardMode\\Hostile_DryadSpawnLogic.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAAwBIAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-21T10:41:39.384Z",
+              "EditorCaption": ""
             }
           ]
         }

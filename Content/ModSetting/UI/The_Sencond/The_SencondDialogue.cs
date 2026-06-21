@@ -1,9 +1,11 @@
 ﻿using Microsoft.Extensions.Options;
 using Microsoft.Xna.Framework.Graphics;
 using MortalDao.Content.ModSetting.QuestSystem;
+using MortalDao.Content.ModSetting.Utilities;
 using System;
 using Terraria;
 using Terraria.ID;
+using Terraria.Localization;
 
 namespace MortalDao.Content.ModSetting.UI.The_Sencond
 {
@@ -12,7 +14,6 @@ namespace MortalDao.Content.ModSetting.UI.The_Sencond
         public string Label;
         public System.Func<bool> Condition;          // 是否显示这个选项
         public System.Action<TheSencondUI> OnSelect; // 点了干嘛
-
         public DialogueOption(string label, Action<TheSencondUI> onSelect, Func<bool> cond = null)
         {
             Label = label; OnSelect = onSelect; Condition = cond;
@@ -24,7 +25,6 @@ namespace MortalDao.Content.ModSetting.UI.The_Sencond
         public string Text;
         public Texture2D Portrait;                     // 可选头像
         public System.Collections.Generic.List<DialogueOption> Options = new();
-
         public DialogueNode(string text) { Text = text; }
     }
 
@@ -33,6 +33,7 @@ namespace MortalDao.Content.ModSetting.UI.The_Sencond
     // ============================================================
     public static class DialogueTree
     {
+        private static LocalizedText GetRealmUIText(string entryName) => MortalDaoUtils.GetText($"Level.UI.Name.Level.{entryName}");
         public static DialogueNode TheSencondFirstMeeting()
         {
             var root = new DialogueNode("");
@@ -120,12 +121,23 @@ namespace MortalDao.Content.ModSetting.UI.The_Sencond
             }));
             root.Options.Add(new DialogueOption("「这房间还满意吗？/ 给你安排好了」", ui =>
             {
+                bool HasDone = false;
                 GlobalTaskSystem.RequestCompleteTask(1, Main.LocalPlayer);
                 if(Main.netMode == NetmodeID.SinglePlayer)
                 {
                     GlobalTaskSystem.SyncTask(1, TaskStatus.Completed);
                 }
                 var doneNode = new DialogueNode("还行吧，虽然有点破旧，但总比露宿街头强。\n以后我就在这儿落脚了，多谢啊！");
+                foreach (Player player in Main.player)
+                {
+                    if (!HasDone)
+                    {
+                        var levelSys = Main.LocalPlayer.GetModPlayer<MainLevelSys>();
+                        levelSys.AddExperience(20);
+                        CombatText.NewText(Main.LocalPlayer.getRect(), Microsoft.Xna.Framework.Color.Gold, GetRealmUIText("OnUpdateEXP").Value);
+                        HasDone = true;
+                    }
+                }
                 doneNode.Options.Add(new DialogueNode("不客气，有事再找我")
                 {
                     Options =

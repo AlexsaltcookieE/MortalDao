@@ -48,7 +48,7 @@ namespace MortalDao.Content.Projectiles.HostileProj
                 null,
                 Main.GameViewMatrix.TransformationMatrix
             );
-            Texture2D tex = ModContent.Request<Texture2D>("MortalDao/Content/ExtraTextures/SylvestaffStreak").Value;
+            Texture2D tex = ModContent.Request<Texture2D>("MortalDao/Content/ExtraTextures/ScarletDevilStreak").Value;
             Vector2 center = Projectile.Center - Main.screenPosition;
             Vector2 dir = Projectile.velocity.SafeNormalize(Vector2.UnitX);
             float rotation = dir.ToRotation();

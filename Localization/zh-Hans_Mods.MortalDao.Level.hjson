@@ -1,0 +1,26 @@
+UI: {
+	Name: {
+		Realm: 境界:
+		EXP: 经验值:
+
+		Level: {
+			OnUpGrade: 境界提升:
+			OnUpdateEXP: 经验增加:
+			One: 废柴
+			Two: 杂碎
+			Three: 凡人
+			Four: 外门
+			Five: 内门
+			Six: 镖人
+			Seven: 剑客
+			Eight: 道士
+			Nine: 炼气初期
+			Ten: 炼气中期
+			Eleven: 炼气晚期
+			Twelve: 筑基初期
+			// Thirteen: Foundation Establishment (Mid)
+			Fourteen: 金丹期
+			// Fifteen: Golden Core Stage
+		}
+	}
+}

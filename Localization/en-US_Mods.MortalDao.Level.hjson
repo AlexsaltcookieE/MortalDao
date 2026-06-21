@@ -1,0 +1,26 @@
+UI: {
+	Name: {
+		Realm: Realm:
+		EXP: EXP:
+
+		Level: {
+			OnUpGrade: Realm Upgrade:
+			OnUpdateEXP: Gain EXP:
+			One: Good-for-nothing
+			Two: Trash
+			Three: Mortal
+			Four: Outer Disciple
+			Five: Inner Disciple
+			Six: Escort
+			Seven: Swordsman
+			Eight: Taoist
+			Nine: Qi Refining Stage (Early)
+			Ten: Qi Refining Stage (Mid)
+			Eleven: Qi Refining Stage (Late)
+			Twelve: Foundation Establishment (Early)
+			Thirteen: Foundation Establishment (Mid)
+			Fourteen: Foundation Establishment (Late)
+			Fifteen: Golden Core Stage
+		}
+	}
+}

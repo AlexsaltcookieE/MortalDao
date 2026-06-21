@@ -89,6 +89,10 @@ namespace MortalDao.Content.NPCs.HostileNPC.PreHardMode
         }
         public override void OnKill()
         {
+            if (Main.netMode == NetmodeID.Server)
+            {
+                return;
+            }
             for (int i = 0; i < 5; i++)
             {
                 int GoreType = Main.rand.Next(4, 5);
@@ -98,10 +102,6 @@ namespace MortalDao.Content.NPCs.HostileNPC.PreHardMode
                     NPC.velocity,
                     GoreType
                 );
-            }
-            if(Main.netMode == NetmodeID.Server)
-            {
-                
             }
         }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)

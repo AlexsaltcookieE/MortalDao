@@ -11,7 +11,6 @@ namespace MortalDao.Content.Items.SummonItems
 {
     public class Weird_Boulder : ModItem
     {
-        public override string Texture => "Terraria/Images/Item_" + ItemID.Boulder;
         public override void SetStaticDefaults()
         {
             ItemID.Sets.SortingPriorityBossSpawns[Type] = 1;
