@@ -3,28 +3,20 @@
   "WorkspaceRootPath": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\modsetting\\experienceandlevel\\mainlevelsys.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\modsetting\\experienceandlevel\\mainlevelsys.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\modsetting\\experienceandlevel\\killgain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\modsetting\\experienceandlevel\\killgain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\modsetting\\ui\\the_sencond\\the_senconddialogue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\modsetting\\ui\\the_sencond\\the_senconddialogue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\items\\meleeweapons\\yuemaidensword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\items\\meleeweapons\\yuemaidensword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\modsetting\\ui\\realm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\modsetting\\ui\\realm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\npcs\\hostilenpc\\prehardmode\\hostile_dryadspawnlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\npcs\\hostilenpc\\prehardmode\\hostile_dryadspawnlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\localization\\zh-hans_mods.mortaldao.hjson||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:localization\\zh-hans_mods.mortaldao.hjson||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\npcs\\hostilenpc\\prehardmode\\hostile_dryad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\npcs\\hostilenpc\\prehardmode\\hostile_dryad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\localization\\en-us_mods.mortaldao.hjson||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:localization\\en-us_mods.mortaldao.hjson||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,11 +26,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Realm.cs",
               "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\UI\\Realm.cs",
               "RelativeDocumentMoniker": "Content\\ModSetting\\UI\\Realm.cs",
@@ -52,67 +44,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "The_SencondDialogue.cs",
-              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\UI\\The_Sencond\\The_SencondDialogue.cs",
-              "RelativeDocumentMoniker": "Content\\ModSetting\\UI\\The_Sencond\\The_SencondDialogue.cs",
-              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\UI\\The_Sencond\\The_SencondDialogue.cs",
-              "RelativeToolTip": "Content\\ModSetting\\UI\\The_Sencond\\The_SencondDialogue.cs",
-              "ViewState": "AgIAAHkAAAAAAAAAAAAYwIYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-21T11:38:40.525Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "KillGain.cs",
-              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\ExperienceAndLevel\\KillGain.cs",
-              "RelativeDocumentMoniker": "Content\\ModSetting\\ExperienceAndLevel\\KillGain.cs",
-              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\ExperienceAndLevel\\KillGain.cs",
-              "RelativeToolTip": "Content\\ModSetting\\ExperienceAndLevel\\KillGain.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAzwA0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-21T11:36:19.669Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MainLevelSys.cs",
-              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\ExperienceAndLevel\\MainLevelSys.cs",
-              "RelativeDocumentMoniker": "Content\\ModSetting\\ExperienceAndLevel\\MainLevelSys.cs",
-              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\ExperienceAndLevel\\MainLevelSys.cs",
-              "RelativeToolTip": "Content\\ModSetting\\ExperienceAndLevel\\MainLevelSys.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAUwDQAAAAVAAAAAAAAAA==",
+              "Title": "YueMaidenSword.cs",
+              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Items\\MeleeWeapons\\YueMaidenSword.cs",
+              "RelativeDocumentMoniker": "Content\\Items\\MeleeWeapons\\YueMaidenSword.cs",
+              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Items\\MeleeWeapons\\YueMaidenSword.cs",
+              "RelativeToolTip": "Content\\Items\\MeleeWeapons\\YueMaidenSword.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-21T11:36:16.395Z",
+              "WhenOpened": "2026-06-22T11:45:18.389Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Hostile_Dryad.cs",
-              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\NPCs\\HostileNPC\\PreHardMode\\Hostile_Dryad.cs",
-              "RelativeDocumentMoniker": "Content\\NPCs\\HostileNPC\\PreHardMode\\Hostile_Dryad.cs",
-              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\NPCs\\HostileNPC\\PreHardMode\\Hostile_Dryad.cs",
-              "RelativeToolTip": "Content\\NPCs\\HostileNPC\\PreHardMode\\Hostile_Dryad.cs",
-              "ViewState": "AgIAAH0AAAAAAAAAAAAqwJIAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-21T10:43:32.237Z",
+              "DocumentIndex": 2,
+              "Title": "zh-Hans_Mods.MortalDao.hjson",
+              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Localization\\zh-Hans_Mods.MortalDao.hjson",
+              "RelativeDocumentMoniker": "Localization\\zh-Hans_Mods.MortalDao.hjson",
+              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Localization\\zh-Hans_Mods.MortalDao.hjson",
+              "RelativeToolTip": "Localization\\zh-Hans_Mods.MortalDao.hjson",
+              "ViewState": "AgIAAMwAAAAAAAAAAADwv9UAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-06-22T11:42:14.066Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Hostile_DryadSpawnLogic.cs",
-              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\NPCs\\HostileNPC\\PreHardMode\\Hostile_DryadSpawnLogic.cs",
-              "RelativeDocumentMoniker": "Content\\NPCs\\HostileNPC\\PreHardMode\\Hostile_DryadSpawnLogic.cs",
-              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\NPCs\\HostileNPC\\PreHardMode\\Hostile_DryadSpawnLogic.cs",
-              "RelativeToolTip": "Content\\NPCs\\HostileNPC\\PreHardMode\\Hostile_DryadSpawnLogic.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAAwBIAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-21T10:41:39.384Z",
+              "DocumentIndex": 3,
+              "Title": "en-US_Mods.MortalDao.hjson",
+              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Localization\\en-US_Mods.MortalDao.hjson",
+              "RelativeDocumentMoniker": "Localization\\en-US_Mods.MortalDao.hjson",
+              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Localization\\en-US_Mods.MortalDao.hjson",
+              "RelativeToolTip": "Localization\\en-US_Mods.MortalDao.hjson",
+              "ViewState": "AgIAAKMAAAAAAAAAAAAewLMAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-06-22T11:41:10.991Z",
               "EditorCaption": ""
             }
           ]

@@ -1,5 +1,6 @@
 ﻿using Microsoft.Build.Tasks;
 using Microsoft.Xna.Framework;
+using MortalDao.Content.Items.Marterials;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Terraria;
 using Terraria.Audio;
+using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Utilities;
@@ -72,6 +74,15 @@ namespace MortalDao.Content.NPCs.HostileNPC.PreHardMode
                     ,Scale:2f
                 );
             }
+        }
+        public override void ModifyNPCLoot(NPCLoot npcLoot)
+        {
+            npcLoot.Add(ItemDropRule.Common(
+                ModContent.ItemType<PeachWood>(), // 物品类型
+                2, // 掉落几率分母（1=100%）
+                4, // 最小掉落数量
+                7  // 最大掉落数量
+            ));
         }
         private bool HasWallInFront()
         {

@@ -61,6 +61,20 @@ Buffs: {
 		DisplayName: 史莱姆一家
 		Description: 你也不想惹怒它们吧（史莱姆之神？）
 	}
+
+	LightSpeed: {
+		Description:
+			'''
+			你感觉浑身轻松
+			提升你的速度和加速度
+			'''
+		DisplayName: 轻盈
+	}
+
+	LightSpeedCoolDown: {
+		DisplayName: 轻盈冷却
+		Description: 你肌肉有些许疲劳
+	}
 }
 
 Items: {
@@ -185,6 +199,25 @@ Items: {
 			能熔炼成许多兵器和法宝
 			'''
 	}
+
+	YueMaidenSword: {
+		DisplayName: 越女剑
+		Tooltip:
+			'''
+			出自《仙剑奇侠传》
+			专给女侠打造的奇轻之剑
+			'''
+	}
+
+	RedLine: {
+		DisplayName: 红绳
+		Tooltip: 吉祥之兆
+	}
+
+	PeachWood: {
+		DisplayName: 桃木
+		Tooltip: 仙桃树之木
+	}
 }
 
 Projectiles: {
@@ -225,8 +258,10 @@ Projectiles: {
 	Baby_Slime_Spike.DisplayName: 史莱姆王子宝宝尖刺
 	Puer_King.DisplayName: 普洱的史莱姆王
 	Puer_Slime_baby.DisplayName: 普洱史莱姆宝宝
-	// Hellstone.DisplayName: Hellstone
-	// MeteroriteOreProj.DisplayName: Meterorite Ore Proj
+	Hellstone.DisplayName: Hellstone
+	MeteroriteOreProj.DisplayName: Meterorite Ore Proj
+	YueMaidenSwordStab.DisplayName: Yue Maiden Sword Stab
+	YueMaidenSwordBlade.DisplayName: Yue Maiden Sword Blade
 }
 
-// "Keybinds.Open Realm Menu.DisplayName": Open  Realm  Menu
+"Keybinds.Open Realm Menu.DisplayName": 打开状态菜单

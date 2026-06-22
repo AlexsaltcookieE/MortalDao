@@ -61,6 +61,16 @@ Buffs: {
 		DisplayName: Rain Bow Slime
 		Description: You won't want to enrage their family! (The God of Slime in Calamity?)
 	}
+
+	LightSpeed: {
+		Description: Mods.MortalDao.Buffs.LightSpeed.Description
+		DisplayName: Light Speed
+	}
+
+	LightSpeedCoolDown: {
+		DisplayName: Light Speed Cool Down
+		Description: Mods.MortalDao.Buffs.LightSpeedCoolDown.Description
+	}
 }
 
 Items: {
@@ -155,6 +165,25 @@ Items: {
 		DisplayName: Cyan Iron Ingot
 		Tooltip: What a amazing metal!
 	}
+
+	YueMaidenSword: {
+		DisplayName: Yue Maiden Sword
+		Tooltip:
+			'''
+			Weapon From(Chinese Paladin: Sword and Fairy)
+			A extremely light sword made for lady
+			'''
+	}
+
+	RedLine: {
+		DisplayName: Red Line
+		Tooltip: Give Hope
+	}
+
+	PeachWood: {
+		DisplayName: Peach Wood
+		Tooltip: Wood From God's Peach Tree
+	}
 }
 
 Projectiles: {
@@ -197,6 +226,8 @@ Projectiles: {
 	Puer_Slime_baby.DisplayName: Puer_ Slime_baby
 	Hellstone.DisplayName: Hellstone
 	MeteroriteOreProj.DisplayName: Meterorite Ore Proj
+	YueMaidenSwordStab.DisplayName: Yue Maiden Sword Stab
+	YueMaidenSwordBlade.DisplayName: Yue Maiden Sword Blade
 }
 
 "Keybinds.Open Realm Menu.DisplayName": Open  Realm  Menu
