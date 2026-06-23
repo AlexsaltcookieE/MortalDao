@@ -34,6 +34,8 @@ NPCs: {
 			Princess_LovesNPC: I really like talking Guide who is very knowledgeable.
 		}
 	}
+
+	AxeRobber.DisplayName: Axe Robber
 }
 
 Buffs: {

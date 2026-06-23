@@ -39,7 +39,7 @@ namespace MortalDao.Content.Items.MeleeWeapons
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(ModContent.ItemType<RedLine>(), 10);
+            recipe.AddIngredient(ModContent.ItemType<RedLine>(), 5);
             recipe.AddIngredient(ModContent.ItemType<PeachWood>(), 10);
             recipe.AddRecipeGroup("MortalDao:SilverOrTungsten", 15);
             recipe.AddTile(ModContent.TileType<AlchemyFurnance>());

@@ -22,7 +22,7 @@ namespace MortalDao.Content.Items.Marterials
         {
             Recipe recipe = CreateRecipe(5);
             recipe.AddIngredient(ItemID.RedHusk);
-            recipe.AddIngredient(ItemID.Silk,5);
+            recipe.AddIngredient(ItemID.Cobweb,20);
             recipe.Register();
         }
     }

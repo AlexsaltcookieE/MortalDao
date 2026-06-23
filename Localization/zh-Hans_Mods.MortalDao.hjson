@@ -34,6 +34,8 @@ NPCs: {
 			Princess_LovesNPC: I like {NPCName}.
 		}
 	}
+
+	// AxeRobber.DisplayName: Axe Robber
 }
 
 Buffs: {

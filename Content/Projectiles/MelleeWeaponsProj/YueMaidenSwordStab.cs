@@ -15,7 +15,7 @@ namespace MortalDao.Content.Projectiles.MelleeWeaponsProj
         private const int Pause_duration = 2;
         private const int Retract_duration = 8;
         //偏移
-        private const float Start_Offset = 55f;
+        private const float Start_Offset = 40f;
         //总持续时间
         private const int Total_duration = Extend_duration + Pause_duration + Retract_duration;
         //刺出距离

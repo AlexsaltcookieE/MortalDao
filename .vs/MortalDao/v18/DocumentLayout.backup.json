@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\items\\meleeweapons\\yuemaidensword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\items\\meleeweapons\\yuemaidensword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\npcs\\attacks\\robberattack\\axerobber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\npcs\\attacks\\robberattack\\axerobber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\modsetting\\ui\\realm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\modsetting\\ui\\realm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\localization\\zh-hans_mods.mortaldao.hjson||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:localization\\zh-hans_mods.mortaldao.hjson||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\localization\\en-us_mods.mortaldao.hjson||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:localization\\en-us_mods.mortaldao.hjson||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\npcs\\hostilenpc\\prehardmode\\hostile_dryad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\npcs\\hostilenpc\\prehardmode\\hostile_dryad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,59 +18,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{c6f34f0d-7ae5-4f3a-be61-fe0c21ae9eb8}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Realm.cs",
-              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\UI\\Realm.cs",
-              "RelativeDocumentMoniker": "Content\\ModSetting\\UI\\Realm.cs",
-              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\UI\\Realm.cs",
-              "RelativeToolTip": "Content\\ModSetting\\UI\\Realm.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAQwD0AAAAvAAAAAAAAAA==",
+              "Title": "Hostile_Dryad.cs",
+              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\NPCs\\HostileNPC\\PreHardMode\\Hostile_Dryad.cs",
+              "RelativeDocumentMoniker": "Content\\NPCs\\HostileNPC\\PreHardMode\\Hostile_Dryad.cs",
+              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\NPCs\\HostileNPC\\PreHardMode\\Hostile_Dryad.cs",
+              "RelativeToolTip": "Content\\NPCs\\HostileNPC\\PreHardMode\\Hostile_Dryad.cs",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAAAIwAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-18T12:50:27.507Z",
-              "IsPinned": true,
+              "WhenOpened": "2026-06-23T11:13:49.143Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "YueMaidenSword.cs",
-              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Items\\MeleeWeapons\\YueMaidenSword.cs",
-              "RelativeDocumentMoniker": "Content\\Items\\MeleeWeapons\\YueMaidenSword.cs",
-              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Items\\MeleeWeapons\\YueMaidenSword.cs",
-              "RelativeToolTip": "Content\\Items\\MeleeWeapons\\YueMaidenSword.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAJAAAAAAAAAA==",
+              "Title": "AxeRobber.cs",
+              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\NPCs\\Attacks\\RobberAttack\\AxeRobber.cs",
+              "RelativeDocumentMoniker": "Content\\NPCs\\Attacks\\RobberAttack\\AxeRobber.cs",
+              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\NPCs\\Attacks\\RobberAttack\\AxeRobber.cs",
+              "RelativeToolTip": "Content\\NPCs\\Attacks\\RobberAttack\\AxeRobber.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAmwEYAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-22T11:45:18.389Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "zh-Hans_Mods.MortalDao.hjson",
-              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Localization\\zh-Hans_Mods.MortalDao.hjson",
-              "RelativeDocumentMoniker": "Localization\\zh-Hans_Mods.MortalDao.hjson",
-              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Localization\\zh-Hans_Mods.MortalDao.hjson",
-              "RelativeToolTip": "Localization\\zh-Hans_Mods.MortalDao.hjson",
-              "ViewState": "AgIAAMwAAAAAAAAAAADwv9UAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-06-22T11:42:14.066Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "en-US_Mods.MortalDao.hjson",
-              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Localization\\en-US_Mods.MortalDao.hjson",
-              "RelativeDocumentMoniker": "Localization\\en-US_Mods.MortalDao.hjson",
-              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Localization\\en-US_Mods.MortalDao.hjson",
-              "RelativeToolTip": "Localization\\en-US_Mods.MortalDao.hjson",
-              "ViewState": "AgIAAKMAAAAAAAAAAAAewLMAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-06-22T11:41:10.991Z",
+              "WhenOpened": "2026-06-23T11:10:51.97Z",
               "EditorCaption": ""
             }
           ]
