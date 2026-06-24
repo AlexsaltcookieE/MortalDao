@@ -4,6 +4,7 @@ using MortalDao.Content.NPCs.Attacks.RobberAttack;
 using System;
 using Terraria;
 using Terraria.Audio;
+using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -19,6 +20,10 @@ namespace MortalDao.Content.Projectiles.AttacksProj.RobberAttackProj
             Decelerating, // 飞行减速阶段
             Hovering,     // 空中悬停2秒阶段
             Returning     // 返回NPC手中阶段
+        }
+        public override void OnSpawn(IEntitySource source)
+        {
+            SoundEngine.PlaySound(SoundID.Item17, Projectile.position);
         }
         private AxePhase currentPhase = AxePhase.Decelerating;
 
@@ -125,7 +130,7 @@ namespace MortalDao.Content.Projectiles.AttacksProj.RobberAttackProj
             // 原拖尾逻辑不变，返回阶段移动时会自动显示拖尾
             Texture2D texture = Terraria.GameContent.TextureAssets.Projectile[Projectile.type].Value;
             Vector2 origin = texture.Size() / 2f;
-            Color trailColor = Color.Gray;
+            Color trailColor = Color.White;
             for (int i = 0; i < Projectile.oldPos.Length; i++)
             {
                 float progress = 1f - i / (float)Projectile.oldPos.Length;

@@ -36,6 +36,7 @@ NPCs: {
 	}
 
 	AxeRobber.DisplayName: 投斧强盗
+	DartRobber.DisplayName: 镖客强盗
 }
 
 Buffs: {
@@ -264,7 +265,8 @@ Projectiles: {
 	MeteroriteOreProj.DisplayName: Meterorite Ore Proj
 	YueMaidenSwordStab.DisplayName: Yue Maiden Sword Stab
 	YueMaidenSwordBlade.DisplayName: Yue Maiden Sword Blade
-	// ThrowingAxe.DisplayName: Throwing Axe
+	ThrowingAxe.DisplayName: Throwing Axe
+	PlumBlossomDart.DisplayName: Plum Blossom Dart
 }
 
 "Keybinds.Open Realm Menu.DisplayName": 打开状态菜单

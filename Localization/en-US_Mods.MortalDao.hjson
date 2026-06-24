@@ -36,6 +36,7 @@ NPCs: {
 	}
 
 	AxeRobber.DisplayName: AxeRobber
+	DartRobber.DisplayName: DartRobber
 }
 
 Buffs: {
@@ -231,6 +232,7 @@ Projectiles: {
 	YueMaidenSwordStab.DisplayName: Yue Maiden Sword Stab
 	YueMaidenSwordBlade.DisplayName: Yue Maiden Sword Blade
 	ThrowingAxe.DisplayName: Throwing Axe
+	PlumBlossomDart.DisplayName: Plum Blossom Dart
 }
 
 "Keybinds.Open Realm Menu.DisplayName": Open  Realm  Menu
