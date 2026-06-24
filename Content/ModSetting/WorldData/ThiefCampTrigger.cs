@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using MortalDao.Content.ModSetting.Utilities;
+using MortalDao.Content.NPCs.Attacks.RobberAttack;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
@@ -30,12 +31,12 @@ namespace MortalDao.Content.ModSetting.WorldData
             ThiefCampWorldData.ThiefInvasionTriggered = true;
             if (Main.netMode != NetmodeID.MultiplayerClient)
             {
-                Main.StartSlimeRain();
-                Main.NewText(GetSpawnInfo("Robber").Value);
+                RobberAttackEvent.EventActive = true;
+                RobberAttackEvent.RemainingRobbers = 50;
+                Main.NewText(GetSpawnInfo("Robber").Value, 255, 200, 50);
             }
             else
             {
-                NetMessage.SendData(61, -1, -1, null, Player.whoAmI, -3f);
             }
         }
     }
