@@ -16,21 +16,69 @@ namespace MortalDao.Content.NPCs.Attacks.RobberAttack
         private int ProjectileTime = 0;
         private int ProjectileCoolDown = 240;
         public override string Texture => "MortalDao/Content/NPCs/Attacks/RobberAttack/AxeRobber";
-        public override float SpawnChance(NPCSpawnInfo spawnInfo)
-        {
-            if (RobberAttackEvent.EventActive)
-            {
-                return 1f;
-            }
-            return 0;
-        }
         public override void OnKill()
         {
-            RobberAttackEvent.RemainingRobbers = RobberAttackEvent.RemainingRobbers - 1;
+            RobberAttackEvent.RemainingRobbers = RobberAttackEvent.RemainingRobbers + 1;
+            for (int i = 0; i < 10; i++)
+            {
+                Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.Blood);
+            }
+                Gore.NewGore(NPC.GetSource_Death(), NPC.position + new Vector2(Main.rand.Next(NPC.width), Main.rand.Next(NPC.height)), new Vector2(Main.rand.NextFloat(-2f, 2f), Main.rand.NextFloat(-4f, -1.0f)), Mod.Find<ModGore>("DartRobberGore1").Type, NPC.scale * Main.rand.NextFloat(0.8f, 1.0f));
+                Gore.NewGore(NPC.GetSource_Death(), NPC.position + new Vector2(Main.rand.Next(NPC.width), Main.rand.Next(NPC.height)), new Vector2(Main.rand.NextFloat(-3f, 3f), Main.rand.NextFloat(-6f, -2f)), Mod.Find<ModGore>("DartRobberGore2").Type, NPC.scale * Main.rand.NextFloat(0.9f, 1.1f));
+                Gore.NewGore(NPC.GetSource_Death(), NPC.position + new Vector2(Main.rand.Next(NPC.width), Main.rand.Next(NPC.height)), new Vector2(Main.rand.NextFloat(-2.5f, 2.5f), Main.rand.NextFloat(-5f, -1.5f)), Mod.Find<ModGore>("DartRobberGore3").Type, NPC.scale * Main.rand.NextFloat(0.85f, 1.05f));
+                Gore.NewGore(NPC.GetSource_Death(), NPC.position + new Vector2(Main.rand.Next(NPC.width), Main.rand.Next(NPC.height)), new Vector2(Main.rand.NextFloat(-3.5f, 3.5f), Main.rand.NextFloat(-7f, -2.5f)), Mod.Find<ModGore>("DartRobberGore4").Type, NPC.scale * Main.rand.NextFloat(0.95f, 1.15f));
+            
+        }
+        public override void HitEffect(NPC.HitInfo hit)
+        {
+            // ✅ 受伤时生成一些金色的尘埃
+            if (Main.netMode != NetmodeID.Server)
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.Blood);
+                }
+            }
         }
 
+        public override void FindFrame(int frameHeight)
+        {
+            int targetID = NPC.FindClosestPlayer();
+            if (targetID == -1)
+            {
+                NPC.velocity.X *= 0.9f;
+                return;
+            }
+
+            Player target = Main.player[targetID];
+            NPC.direction = NPC.Center.X >  target.Center.X ? 1 : -1;
+            NPC.spriteDirection = NPC.direction;
+            switch (currentState)
+            {
+                case AttackState.Normal:
+                    // 正常状态：播放第1-3帧（索引0-2）
+                    NPC.frameCounter++;
+                    if (NPC.frameCounter >= 6) // 每10帧切换一次
+                    {
+                        NPC.frameCounter = 0;
+                        NPC.frame.Y += frameHeight;
+                        if (NPC.frame.Y >= frameHeight * 4) // 超过第4帧时回到第1帧
+                        {
+                            NPC.frame.Y = 0;
+                        }
+                    }
+                    break;
+                case AttackState.JumpingUp:
+                    NPC.frame.Y = 0;
+                    break;
+                case AttackState.Darts:
+                    NPC.frame.Y = 0;
+                    break;
+            }
+        }
         public override void SetStaticDefaults()
         {
+            Main.npcFrameCount[NPC.type] = 4; // 设置NPC的帧数
             // ✅ 只需要设置轨迹长度即可，NPC的TrailingMode不会自动滚存，留着也没用可以删掉
             NPCID.Sets.TrailCacheLength[NPC.type] = 4;
         }
@@ -44,12 +92,12 @@ namespace MortalDao.Content.NPCs.Attacks.RobberAttack
         private AttackState currentState = AttackState.Normal;
         public override void SetDefaults()
         {
-            NPC.width = 40;
-            NPC.height = 56;
-            NPC.scale = 1.4f;
+            NPC.width = 30;
+            NPC.height = 44;
+            NPC.scale = 1.2f;
             NPC.damage = 15;
-            NPC.lifeMax = 100;
-            NPC.defense = 5;
+            NPC.lifeMax = 40;
+            NPC.defense = 2;
             NPC.knockBackResist = 1f;
             NPC.friendly = false;
             NPC.noTileCollide = false;
@@ -209,7 +257,7 @@ namespace MortalDao.Content.NPCs.Attacks.RobberAttack
                 Vector2 dirToPlayer = target.Center - NPC.Center;
                 dirToPlayer.Normalize();
 
-                float moveSpeed = 4f;
+                float moveSpeed = 3f;
                 NPC.velocity.X = dirToPlayer.X * moveSpeed;
 
                 NPC.direction = target.Center.X > NPC.Center.X ? 1 : -1;
@@ -227,38 +275,43 @@ namespace MortalDao.Content.NPCs.Attacks.RobberAttack
         }
         public override bool PreDraw(SpriteBatch spriteBatch, Vector2 screenPos, Color drawColor)
         {
+            SpriteEffects effects = NPC.spriteDirection == -1 ? SpriteEffects.FlipHorizontally : SpriteEffects.None;
+
             Texture2D texture = Terraria.GameContent.TextureAssets.Npc[NPC.type].Value;
-            Vector2 origin = texture.Size() / 2f;
+            Vector2 origin = new Vector2(NPC.frame.Width / 2f, NPC.frame.Height / 2f);
             Color trailColor = Color.White; // 橙色残影比白色更明显，方便调试
 
             // 计算NPC中心的偏移量（避免碰撞箱和视觉大小不一致的问题）
             Vector2 centerOffset = NPC.Center - NPC.position;
 
             // 画残影：i=0是最新的（离本体最近），i越大越旧
-            for (int i = 0; i < NPC.oldPos.Length; i++)
+            if (currentState ==AttackState.JumpingUp || currentState == AttackState.Darts)
             {
-                if (NPC.oldPos[i] == Vector2.Zero) continue; // 跳过未初始化的帧
+                for (int i = 0; i < NPC.oldPos.Length; i++)
+                {
+                    if (NPC.oldPos[i] == Vector2.Zero) continue; // 跳过未初始化的帧
 
-                // ✅ 进度计算：最新的残影最亮最大，最旧的几乎透明
-                float progress = 1f - (float)i / NPC.oldPos.Length;
+                    // ✅ 进度计算：最新的残影最亮最大，最旧的几乎透明
+                    float progress = 1f - (float)i / NPC.oldPos.Length;
 
-                // 残影位置：oldPos是左上角坐标，加centerOffset得到中心，再转成屏幕坐标
-                Vector2 drawPos = NPC.oldPos[i] + centerOffset - screenPos;
+                    // 残影位置：oldPos是左上角坐标，加centerOffset得到中心，再转成屏幕坐标
+                    Vector2 drawPos = NPC.oldPos[i] + centerOffset - screenPos;
 
-                Color color = trailColor * progress * 0.7f; // 透明度随progress衰减
+                    Color color = trailColor * progress * 0.7f; // 透明度随progress衰减
 
-                spriteBatch.Draw(
-                    texture,
-                    drawPos,
-                    null,
-                    color,
-                    NPC.oldRot[i], // 用我们手动滚存的旋转，和位置完全匹配
-                    origin,
-                    // 缩放：越新的残影越大，越旧的越小
-                    NPC.scale,
-                    SpriteEffects.None,
-                    0f
-                );
+                    spriteBatch.Draw(
+                        texture,
+                        drawPos,
+                        NPC.frame,
+                        color,
+                        NPC.oldRot[i], // 用我们手动滚存的旋转，和位置完全匹配
+                        origin,
+                        // 缩放：越新的残影越大，越旧的越小
+                        NPC.scale,
+                        effects,
+                        0f
+                    );
+                }
             }
 
             // 画本体
@@ -266,12 +319,12 @@ namespace MortalDao.Content.NPCs.Attacks.RobberAttack
             spriteBatch.Draw(
                 texture,
                 centerDraw,
-                null,
+                NPC.frame,
                 drawColor,
                 NPC.rotation,
                 origin,
                 NPC.scale,
-                SpriteEffects.None,
+                effects,
                 0f
             );
 

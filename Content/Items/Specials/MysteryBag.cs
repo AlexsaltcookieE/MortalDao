@@ -16,12 +16,11 @@ namespace MortalDao.Content.Items.Specials
         }
         public override void SetDefaults()
         {
-            Item.width = 32;
-            Item.height = 32;
+            Item.width = 36;
+            Item.height = 24;
             Item.maxStack = 20;
-            Item.rare = ItemRarityID.Red;
+            Item.rare = ItemRarityID.Orange;
             Item.consumable = true;//消耗品
-            Item.useStyle = ItemUseStyleID.Swing;
             Item.noMelee = true;
             Item.value = 30;
         }

@@ -7,20 +7,11 @@
       "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\npcs\\attacks\\robberattack\\dartrobber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Administrator\\AppData\\Local\\Temp\\.vsdbgsrc\\2a0aa949f090ea2583e14abf0644ee68943f397aacd60be945d5fa73ad3e9a04\\LegacyLighting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\npcs\\attacks\\robberattack\\axerobber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\npcs\\attacks\\robberattack\\axerobber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\npcs\\attacks\\robberattack\\dartrobber.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
-      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\npcs\\attacks\\robberattack\\dartrobber.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\npcs\\attacks\\robberattack\\gores\\axerobbergore2.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
-      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\npcs\\attacks\\robberattack\\gores\\axerobbergore2.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\npcs\\boss\\fiveelement\\goldelement\\goldbody.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\npcs\\boss\\fiveelement\\goldelement\\goldbody.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,21 +21,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "AxeRobber.cs",
               "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\NPCs\\Attacks\\RobberAttack\\AxeRobber.cs",
               "RelativeDocumentMoniker": "Content\\NPCs\\Attacks\\RobberAttack\\AxeRobber.cs",
               "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\NPCs\\Attacks\\RobberAttack\\AxeRobber.cs",
               "RelativeToolTip": "Content\\NPCs\\Attacks\\RobberAttack\\AxeRobber.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAADtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-24T05:15:25.978Z",
               "IsPinned": true,
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LegacyLighting.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\.vsdbgsrc\\2a0aa949f090ea2583e14abf0644ee68943f397aacd60be945d5fa73ad3e9a04\\LegacyLighting.cs",
+              "ToolTip": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\.vsdbgsrc\\2a0aa949f090ea2583e14abf0644ee68943f397aacd60be945d5fa73ad3e9a04\\LegacyLighting.cs [\u53EA\u8BFB]",
+              "ViewState": "AgIAAMoBAAAAAAAAAADwv98BAAAVAAAAAQAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-25T12:17:48.539Z",
+              "EditorCaption": " [\u53EA\u8BFB]"
             },
             {
               "$type": "Document",
@@ -54,46 +56,9 @@
               "RelativeDocumentMoniker": "Content\\NPCs\\Attacks\\RobberAttack\\DartRobber.cs",
               "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\NPCs\\Attacks\\RobberAttack\\DartRobber.cs",
               "RelativeToolTip": "Content\\NPCs\\Attacks\\RobberAttack\\DartRobber.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAADwvxYAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBgAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-24T14:35:55.626Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DartRobber.png - PNG [55x150, 32 \u4F4D, PNG]",
-              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\NPCs\\Attacks\\RobberAttack\\DartRobber.png",
-              "RelativeDocumentMoniker": "Content\\NPCs\\Attacks\\RobberAttack\\DartRobber.png",
-              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\NPCs\\Attacks\\RobberAttack\\DartRobber.png - PNG [55x150, 32 \u4F4D, PNG]",
-              "RelativeToolTip": "Content\\NPCs\\Attacks\\RobberAttack\\DartRobber.png - PNG [55x150, 32 \u4F4D, PNG]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2026-06-24T14:35:54.974Z",
-              "EditorCaption": " - PNG [55x150, 32 \u4F4D, PNG]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AxeRobberGore2.png - PNG [23x19, 32 \u4F4D, PNG]",
-              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\NPCs\\Attacks\\RobberAttack\\Gores\\AxeRobberGore2.png",
-              "RelativeDocumentMoniker": "Content\\NPCs\\Attacks\\RobberAttack\\Gores\\AxeRobberGore2.png",
-              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\NPCs\\Attacks\\RobberAttack\\Gores\\AxeRobberGore2.png - PNG [23x19, 32 \u4F4D, PNG]",
-              "RelativeToolTip": "Content\\NPCs\\Attacks\\RobberAttack\\Gores\\AxeRobberGore2.png - PNG [23x19, 32 \u4F4D, PNG]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2026-06-24T14:35:52.245Z",
-              "EditorCaption": " - PNG [23x19, 32 \u4F4D, PNG]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "GoldBody.cs",
-              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\NPCs\\BOSS\\FiveElement\\GoldElement\\GoldBody.cs",
-              "RelativeDocumentMoniker": "Content\\NPCs\\BOSS\\FiveElement\\GoldElement\\GoldBody.cs",
-              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\NPCs\\BOSS\\FiveElement\\GoldElement\\GoldBody.cs",
-              "RelativeToolTip": "Content\\NPCs\\BOSS\\FiveElement\\GoldElement\\GoldBody.cs",
-              "ViewState": "AgIAAMQDAAAAAAAAAAAcwNUDAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-24T14:33:24.681Z",
+              "WhenOpened": "2026-06-25T12:12:44.394Z",
               "EditorCaption": ""
             }
           ]

@@ -13,20 +13,27 @@ namespace MortalDao.Content.NPCs.Attacks.RobberAttack
     {
         public override string Texture => "MortalDao/Content/NPCs/Attacks/RobberAttack/DartRobber";
         private int JumpStateDir;
-        public override float SpawnChance(NPCSpawnInfo spawnInfo)
-        {
-            if (RobberAttackEvent.EventActive)
-            {
-                return 1f;
-            }
-            return 0;
-        }
         public override void OnKill()
         {
-            RobberAttackEvent.RemainingRobbers = RobberAttackEvent.RemainingRobbers - 1;
-            Gore.NewGore(NPC.GetSource_Death(), NPC.position + new Vector2(Main.rand.Next(NPC.width), Main.rand.Next(NPC.height)), new Vector2(Main.rand.NextFloat(-2f, 2f), Main.rand.NextFloat(-4f, -1.0f)), Mod.Find<ModGore>("AxeRobberGore1").Type, NPC.scale * Main.rand.NextFloat(0.8f, 1.0f));
-            Gore.NewGore(NPC.GetSource_Death(), NPC.position + new Vector2(Main.rand.Next(NPC.width), Main.rand.Next(NPC.height)), new Vector2(Main.rand.NextFloat(-3f, 3f), Main.rand.NextFloat(-6f, -2f)), Mod.Find<ModGore>("AxeRobberGore2").Type, NPC.scale * Main.rand.NextFloat(0.9f, 1.1f));
-            Gore.NewGore(NPC.GetSource_Death(), NPC.position + new Vector2(Main.rand.Next(NPC.width), Main.rand.Next(NPC.height)), new Vector2(Main.rand.NextFloat(-2.5f, 2.5f), Main.rand.NextFloat(-5f, -1.5f)), Mod.Find<ModGore>("AxeRobberGore3").Type, NPC.scale * Main.rand.NextFloat(0.85f, 1.05f));
+            RobberAttackEvent.RemainingRobbers = RobberAttackEvent.RemainingRobbers + 1;
+            if (Main.netMode != NetmodeID.Server)
+            {
+                Gore.NewGore(NPC.GetSource_Death(), NPC.position + new Vector2(Main.rand.Next(NPC.width), Main.rand.Next(NPC.height)), new Vector2(Main.rand.NextFloat(-2f, 2f), Main.rand.NextFloat(-4f, -1.0f)), Mod.Find<ModGore>("AxeRobberGore1").Type, NPC.scale * Main.rand.NextFloat(0.8f, 1.0f));
+                Gore.NewGore(NPC.GetSource_Death(), NPC.position + new Vector2(Main.rand.Next(NPC.width), Main.rand.Next(NPC.height)), new Vector2(Main.rand.NextFloat(-3f, 3f), Main.rand.NextFloat(-6f, -2f)), Mod.Find<ModGore>("AxeRobberGore2").Type, NPC.scale * Main.rand.NextFloat(0.9f, 1.1f));
+                Gore.NewGore(NPC.GetSource_Death(), NPC.position + new Vector2(Main.rand.Next(NPC.width), Main.rand.Next(NPC.height)), new Vector2(Main.rand.NextFloat(-2.5f, 2.5f), Main.rand.NextFloat(-5f, -1.5f)), Mod.Find<ModGore>("AxeRobberGore3").Type, NPC.scale * Main.rand.NextFloat(0.85f, 1.05f));
+                Gore.NewGore(NPC.GetSource_Death(), NPC.position + new Vector2(Main.rand.Next(NPC.width), Main.rand.Next(NPC.height)), new Vector2(Main.rand.NextFloat(-3.5f, 3.5f), Main.rand.NextFloat(-7f, -2.5f)), Mod.Find<ModGore>("AxeRobberGore4").Type, NPC.scale * Main.rand.NextFloat(0.95f, 1.15f));
+            }
+        }
+        public override void HitEffect(NPC.HitInfo hit)
+        {
+            // ✅ 受伤时生成一些金色的尘埃
+            if (Main.netMode != NetmodeID.Server)
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.Blood);
+                }
+            }
         }
         //生成逻辑
         private enum AttackState
@@ -56,10 +63,9 @@ namespace MortalDao.Content.NPCs.Attacks.RobberAttack
         }
         public override void SetDefaults()
         {
-            
             NPC.width = 55;
             NPC.height = 50;
-            NPC.scale = 1.4f;
+            NPC.scale = 1.2f;
             NPC.damage = 15;
             NPC.lifeMax = 100;
             NPC.defense = 5;
@@ -207,7 +213,7 @@ namespace MortalDao.Content.NPCs.Attacks.RobberAttack
                 Vector2 dirToPlayer = target.Center - NPC.Center;
                 dirToPlayer.Normalize();
 
-                float moveSpeed = 4f;
+                float moveSpeed = 3f;
                 NPC.velocity.X = dirToPlayer.X * moveSpeed;
                 if (HasWallInFront() && NPC.velocity.Y == 0)
                 {
@@ -343,30 +349,33 @@ namespace MortalDao.Content.NPCs.Attacks.RobberAttack
             Vector2 centerOffset = NPC.Center - NPC.position;
 
             // 画残影：i=0是最新的（离本体最近），i越大越旧
-            for (int i = 0; i < NPC.oldPos.Length; i++)
+            if (currentState == AttackState.JumpingUp || currentState == AttackState.DivingDown)
             {
-                if (NPC.oldPos[i] == Vector2.Zero) continue; // 跳过未初始化的帧
+                for (int i = 0; i < NPC.oldPos.Length; i++)
+                {
+                    if (NPC.oldPos[i] == Vector2.Zero) continue; // 跳过未初始化的帧
 
-                // ✅ 进度计算：最新的残影最亮最大，最旧的几乎透明
-                float progress = 1f - (float)i / NPC.oldPos.Length;
+                    // ✅ 进度计算：最新的残影最亮最大，最旧的几乎透明
+                    float progress = 1f - (float)i / NPC.oldPos.Length;
 
-                // 残影位置：oldPos是左上角坐标，加centerOffset得到中心，再转成屏幕坐标
-                Vector2 drawPos = NPC.oldPos[i] + centerOffset - screenPos;
+                    // 残影位置：oldPos是左上角坐标，加centerOffset得到中心，再转成屏幕坐标
+                    Vector2 drawPos = NPC.oldPos[i] + centerOffset - screenPos;
 
-                Color color = trailColor * progress * 0.7f; // 透明度随progress衰减
+                    Color color = trailColor * progress * 0.7f; // 透明度随progress衰减
 
-                spriteBatch.Draw(
-                    texture,
-                    drawPos,
-                    NPC.frame,
-                    color,
-                    NPC.oldRot[i], // 用我们手动滚存的旋转，和位置完全匹配
-                    origin,
-                    // 缩放：越新的残影越大，越旧的越小
-                    NPC.scale,
-                    effects,
-                    0f
-                );
+                    spriteBatch.Draw(
+                        texture,
+                        drawPos,
+                        NPC.frame,
+                        color,
+                        NPC.oldRot[i], // 用我们手动滚存的旋转，和位置完全匹配
+                        origin,
+                        // 缩放：越新的残影越大，越旧的越小
+                        NPC.scale,
+                        effects,
+                        0f
+                    );
+                }
             }
 
             // 画本体

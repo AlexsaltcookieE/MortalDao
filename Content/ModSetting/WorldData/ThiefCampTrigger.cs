@@ -32,7 +32,7 @@ namespace MortalDao.Content.ModSetting.WorldData
             if (Main.netMode != NetmodeID.MultiplayerClient)
             {
                 RobberAttackEvent.EventActive = true;
-                RobberAttackEvent.RemainingRobbers = 50;
+                RobberAttackEvent.RemainingRobbers = 0;
                 Main.NewText(GetSpawnInfo("Robber").Value, 255, 200, 50);
             }
             else
