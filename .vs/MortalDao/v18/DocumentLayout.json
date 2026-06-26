@@ -3,11 +3,16 @@
   "WorkspaceRootPath": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\npcs\\attacks\\robberattack\\dartrobber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\npcs\\attacks\\robberattack\\dartrobber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\items\\meleeweapons\\roughpeachwoodsword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\items\\meleeweapons\\roughpeachwoodsword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Administrator\\AppData\\Local\\Temp\\.vsdbgsrc\\2a0aa949f090ea2583e14abf0644ee68943f397aacd60be945d5fa73ad3e9a04\\LegacyLighting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\projectiles\\melleeweaponsproj\\cyan_bladeproj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\projectiles\\melleeweaponsproj\\cyan_bladeproj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\projectiles\\melleeweaponsproj\\cyan_bladehitbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\projectiles\\melleeweaponsproj\\cyan_bladehitbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\npcs\\attacks\\robberattack\\axerobber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,17 +26,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "AxeRobber.cs",
               "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\NPCs\\Attacks\\RobberAttack\\AxeRobber.cs",
               "RelativeDocumentMoniker": "Content\\NPCs\\Attacks\\RobberAttack\\AxeRobber.cs",
               "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\NPCs\\Attacks\\RobberAttack\\AxeRobber.cs",
               "RelativeToolTip": "Content\\NPCs\\Attacks\\RobberAttack\\AxeRobber.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAADtAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAwwA8AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-24T05:15:25.978Z",
               "IsPinned": true,
@@ -39,26 +44,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LegacyLighting.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\.vsdbgsrc\\2a0aa949f090ea2583e14abf0644ee68943f397aacd60be945d5fa73ad3e9a04\\LegacyLighting.cs",
-              "ToolTip": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\.vsdbgsrc\\2a0aa949f090ea2583e14abf0644ee68943f397aacd60be945d5fa73ad3e9a04\\LegacyLighting.cs [\u53EA\u8BFB]",
-              "ViewState": "AgIAAMoBAAAAAAAAAADwv98BAAAVAAAAAQAAAA==",
+              "DocumentIndex": 0,
+              "Title": "RoughPeachWoodSword.cs",
+              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Items\\MeleeWeapons\\RoughPeachWoodSword.cs",
+              "RelativeDocumentMoniker": "Content\\Items\\MeleeWeapons\\RoughPeachWoodSword.cs",
+              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Items\\MeleeWeapons\\RoughPeachWoodSword.cs",
+              "RelativeToolTip": "Content\\Items\\MeleeWeapons\\RoughPeachWoodSword.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxYAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-25T12:17:48.539Z",
-              "EditorCaption": " [\u53EA\u8BFB]"
+              "WhenOpened": "2026-06-26T11:45:09.554Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DartRobber.cs",
-              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\NPCs\\Attacks\\RobberAttack\\DartRobber.cs",
-              "RelativeDocumentMoniker": "Content\\NPCs\\Attacks\\RobberAttack\\DartRobber.cs",
-              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\NPCs\\Attacks\\RobberAttack\\DartRobber.cs",
-              "RelativeToolTip": "Content\\NPCs\\Attacks\\RobberAttack\\DartRobber.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBgAAAANAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Cyan_BladeProj.cs",
+              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Projectiles\\MelleeWeaponsProj\\Cyan_BladeProj.cs",
+              "RelativeDocumentMoniker": "Content\\Projectiles\\MelleeWeaponsProj\\Cyan_BladeProj.cs",
+              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Projectiles\\MelleeWeaponsProj\\Cyan_BladeProj.cs",
+              "RelativeToolTip": "Content\\Projectiles\\MelleeWeaponsProj\\Cyan_BladeProj.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAAwEIAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-25T12:12:44.394Z",
+              "WhenOpened": "2026-06-26T08:20:47.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Cyan_BladeHitBox.cs",
+              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Projectiles\\MelleeWeaponsProj\\Cyan_BladeHitBox.cs",
+              "RelativeDocumentMoniker": "Content\\Projectiles\\MelleeWeaponsProj\\Cyan_BladeHitBox.cs",
+              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Projectiles\\MelleeWeaponsProj\\Cyan_BladeHitBox.cs",
+              "RelativeToolTip": "Content\\Projectiles\\MelleeWeaponsProj\\Cyan_BladeHitBox.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-26T08:20:42.456Z",
               "EditorCaption": ""
             }
           ]

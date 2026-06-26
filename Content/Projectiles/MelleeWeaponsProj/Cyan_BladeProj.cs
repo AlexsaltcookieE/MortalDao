@@ -14,6 +14,15 @@ namespace MortalDao.Content.Projectiles.MelleeWeaponsProj
 {
     public class PeachWoodBladeProj : ModProjectile
     {
+        private class BladeTrail
+        {
+            public float angle;      // 这一帧刀身的角度（绝对）
+            public float time;       // 用于 fade
+        }
+        //private List<BladeTrail> _trail = new List<BladeTrail>();
+        //private const int MaxTrail = 14;   // 你想要多长
+
+
         public override string Texture => "MortalDao/Content/Items/MeleeWeapons/RoughPeachWoodSword";
         Player player => Main.player[Projectile.owner];//获取玩家
         private int MaxRotation;
@@ -23,7 +32,10 @@ namespace MortalDao.Content.Projectiles.MelleeWeaponsProj
         private bool PlaySound;
         private int hitbox;
         private float RAmount = 0.32f;
-
+        //
+        private float startAngle = 0f;
+        private float swingAngle = 0f;
+        //
         public override void SetDefaults()
         {
             Projectile.width = Projectile.height = 40;
@@ -45,6 +57,14 @@ namespace MortalDao.Content.Projectiles.MelleeWeaponsProj
 
         public override void AI()//模拟&quot;刀&quot;的挥舞逻辑
         {
+            if (Main.rand.NextBool(2))
+            {
+                Dust d = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height,
+                    DustID.Torch,      // 橙色火焰，自带 glow
+                    0f, 0f, 0, default, 1.2f);
+                d.noGravity = true;    // 飘着不落地
+                d.velocity *= 0.4f;
+            }
             Player player = Main.player[Projectile.owner];
             player.heldProj = Projectile.whoAmI;
             player.itemTime = 80;      // 关键
@@ -171,37 +191,74 @@ namespace MortalDao.Content.Projectiles.MelleeWeaponsProj
         {
             player.velocity += new Vector2(player.direction * 3f, 0);
         }
+
         public override bool PreDraw(ref Color lightColor)
         {
             SpriteBatch sb = Main.spriteBatch;
             GraphicsDevice gd = Main.graphics.GraphicsDevice;
-
             sb.End();
-            sb.Begin(SpriteSortMode.Immediate, BlendState.Additive, SamplerState.AnisotropicClamp, DepthStencilState.None, RasterizerState.CullNone, null, Main.GameViewMatrix.TransformationMatrix);
-            List<Vertex> ve = new List<Vertex>();
-            for (int i = 0; i < 15; i++)
+            sb.Begin(
+                SpriteSortMode.Immediate,
+                BlendState.Additive,
+                SamplerState.LinearClamp, // 圆形纹理一定要 Linear
+                DepthStencilState.None,
+                RasterizerState.CullNone,
+                null,
+                Main.GameViewMatrix.TransformationMatrix
+            );
+            float radius = 81f;
+            float width = 12f;
+            int trailLen = Projectile.oldRot.Length;
+            int segmentsPerOldRot = 6; // 每个 oldRot 插 6 段
+            var ve = new List<Vertex>();
+            for (int j = 0; j < Projectile.oldRot.Length - 1; j++)
             {
-                Color b = (Color.Lerp(Color.SandyBrown, Color.Brown, i / 15f));
-                ve.Add(new Vertex(Projectile.Center - Main.screenPosition + new Vector2(0, -70).RotatedBy(Projectile.oldRot[i]) * (1 + (float)Math.Cos(Projectile.oldRot[i] - MathHelper.PiOver2) * player.direction), new Vector3(i / 15f, 1, 1), b));
-                ve.Add(new Vertex(Projectile.Center - Main.screenPosition + new Vector2(0, -20).RotatedBy(Projectile.oldRot[i]) * (1 + (float)Math.Cos(Projectile.oldRot[i] - MathHelper.PiOver2) * player.direction), new Vector3(i / 15f, 0, 1), b));
-                if (ve.Count >= 3)//因为顶点需要围成一个三角形才能画出来 所以需要判顶点数>=3 否则报错
+                float a0 = MathHelper.WrapAngle(Projectile.oldRot[j]);
+                float a1 = MathHelper.WrapAngle(Projectile.oldRot[j + 1]);
+                // 防止跨 ±π 翻转
+                if (Math.Abs(a1 - a0) > MathHelper.Pi)
+                    a1 += Math.Sign(a0 - a1) * MathHelper.TwoPi;
+                for (int k = 0; k <= segmentsPerOldRot; k++)
                 {
-                    gd.Textures[0] = ModContent.Request<Texture2D>("MortalDao/Content/Projectiles/MelleeWeaponsProj/Cyan_BladeProj").Value;//设置纹理
-                    gd.DrawUserPrimitives(PrimitiveType.TriangleStrip, ve.ToArray(), 0, ve.Count - 2);
+                    float t = k / (float)segmentsPerOldRot;
+                    float a = MathHelper.Lerp(a0, a1, t);
+                    float progress = (j + t) / (Projectile.oldRot.Length - 1);
+                    Vector2 pos = player.Center + new Vector2(0, -radius).RotatedBy(a);
+                    Vector2 screenPos = pos - Main.screenPosition;
+                    Color c = Color.Lerp(Color.SandyBrown, Color.Brown, progress) * (0.8f + 0.8f * progress);
+                    ve.Add(new Vertex(screenPos + new Vector2(0, -width).RotatedBy(a),new Vector3(progress, 1, 1), c));
+                    ve.Add(new Vertex(screenPos + new Vector2(0, width).RotatedBy(a),new Vector3(progress, 0, 1), c));
                 }
             }
+            if (ve.Count >= 3)
+            {
+                gd.Textures[0] = ModContent.Request<Texture2D>("MortalDao/Content/Projectiles/MelleeWeaponsProj/Cyan_BladeProj").Value;
+                gd.DrawUserPrimitives(PrimitiveType.TriangleStrip, ve.ToArray(), 0, ve.Count - 2);
+            }
             sb.End();
-            sb.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, SamplerState.AnisotropicClamp, DepthStencilState.None, RasterizerState.CullNone, null, Main.GameViewMatrix.TransformationMatrix);
-            Main.spriteBatch.Draw(TextureAssets.Projectile[Type].Value,
-                         Projectile.Center - Main.screenPosition,
-                         null,
-                         lightColor,
-                         Projectile.rotation - MathHelper.PiOver4,
-                         new Vector2(0, 30),
-                         2f,
-                         SpriteEffects.None,
-                         0);
-            return false;//让弹幕不画原来的样子
+            // 原刀身
+            sb.Begin(
+                SpriteSortMode.Immediate,
+                BlendState.AlphaBlend,
+                SamplerState.LinearClamp,
+                DepthStencilState.None,
+                RasterizerState.CullNone,
+                null,
+                Main.GameViewMatrix.TransformationMatrix
+            );
+
+            Main.spriteBatch.Draw(
+                TextureAssets.Projectile[Type].Value,
+                Projectile.Center - Main.screenPosition,
+                null,
+                lightColor,
+                Projectile.rotation - MathHelper.PiOver4,
+                new Vector2(0, 33.2f),
+                2f,
+                SpriteEffects.None,
+                0
+            );
+            return false;
         }
     }
 }

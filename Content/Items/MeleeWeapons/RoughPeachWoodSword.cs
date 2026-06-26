@@ -13,14 +13,14 @@ namespace MortalDao.Content.Items.MeleeWeapons
         // The Display Name and Tooltip of this item can be edited in the 'Localization/en-US_Mods.YINGYANG.hjson' file.
         public override void SetDefaults()
         {
-            Item.damage = 50;
+            Item.damage = 40;
             Item.DamageType = DamageClass.Melee;
             Item.width = 70;
             Item.height = 70;
             Item.useTime = 120;
             Item.useAnimation = 120;
             Item.shootSpeed = 120;
-            Item.useStyle = ItemUseStyleID.Swing;
+            Item.useStyle = ItemUseStyleID.Shoot;
             Item.knockBack = 6;
             Item.rare = ItemRarityID.Orange;
             Item.UseSound = SoundID.Item1;

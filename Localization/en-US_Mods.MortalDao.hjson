@@ -37,6 +37,7 @@ NPCs: {
 
 	AxeRobber.DisplayName: AxeRobber
 	DartRobber.DisplayName: DartRobber
+	RobberWolf.DisplayName: Robber Wolf
 }
 
 Buffs: {

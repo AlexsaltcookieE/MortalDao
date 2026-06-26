@@ -95,25 +95,49 @@ namespace MortalDao.Content.NPCs.Attacks.RobberAttack
             NPC.oldRot[0] = NPC.rotation; // 当前帧的旋转存到最前面
         }
         #endregion
+        private bool HasStepInFront()
+        {
+            int direction = NPC.direction;
+            float checkX = NPC.Center.X + direction * (NPC.width / 2f + 4f);
 
+            // 从脚底往上数 3 格（含脚那一格），看连续 solid 有几格
+            int wallHeight = 0;
+            for (int yOffset = 0; yOffset < 3; yOffset++)
+            {
+                Vector2 checkPos = new Vector2(checkX, NPC.Bottom.Y - 2 - yOffset * 16f);
+                Point tilePos = checkPos.ToTileCoordinates();
+                Tile tile = Framing.GetTileSafely(tilePos.X, tilePos.Y);
+
+                if (tile.HasTile && Main.tileSolid[tile.TileType])
+                    wallHeight++;
+                else
+                    break; // 遇到空气就停，只统计"连续"的
+            }
+
+            // ≥ 2 格高才算墙，需要跳；1 格高当台阶，直接走过去
+            return wallHeight >= 1;
+        }
         private bool HasWallInFront()
         {
             int direction = NPC.direction;
-            Vector2 checkPos1 = new Vector2(
-                NPC.Center.X + (direction * (NPC.width / 2 + 4)),
-                NPC.Bottom.Y - 2
-            );
-            Vector2 checkPos2 = new Vector2(
-                NPC.Center.X + (direction * (NPC.width / 2 + 4)),
-                NPC.Center.Y
-            );
-            Point tilePos1 = checkPos1.ToTileCoordinates();
-            Point tilePos2 = checkPos2.ToTileCoordinates();
-            Tile tile1 = Framing.GetTileSafely(tilePos1.X, tilePos1.Y);
-            Tile tile2 = Framing.GetTileSafely(tilePos2.X, tilePos2.Y);
-            bool solid1 = tile1.HasTile && Main.tileSolid[tile1.TileType];
-            bool solid2 = tile2.HasTile && Main.tileSolid[tile2.TileType];
-            return solid1 || solid2;
+            float checkX = NPC.Center.X + direction * (NPC.width / 2f + 4f);
+
+            // 从脚底往上数 3 格（含脚那一格），看连续 solid 有几格
+            int wallHeight = 0;
+            for (int yOffset = 0; yOffset < 3; yOffset++)
+            {
+                Vector2 checkPos = new Vector2(checkX, NPC.Bottom.Y - 2 - yOffset * 16f);
+                Point tilePos = checkPos.ToTileCoordinates();
+                Tile tile = Framing.GetTileSafely(tilePos.X, tilePos.Y);
+
+                if (tile.HasTile && Main.tileSolid[tile.TileType])
+                    wallHeight++;
+                else
+                    break; // 遇到空气就停，只统计"连续"的
+            }
+
+            // ≥ 2 格高才算墙，需要跳；1 格高当台阶，直接走过去
+            return wallHeight >= 2;
         }
 
         public override void AI()
@@ -218,6 +242,10 @@ namespace MortalDao.Content.NPCs.Attacks.RobberAttack
                 if (HasWallInFront() && NPC.velocity.Y == 0)
                 {
                     NPC.velocity.Y = -9f;
+                }
+                if (HasStepInFront() && NPC.velocity.Y == 0)
+                {
+                    NPC.velocity.Y = -4f;
                 }
             }
             else
@@ -342,8 +370,6 @@ namespace MortalDao.Content.NPCs.Attacks.RobberAttack
 
             Texture2D texture = Terraria.GameContent.TextureAssets.Npc[NPC.type].Value;
             Vector2 origin = new Vector2(NPC.frame.Width / 2f, NPC.frame.Height / 2f);
-            //Vector2 origin = texture.Size() / 2f;
-            Color trailColor = Color.White; // 橙色残影比白色更明显，方便调试
 
             // 计算NPC中心的偏移量（避免碰撞箱和视觉大小不一致的问题）
             Vector2 centerOffset = NPC.Center - NPC.position;
@@ -361,7 +387,7 @@ namespace MortalDao.Content.NPCs.Attacks.RobberAttack
                     // 残影位置：oldPos是左上角坐标，加centerOffset得到中心，再转成屏幕坐标
                     Vector2 drawPos = NPC.oldPos[i] + centerOffset - screenPos;
 
-                    Color color = trailColor * progress * 0.7f; // 透明度随progress衰减
+                    Color color = drawColor * progress * 0.7f;
 
                     spriteBatch.Draw(
                         texture,

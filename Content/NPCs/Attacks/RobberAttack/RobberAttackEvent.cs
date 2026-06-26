@@ -19,6 +19,7 @@ namespace MortalDao.Content.NPCs.Attacks.RobberAttack
         {
             if (!RobberAttackEvent.EventActive == true) return;
             pool.Clear();
+            pool.Add(ModContent.NPCType<RobberWolf>(), 1f);
             pool.Add(ModContent.NPCType<AxeRobber>(), 1f);
             pool.Add(ModContent.NPCType<DartRobber>(), 1f);
         }

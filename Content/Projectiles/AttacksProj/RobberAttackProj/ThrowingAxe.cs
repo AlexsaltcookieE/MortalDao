@@ -135,7 +135,7 @@ namespace MortalDao.Content.Projectiles.AttacksProj.RobberAttackProj
             {
                 float progress = 1f - i / (float)Projectile.oldPos.Length;
                 Vector2 drawPos = Projectile.oldPos[i] + Projectile.Size / 2f - Main.screenPosition;
-                Color color = trailColor * progress * 0.7f;
+                Color color = lightColor * progress * 0.7f;
                 Main.spriteBatch.Draw(texture, drawPos, null, color, Projectile.rotation, origin, Projectile.scale * (0.8f + progress * 0.4f), SpriteEffects.None, 0f);
             }
             Main.spriteBatch.Draw(texture, Projectile.Center - Main.screenPosition, null, lightColor, Projectile.rotation, origin, Projectile.scale, SpriteEffects.None, 0f);
