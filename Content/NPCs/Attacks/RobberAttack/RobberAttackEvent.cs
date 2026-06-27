@@ -22,6 +22,7 @@ namespace MortalDao.Content.NPCs.Attacks.RobberAttack
             pool.Add(ModContent.NPCType<RobberWolf>(), 1f);
             pool.Add(ModContent.NPCType<AxeRobber>(), 1f);
             pool.Add(ModContent.NPCType<DartRobber>(), 1f);
+            pool.Add(ModContent.NPCType<thiefRobber>(), 1f);
         }
         public override void EditSpawnRate(Player player, ref int spawnRate, ref int maxSpawns)
         {
@@ -33,7 +34,7 @@ namespace MortalDao.Content.NPCs.Attacks.RobberAttack
     {
         private static LocalizedText GetSpawnInfo(string entryName) => MortalDaoUtils.GetText($"OnspawnMessage.{entryName}");
         private static LocalizedText GetDeSpawnInfo(string entryName) => MortalDaoUtils.GetText($"DespawnMessage.{entryName}");
-
+        //
         public static bool EventActive = false;
         public static int TotalRobbers = 50;
         public static int RemainingRobbers = 0;
@@ -59,6 +60,7 @@ namespace MortalDao.Content.NPCs.Attacks.RobberAttack
             {
                 EventActive = false;
                 Main.NewText(GetDeSpawnInfo("RobberAttack.DespawnText").Value, 255, 200, 50);
+                BossesDowned.DownedRobberAttack = true;
                 return;
             }
         }
@@ -103,7 +105,13 @@ namespace MortalDao.Content.NPCs.Attacks.RobberAttack
         }
         private void DrawProgressText(SpriteBatch sb, float yScale, Vector2 baseBarDrawPosition, int barOffsetY, out Vector2 newBarPosition)
         {
-            Vector2 textSize = FontAssets.MouseText.Value.MeasureString(progressText);
+            var font = FontAssets.MouseText.Value;
+            if (font == null || progressText == null)
+            {
+                newBarPosition = baseBarDrawPosition + Vector2.UnitY * (yScale + barOffsetY);
+                return;
+            }
+            Vector2 textSize = font.MeasureString(progressText);
             float progressTextScale = 1f;
             if (textSize.Y > 22f)
             {
@@ -124,7 +132,7 @@ namespace MortalDao.Content.NPCs.Attacks.RobberAttack
         private void DrawProgressTextAndIcons(SpriteBatch sb, int barOffsetY)
         {
             Texture2D IconTexture = ModContent.Request<Texture2D>("MortalDao/Content/NPCs/Attacks/RobberAttack/RobberAttackIcon").Value;
-            Vector2 textMeasurement = FontAssets.MouseText.Value.MeasureString("RobberAttack");
+            Vector2 textMeasurement = FontAssets.MouseText.Value.MeasureString(GetSpawnInfo("RobberAttackName").Value);
             float x = 120f;
             if (textMeasurement.X > 200f)
             {
@@ -134,7 +142,7 @@ namespace MortalDao.Content.NPCs.Attacks.RobberAttack
             Rectangle iconRectangle = Utils.CenteredRectangle(new Vector2(Main.screenWidth - x, Main.screenHeight - 80 + barOffsetY), textMeasurement + new Vector2(IconTexture.Width + 12, 6f));
             Utils.DrawInvBG(sb, iconRectangle, InvasionBarColor * 0.5f);
             sb.Draw(IconTexture,iconRectangle.Left() + Vector2.UnitX * 8f, null, Color.White, 0f, Vector2.UnitY * IconTexture.Height / 2, 0.8f, SpriteEffects.None, 0f);
-            Utils.DrawBorderString(sb,"RobberAttack", iconRectangle.Right() + Vector2.UnitX * -16f, Color.White, 0.9f, 1f, 0.4f, -1);
+            Utils.DrawBorderString(sb,GetSpawnInfo("RobberAttackName").Value, iconRectangle.Right() + Vector2.UnitX * -16f, Color.White, 0.9f, 1f, 0.4f, -1);
         }
         public void DrawInvasionInfo(SpriteBatch sb)
         {

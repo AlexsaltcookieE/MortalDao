@@ -38,6 +38,7 @@ NPCs: {
 	AxeRobber.DisplayName: AxeRobber
 	DartRobber.DisplayName: DartRobber
 	RobberWolf.DisplayName: Robber Wolf
+	thiefRobber.DisplayName: thief Robber
 }
 
 Buffs: {
@@ -237,3 +238,8 @@ Projectiles: {
 }
 
 "Keybinds.Open Realm Menu.DisplayName": Open  Realm  Menu
+
+BossChecklistIntegration: {
+	RobberAttack.EntryName: Robber Attack
+	强盗入侵.EntryName: 强盗入侵
+}

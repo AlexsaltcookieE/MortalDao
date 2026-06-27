@@ -35,9 +35,6 @@ namespace MortalDao.Content.ModSetting.WorldData
                 RobberAttackEvent.RemainingRobbers = 0;
                 Main.NewText(GetSpawnInfo("Robber").Value, 255, 200, 50);
             }
-            else
-            {
-            }
         }
     }
 }

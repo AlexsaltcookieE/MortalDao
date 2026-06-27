@@ -167,6 +167,13 @@ namespace MortalDao.Content.NPCs.Attacks.RobberAttack
         }
         public override void AI()
         {
+            if (hitStunTimer > 0)
+            {
+                hitStunTimer--;
+                // 只让击退自然生效，不做任何主动位移
+                NPC.velocity.X *= 0.9f; // 可选：稍微减速，看起来更自然
+                return;
+            }
             UpdateTrail();
             int targetID = NPC.FindClosestPlayer();
             if (targetID == -1)
@@ -355,6 +362,17 @@ namespace MortalDao.Content.NPCs.Attacks.RobberAttack
             );
 
             return false;
+        }
+        private int hitStunTimer = 0;
+        public override void OnHitByItem(Player player, Item item, NPC.HitInfo hit, int damageDone)
+        {
+            hitStunTimer = 8;
+            base.OnHitByItem(player, item, hit, damageDone);
+        }
+        public override void OnHitByProjectile(Projectile projectile, NPC.HitInfo hit, int damageDone)
+        {
+            hitStunTimer = 8;
+            base.OnHitByProjectile(projectile, hit, damageDone);
         }
     }
 }

@@ -3,20 +3,32 @@
   "WorkspaceRootPath": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\items\\meleeweapons\\roughpeachwoodsword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\items\\meleeweapons\\roughpeachwoodsword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\modsetting\\worlddata\\thiefcamptrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\modsetting\\worlddata\\thiefcamptrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\projectiles\\melleeweaponsproj\\cyan_bladeproj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\projectiles\\melleeweaponsproj\\cyan_bladeproj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\modsetting\\worlddata\\thiefcampworlddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\modsetting\\worlddata\\thiefcampworlddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\projectiles\\melleeweaponsproj\\cyan_bladehitbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\projectiles\\melleeweaponsproj\\cyan_bladehitbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\modsetting\\bossesdowned.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\modsetting\\bossesdowned.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\npcs\\attacks\\robberattack\\axerobber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\npcs\\attacks\\robberattack\\axerobber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\modsetting\\modlink\\linkbosschecklist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\modsetting\\modlink\\linkbosschecklist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\localization\\en-us_mods.mortaldao.bclinfo.hjson||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:localization\\en-us_mods.mortaldao.bclinfo.hjson||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\localization\\en-us_mods.mortaldao.onspawnmessage.hjson||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:localization\\en-us_mods.mortaldao.onspawnmessage.hjson||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|d:\\\u6587\u6863\\my games\\terraria\\tmodloader\\modsources\\mortaldao\\content\\npcs\\boss\\fiveelement\\goldelement\\goldbody.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6F43A40-0C79-2D9D-0640-CDF2B97BE6F1}|MortalDao.csproj|solutionrelative:content\\npcs\\boss\\fiveelement\\goldelement\\goldbody.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,55 +42,93 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AxeRobber.cs",
-              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\NPCs\\Attacks\\RobberAttack\\AxeRobber.cs",
-              "RelativeDocumentMoniker": "Content\\NPCs\\Attacks\\RobberAttack\\AxeRobber.cs",
-              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\NPCs\\Attacks\\RobberAttack\\AxeRobber.cs",
-              "RelativeToolTip": "Content\\NPCs\\Attacks\\RobberAttack\\AxeRobber.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAwwA8AAAAlAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ThiefCampWorldData.cs",
+              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\WorldData\\ThiefCampWorldData.cs",
+              "RelativeDocumentMoniker": "Content\\ModSetting\\WorldData\\ThiefCampWorldData.cs",
+              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\WorldData\\ThiefCampWorldData.cs",
+              "RelativeToolTip": "Content\\ModSetting\\WorldData\\ThiefCampWorldData.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAUwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-24T05:15:25.978Z",
-              "IsPinned": true,
+              "WhenOpened": "2026-06-27T15:43:58.66Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RoughPeachWoodSword.cs",
-              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Items\\MeleeWeapons\\RoughPeachWoodSword.cs",
-              "RelativeDocumentMoniker": "Content\\Items\\MeleeWeapons\\RoughPeachWoodSword.cs",
-              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Items\\MeleeWeapons\\RoughPeachWoodSword.cs",
-              "RelativeToolTip": "Content\\Items\\MeleeWeapons\\RoughPeachWoodSword.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvxYAAAAwAAAAAAAAAA==",
+              "Title": "ThiefCampTrigger.cs",
+              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\WorldData\\ThiefCampTrigger.cs",
+              "RelativeDocumentMoniker": "Content\\ModSetting\\WorldData\\ThiefCampTrigger.cs",
+              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\WorldData\\ThiefCampTrigger.cs",
+              "RelativeToolTip": "Content\\ModSetting\\WorldData\\ThiefCampTrigger.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAzwCQAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-26T11:45:09.554Z",
+              "WhenOpened": "2026-06-27T15:43:50.25Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Cyan_BladeProj.cs",
-              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Projectiles\\MelleeWeaponsProj\\Cyan_BladeProj.cs",
-              "RelativeDocumentMoniker": "Content\\Projectiles\\MelleeWeaponsProj\\Cyan_BladeProj.cs",
-              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Projectiles\\MelleeWeaponsProj\\Cyan_BladeProj.cs",
-              "RelativeToolTip": "Content\\Projectiles\\MelleeWeaponsProj\\Cyan_BladeProj.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAAwEIAAAANAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "en-US_Mods.MortalDao.OnspawnMessage.hjson",
+              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Localization\\en-US_Mods.MortalDao.OnspawnMessage.hjson",
+              "RelativeDocumentMoniker": "Localization\\en-US_Mods.MortalDao.OnspawnMessage.hjson",
+              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Localization\\en-US_Mods.MortalDao.OnspawnMessage.hjson",
+              "RelativeToolTip": "Localization\\en-US_Mods.MortalDao.OnspawnMessage.hjson",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-06-27T15:31:47.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "en-US_Mods.MortalDao.BCLInfo.hjson",
+              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Localization\\en-US_Mods.MortalDao.BCLInfo.hjson",
+              "RelativeDocumentMoniker": "Localization\\en-US_Mods.MortalDao.BCLInfo.hjson",
+              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Localization\\en-US_Mods.MortalDao.BCLInfo.hjson",
+              "RelativeToolTip": "Localization\\en-US_Mods.MortalDao.BCLInfo.hjson",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-06-27T15:31:26.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LinkBossCheckList.cs",
+              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\ModLink\\LinkBossCheckList.cs",
+              "RelativeDocumentMoniker": "Content\\ModSetting\\ModLink\\LinkBossCheckList.cs",
+              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\ModLink\\LinkBossCheckList.cs",
+              "RelativeToolTip": "Content\\ModSetting\\ModLink\\LinkBossCheckList.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAcwCQAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-26T08:20:47.152Z",
+              "WhenOpened": "2026-06-27T15:29:18.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GoldBody.cs",
+              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\NPCs\\BOSS\\FiveElement\\GoldElement\\GoldBody.cs",
+              "RelativeDocumentMoniker": "Content\\NPCs\\BOSS\\FiveElement\\GoldElement\\GoldBody.cs",
+              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\NPCs\\BOSS\\FiveElement\\GoldElement\\GoldBody.cs",
+              "RelativeToolTip": "Content\\NPCs\\BOSS\\FiveElement\\GoldElement\\GoldBody.cs",
+              "ViewState": "AgIAAMIDAAAAAAAAAAAWwNADAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-27T15:28:08.315Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Cyan_BladeHitBox.cs",
-              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Projectiles\\MelleeWeaponsProj\\Cyan_BladeHitBox.cs",
-              "RelativeDocumentMoniker": "Content\\Projectiles\\MelleeWeaponsProj\\Cyan_BladeHitBox.cs",
-              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\Projectiles\\MelleeWeaponsProj\\Cyan_BladeHitBox.cs",
-              "RelativeToolTip": "Content\\Projectiles\\MelleeWeaponsProj\\Cyan_BladeHitBox.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Title": "BossesDowned.cs",
+              "DocumentMoniker": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\BossesDowned.cs",
+              "RelativeDocumentMoniker": "Content\\ModSetting\\BossesDowned.cs",
+              "ToolTip": "D:\\\u6587\u6863\\My Games\\Terraria\\tModLoader\\ModSources\\MortalDao\\Content\\ModSetting\\BossesDowned.cs",
+              "RelativeToolTip": "Content\\ModSetting\\BossesDowned.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-26T08:20:42.456Z",
+              "WhenOpened": "2026-06-27T15:25:04.9Z",
               "EditorCaption": ""
             }
           ]
