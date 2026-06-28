@@ -18,6 +18,7 @@ namespace MortalDao.Content.Projectiles.MelleeWeaponsProj
             Projectile.tileCollide = false;
             Projectile.timeLeft = 2; // 每帧刷新
             Projectile.hide = true;  // 不绘制
+            Projectile.penetrate = 3;
         }
 
         public override bool ShouldUpdatePosition() => false;

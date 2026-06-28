@@ -74,6 +74,10 @@ namespace MortalDao.Content.NPCs.Attacks.RobberAttack
             EventActive = tag.GetBool("RobberEventActive");
             RemainingRobbers = tag.GetInt("RobberEventRemaining");
         }
+        public override void ClearWorld()
+        {
+            EventActive = false;
+        }
         public override void ModifyInterfaceLayers(List<GameInterfaceLayer> layers)
         {
             int idx = layers.FindIndex(l => l.Name == "Vanilla: Mouse Text");

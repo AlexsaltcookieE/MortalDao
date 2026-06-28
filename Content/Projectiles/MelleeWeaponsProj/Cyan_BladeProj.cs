@@ -6,7 +6,6 @@ using System.Collections.Generic;
 using Terraria;
 using Terraria.Audio;
 using Terraria.GameContent;
-using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -33,8 +32,6 @@ namespace MortalDao.Content.Projectiles.MelleeWeaponsProj
         private int hitbox;
         private float RAmount = 0.32f;
         //
-        private float startAngle = 0f;
-        private float swingAngle = 0f;
         //
         public override void SetDefaults()
         {
@@ -57,14 +54,6 @@ namespace MortalDao.Content.Projectiles.MelleeWeaponsProj
 
         public override void AI()//模拟&quot;刀&quot;的挥舞逻辑
         {
-            if (Main.rand.NextBool(2))
-            {
-                Dust d = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height,
-                    DustID.Torch,      // 橙色火焰，自带 glow
-                    0f, 0f, 0, default, 1.2f);
-                d.noGravity = true;    // 飘着不落地
-                d.velocity *= 0.4f;
-            }
             Player player = Main.player[Projectile.owner];
             player.heldProj = Projectile.whoAmI;
             player.itemTime = 80;      // 关键

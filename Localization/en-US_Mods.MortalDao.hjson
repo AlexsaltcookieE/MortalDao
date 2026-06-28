@@ -189,6 +189,11 @@ Items: {
 		DisplayName: Peach Wood
 		Tooltip: Wood From God's Peach Tree
 	}
+
+	LongSword: {
+		DisplayName: Long Sword
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
@@ -203,16 +208,16 @@ Projectiles: {
 	IronOreProj.DisplayName: Iron Ore Proj
 	WeirdBoulderProj.DisplayName: Weird Boulder Proj
 	AKey.DisplayName: A Key
-	Black_Hole.DisplayName: Black_ Hole
-	Bow_of_OverLord.DisplayName: Bow_of_ Over Lord
-	Cyan_Dragon.DisplayName: Cyan_ Dragon
-	Cyan_Dragon_H.DisplayName: Cyan_ Dragon_ H
+	Black_Hole.DisplayName: Black Hole
+	Bow_of_OverLord.DisplayName: Bow of Over Lord
+	Cyan_Dragon.DisplayName: Cyan Dragon
+	Cyan_Dragon_H.DisplayName: Cyan Dragon H
 	DKey.DisplayName: D Key
-	Ghost_aero.DisplayName: Ghost_aero
-	Ghost_Explosion.DisplayName: Ghost_ Explosion
-	Ghost_Hook.DisplayName: Ghost_ Hook
-	Ghost_Restriction_Ring.DisplayName: Ghost_ Restriction_ Ring
-	Milion_Arrow.DisplayName: Milion_ Arrow
+	Ghost_aero.DisplayName: Ghost aero
+	Ghost_Explosion.DisplayName: Ghost Explosion
+	Ghost_Hook.DisplayName: Ghost Hook
+	Ghost_Restriction_Ring.DisplayName: Ghost Restriction_ Ring
+	Milion_Arrow.DisplayName: Milion Arrow
 	SpaceKey.DisplayName: Space Key
 	BlackTriBeam.DisplayName: Black Tri Beam
 	HostileLeafBeam.DisplayName: Hostile Leaf Beam
@@ -221,10 +226,10 @@ Projectiles: {
 	LXYPeachWood.DisplayName: L X Y Peach Wood
 	PeachWoodBladeHitbox.DisplayName: Peach Wood Blade Hitbox
 	PeachWoodBladeProj.DisplayName: Peach Wood Blade Proj
-	OverLord_Arrow.DisplayName: Over Lord_ Arrow
-	Baby_Slime_Gel.DisplayName: Baby_ Slime_ Gel
-	Baby_Slime_Gun.DisplayName: Baby_ Slime_ Gun
-	Baby_Slime_King.DisplayName: Baby_ Slime_ King
+	OverLord_Arrow.DisplayName: Over Lord Arrow
+	Baby_Slime_Gel.DisplayName: Baby Slime Gel
+	Baby_Slime_Gun.DisplayName: Baby Slime Gun
+	Baby_Slime_King.DisplayName: Baby Slime King
 	Baby_Slime_Queen.DisplayName: Baby_ Slime_ Queen
 	Baby_Slime_Spike.DisplayName: Baby_ Slime_ Spike
 	Puer_King.DisplayName: Puer_ King
@@ -235,11 +240,8 @@ Projectiles: {
 	YueMaidenSwordBlade.DisplayName: Yue Maiden Sword Blade
 	ThrowingAxe.DisplayName: Throwing Axe
 	PlumBlossomDart.DisplayName: Plum Blossom Dart
+	LongSwordProj.DisplayName: Long Sword Proj
 }
 
 "Keybinds.Open Realm Menu.DisplayName": Open  Realm  Menu
-
-BossChecklistIntegration: {
-	RobberAttack.EntryName: Robber Attack
-	强盗入侵.EntryName: 强盗入侵
-}
+BossChecklistIntegration.强盗入侵.EntryName: 强盗入侵

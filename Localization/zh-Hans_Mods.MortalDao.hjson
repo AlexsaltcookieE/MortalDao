@@ -223,6 +223,11 @@ Items: {
 		DisplayName: 桃木
 		Tooltip: 仙桃树之木
 	}
+
+	LongSword: {
+		// DisplayName: Long Sword
+		// Tooltip: ""
+	}
 }
 
 Projectiles: {
@@ -269,11 +274,8 @@ Projectiles: {
 	YueMaidenSwordBlade.DisplayName: Yue Maiden Sword Blade
 	ThrowingAxe.DisplayName: Throwing Axe
 	PlumBlossomDart.DisplayName: Plum Blossom Dart
+	// LongSwordProj.DisplayName: Long Sword Proj
 }
 
 "Keybinds.Open Realm Menu.DisplayName": 打开状态菜单
-
-BossChecklistIntegration: {
-	// RobberAttack.EntryName: Robber Attack
-	// 强盗入侵.EntryName: 强盗入侵
-}
+// BossChecklistIntegration.强盗入侵.EntryName: 强盗入侵

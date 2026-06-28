@@ -17,7 +17,9 @@ namespace MortalDao.Content.ModSetting.WorldData
         {
             var w = ThiefCampWorldData.CampCenterX;
             var h = ThiefCampWorldData.CampCenterY;
-            if (w == -1 || h == -1 || ThiefCampWorldData.ThiefInvasionTriggered)
+            if (w == -1 || h == -1 || BossesDowned.DownedRobberAttack)
+                return;
+            if (RobberAttackEvent.EventActive)
                 return;
             Vector2 CampPos = new Vector2(w * 16 + 8, h * 16 + 8); // +8 居中到格中心
             float distance = Vector2.Distance(CampPos, Player.Center);
@@ -28,7 +30,6 @@ namespace MortalDao.Content.ModSetting.WorldData
         }
         private void TriggerThiefInvasion()
         {
-            ThiefCampWorldData.ThiefInvasionTriggered = true;
             if (Main.netMode != NetmodeID.MultiplayerClient)
             {
                 RobberAttackEvent.EventActive = true;
