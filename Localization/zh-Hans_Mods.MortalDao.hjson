@@ -103,8 +103,14 @@ Items: {
 	}
 
 	RoughPeachWoodSword: {
-		DisplayName: 初始桃木剑
-		Tooltip: 上面贴着玩具店标识的价格
+		DisplayName: 桃木剑
+		Tooltip:
+			'''
+			出自《仙剑奇侠传一》
+			用木材雕刻的剑，小孩玩具。
+			李逍遥和林月如的佩剑之一
+			十分笨重
+			'''
 	}
 
 	XIAOYAO: {
@@ -209,8 +215,10 @@ Items: {
 		DisplayName: 越女剑
 		Tooltip:
 			'''
-			出自《仙剑奇侠传》
+			出自《仙剑奇侠传一》
 			专给女侠打造的奇轻之剑
+			赵灵儿和林月如的佩剑之一
+			它能让你更加轻盈
 			'''
 	}
 
@@ -225,8 +233,18 @@ Items: {
 	}
 
 	LongSword: {
-		// DisplayName: Long Sword
+		DisplayName: 长剑
+		Tooltip:
+			'''
+			出自《仙剑奇侠传一》
+			一般铁匠接受订造的剑 比铁剑精致锋利
+			李逍遥和林月如的佩剑之一
+			'''
+	}
+
+	RobberFlag: {
 		// Tooltip: ""
+		// DisplayName: Robber Flag
 	}
 }
 

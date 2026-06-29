@@ -96,7 +96,13 @@ Items: {
 
 	RoughPeachWoodSword: {
 		DisplayName: Rough Peach Wood Sword
-		Tooltip: A tips on the Sword which is (Buy one get one free!).
+		Tooltip:
+			'''
+			Weapon From(Chinese Paladin: Sword and Fairy)
+			A sword carved from wood, a child's toy.
+			Usable by: Li Xiaoyao, Lin Yueru.
+			Very heavy
+			'''
 	}
 
 	XIAOYAO: {
@@ -177,6 +183,8 @@ Items: {
 			'''
 			Weapon From(Chinese Paladin: Sword and Fairy)
 			A extremely light sword made for lady
+			Usable by: Zhao Liner, Lin Yueru.
+			Make your action lighter.
 			'''
 	}
 
@@ -192,7 +200,17 @@ Items: {
 
 	LongSword: {
 		DisplayName: Long Sword
+		Tooltip:
+			'''
+			Weapon From(Chinese Paladin: Sword and Fairy)
+			A custom-forged blade from an ordinary smith is finer and keener than a common iron sword.
+			Usable by: Li Xiaoyao, Lin Yueru.
+			'''
+	}
+
+	RobberFlag: {
 		Tooltip: ""
+		DisplayName: Robber Flag
 	}
 }
 

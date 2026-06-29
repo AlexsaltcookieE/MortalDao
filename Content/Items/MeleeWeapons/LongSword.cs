@@ -9,6 +9,7 @@ namespace MortalDao.Content.Items.MeleeWeapons
     {
         public override void SetDefaults()
         {
+            
             //尺寸
             Item.scale = 1.5f;
             //伤害
@@ -16,9 +17,9 @@ namespace MortalDao.Content.Items.MeleeWeapons
             Item.damage = 20;
             Item.DamageType = DamageClass.Melee;
             //速度
-            Item.useTime = 25;
-            Item.useAnimation = 16;
-            Item.useStyle = ItemUseStyleID.Swing;
+            Item.useTime = 45;
+            Item.useAnimation = 45;
+            Item.useStyle = ItemUseStyleID.HiddenAnimation;
             //动画
             Item.noMelee = true;
             Item.noUseGraphic = true;
@@ -29,7 +30,7 @@ namespace MortalDao.Content.Items.MeleeWeapons
             Item.autoReuse = false;
             //弹幕
             Item.shoot = ModContent.ProjectileType<LongSwordProj>();
-            Item.shootSpeed = 25;
+            Item.shootSpeed = 45;
         }
     }
 }
