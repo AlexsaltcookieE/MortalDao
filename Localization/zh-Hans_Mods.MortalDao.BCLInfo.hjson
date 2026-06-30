@@ -1,2 +1,3 @@
-RobberAttack.SpawnInfo: 走进盗贼营地
+RobberAttack.SpawnInfo: 走进盗贼营地或者用[i:MortalDao/RobberFlag]（完成事件才可制作）
+JiuTong.SpawnInfo: 当你击溃盗贼们
 GoldElement.SpawnInfo: 在地下或洞穴丢出[i:MortalDao/Weird_Boulder]召唤金元素

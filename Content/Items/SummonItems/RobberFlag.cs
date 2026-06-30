@@ -1,5 +1,7 @@
-﻿using MortalDao.Content.ModSetting.Utilities;
+﻿using MortalDao.Content.Items.Marterials;
+using MortalDao.Content.ModSetting.Utilities;
 using MortalDao.Content.NPCs.Attacks.RobberAttack;
+using MortalDao.Content.Tiles.CraftStation;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
@@ -40,6 +42,14 @@ namespace MortalDao.Content.Items.SummonItems
                 Main.NewText(GetSpawnInfo("Robber").Value, 255, 200, 50);
             }
             return true;
+        }
+        public override void AddRecipes()
+        {
+            Recipe recipe = CreateRecipe();
+            recipe.AddCondition(new Condition(GetSpawnInfo("RobberFlagRecipe"), () => BossesDowned.DownedRobberAttack));
+            recipe.AddIngredient(ItemID.RedBanner);
+            recipe.AddIngredient(ItemID.GoldCoin, 5);
+            recipe.Register();
         }
     }
 }

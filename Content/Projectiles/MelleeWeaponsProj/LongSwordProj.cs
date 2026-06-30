@@ -24,6 +24,7 @@ namespace MortalDao.Content.Projectiles.MelleeWeaponsProj
         private Vector2 DrawCenter;
         //
         private int soundTimer = 0;
+        private int hitEnemyCount = 0;
 
         public override void SetDefaults()
         {
@@ -88,6 +89,7 @@ namespace MortalDao.Content.Projectiles.MelleeWeaponsProj
         // 假设你有一个 OnHitNPC 方法
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
+            Projectile.damage = (int)(Projectile.damage * 0.9f); // 每次命中后伤害变为90%
             // 1. 定义闪光颜色 (根据你的刀身颜色调整)
             Color flashColor = Color.White; // 青白色，或者换成 Color.Purple
             int starCount = 5;

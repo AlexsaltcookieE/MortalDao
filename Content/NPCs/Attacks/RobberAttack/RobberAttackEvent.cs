@@ -1,10 +1,13 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using MortalDao.Content.ModSetting.Utilities;
+using MortalDao.Content.NPCs.BOSS.DarkGaze;
+using MortalDao.Content.NPCs.BOSS.FiveElement.GoldElement;
 using SteelSeries.GameSense;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.GameContent;
+using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
@@ -59,6 +62,21 @@ namespace MortalDao.Content.NPCs.Attacks.RobberAttack
             if (RemainingRobbers >= TotalRobbers)
             {
                 EventActive = false;
+                if (Main.netMode != NetmodeID.MultiplayerClient) // 确保只在服务器/单机生成
+                {
+                    // 选择一个玩家作为生成点（例如主玩家）
+                    Player targetPlayer = Main.LocalPlayer;
+                    int spawnX = (int)targetPlayer.Center.X;
+                    int spawnY = (int)targetPlayer.Center.Y - 100; // 在玩家上方生成
+
+                    // 生成九筒
+                    NPC.NewNPC(
+                        NPC.GetSource_NaturalSpawn(),
+                        spawnX,
+                        spawnY,
+                        ModContent.NPCType<JiuTong>()
+                    );
+                }
                 Main.NewText(GetDeSpawnInfo("RobberAttack.DespawnText").Value, 255, 200, 50);
                 BossesDowned.DownedRobberAttack = true;
                 return;

@@ -41,7 +41,7 @@ namespace MortalDao.Content.Projectiles.MelleeWeaponsProj
             Projectile.ignoreWater = true;
             Projectile.ownerHitCheck = true;
             Projectile.usesLocalNPCImmunity = true;
-            Projectile.localNPCHitCooldown = 10; // 无敌帧时间
+            Projectile.localNPCHitCooldown = 30; // 无敌帧时间
             Projectile.velocity = Vector2.Zero; // 手动控制位置，不使用物理速度
         }
         public override void AI()

@@ -40,6 +40,7 @@ namespace MortalDao.Content.ModSetting.ModLink
             };
             Dictionary<string, object> RobberAttackInfo = new Dictionary<string, object>()
             {
+                ["spawnItems"] = ModContent.ItemType<RobberFlag>(),
                 ["spawnInfo"] = () => GetSpawnInfo("RobberAttack"),
                 ["overrideHeadTextures"] = "MortalDao/Content/NPCs/Attacks/RobberAttack/RobberAttackIcon",
                 ["customPortrait"] = RobberAttackPortrait
@@ -55,9 +56,27 @@ namespace MortalDao.Content.ModSetting.ModLink
             //---------------------------------------------------------------------------------------------------------------------------
 
             //---------------------------------------------------------------------------------------------------------------------------
+            //九筒
+            //---------------------------------------------------------------------------------------------------------------------------
+            Action<SpriteBatch, Rectangle, Color> JiuTongPortrait = (SpriteBatch sb, Rectangle rect, Color color) =>
+            {
+                Texture2D texture = ModContent.Request<Texture2D>("MortalDao/Content/ExtraTextures/BCLTex/BCLJiuTong").Value;
+                float scale = 2f;
+                Vector2 centered = new Vector2(rect.Center.X - (texture.Width * scale / 2), rect.Center.Y - (texture.Height * scale / 2));
+                sb.Draw(texture, centered, null, color, 0f,Vector2.Zero,scale, SpriteEffects.None, 0f);
+            };
+            Dictionary<string, object> JiuTongInfo = new Dictionary<string, object>()
+            {
+                ["spawnInfo"] = () => GetSpawnInfo("JiuTong"),
+                ["customPortrait"] = JiuTongPortrait
+            };
+            AddBoss(bossCheckList, mortalDao, "JiuTong", 1.5f, () => BossesDowned.DownedJiuTong, ModContent.NPCType<JiuTong>(), JiuTongInfo);
+            //---------------------------------------------------------------------------------------------------------------------------
+
+            //---------------------------------------------------------------------------------------------------------------------------
             //金元素
             //---------------------------------------------------------------------------------------------------------------------------
-            Action <SpriteBatch, Rectangle, Color> GoldElementPortrait = (SpriteBatch sb, Rectangle rect, Color color) =>
+            Action<SpriteBatch, Rectangle, Color> GoldElementPortrait = (SpriteBatch sb, Rectangle rect, Color color) =>
             {
                 Texture2D texture = ModContent.Request<Texture2D>("MortalDao/Content/ExtraTextures/BCLTex/BCLGoldElement").Value;
                 Vector2 centered = new Vector2(rect.Center.X - (texture.Width / 2), rect.Center.Y - (texture.Height / 2));

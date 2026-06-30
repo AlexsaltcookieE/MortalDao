@@ -9,12 +9,12 @@ namespace MortalDao.Content.Items.MeleeWeapons
     {
         public override void SetDefaults()
         {
-            
             //尺寸
             Item.scale = 1.5f;
             //伤害
-            Item.crit = 20;
-            Item.damage = 20;
+            Item.knockBack = 1.3f;
+            Item.crit = 8;
+            Item.damage = 32;
             Item.DamageType = DamageClass.Melee;
             //速度
             Item.useTime = 45;
@@ -25,7 +25,7 @@ namespace MortalDao.Content.Items.MeleeWeapons
             Item.noUseGraphic = true;
             //稀有度
             Item.value = Item.buyPrice(gold: 1);
-            Item.rare = ItemRarityID.Yellow;
+            Item.rare = ItemRarityID.LightPurple;
             //其他
             Item.autoReuse = false;
             //弹幕

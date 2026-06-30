@@ -39,6 +39,8 @@ NPCs: {
 	DartRobber.DisplayName: 镖客强盗
 	RobberWolf.DisplayName: 豺狼
 	thiefRobber.DisplayName: 盗贼强盗
+	// LiYuanBa.DisplayName: Li Yuan Ba
+	JiuTong.DisplayName: 九筒
 }
 
 Buffs: {
@@ -293,7 +295,16 @@ Projectiles: {
 	ThrowingAxe.DisplayName: Throwing Axe
 	PlumBlossomDart.DisplayName: Plum Blossom Dart
 	// LongSwordProj.DisplayName: Long Sword Proj
+	// Hammer.DisplayName: Hammer
+	// LightningProj.DisplayName: Lightning Proj
+	// LightningBallProj.DisplayName: Lightning Ball Proj
+	// JiuTongFinger.DisplayName: Jiu Tong Finger
+	// JiuTongProj.DisplayName: Jiu Tong Proj
 }
 
 "Keybinds.Open Realm Menu.DisplayName": 打开状态菜单
-// BossChecklistIntegration.强盗入侵.EntryName: 强盗入侵
+
+BossChecklistIntegration: {
+	// 强盗入侵.EntryName: 强盗入侵
+	// RobberAttack.EntryName: Robber Attack
+}
